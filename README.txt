@@ -2,17 +2,16 @@
 
 
 
-- DO NOT TOUCH SFML OR MAKEFILE 
+-DO NOT TOUCH SFML OR MAKEFILE 
   
--Compile program to builds
+-Compile program to builds folder
+
 
 
 - Compile using the following command     mingw32-make all
 
 
-
-
-
-
-
 https://www.youtube.com/watch?v=UM93glM0Fhs
+
+
+
