@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/SFML-2.5.1-sources/SFML-2.5.1/include/SFML/Config.hpp
+TargetConditionals.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/SFML-2.5.1-sources/SFML-2.5.1/include/SFML/TargetConditionals.h
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/SFML-2.5.1-sources/SFML-2.5.1/src/SFML/Main/MainWin32.cpp
+SFML/Config.hpp
+-
+windows.h
+-
+
