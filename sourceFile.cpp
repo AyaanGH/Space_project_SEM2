@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 
+
 int main( int argc, char** argv )
 {
 	sf::RenderWindow appWindow( sf::VideoMode( 800, 600, 32 ), "App" );
@@ -15,6 +16,10 @@ int main( int argc, char** argv )
 		
 		appWindow.clear();
 		appWindow.display();
+
+		
+
+		
 	}
 	
 	return 0;
