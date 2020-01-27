@@ -1,6 +1,10 @@
-# README
+# IMPORTANT
 
 
 
+- DO NOT TOUCH SFML OR MAKEFILE 
+  
+-Compile program to builds
 
-mingw32-make all
+
+- Compile using the following command     mingw32-make all
