@@ -1,71 +1,74 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
+//  void playerMove(sf::Keyboard::Key){
 
-int main( int argc, char** argv )
+// }
+
+int main(int argc, char **argv)
 {
-	sf::RenderWindow appWindow( sf::VideoMode( 800, 600, 32 ), "App" );
-	sf::Event appEvent;
-	
-	while ( appWindow.isOpen() )
+	//Define window size
+	sf::RenderWindow gameWindow(sf::VideoMode(800, 600, 32), "Space Game	", sf::Style::Close | sf::Style::Resize);
+	sf::RectangleShape player1(sf::Vector2f(100.0f, 100.0f));
+	player1.setFillColor(sf::Color::Green);
+	//Main game loop
+	while (gameWindow.isOpen())
 	{
-		while ( appWindow.pollEvent( appEvent ) )
+		// Get any events that have happened since last frame E.g mouse
+		sf::Event check_events;
+
+		//std::cout << check_events.MouseButtonPressed;
+
+		//Loop runs whilst there are events in the queue
+		while (gameWindow.pollEvent(check_events))
 		{
-			if ( appEvent.type == sf::Event::Closed )
-				appWindow.close();
+
+			//Close if Event is close button
+			if (check_events.type == sf::Event::Closed)
+			{
+				gameWindow.close();
+			}
+
+			// if ( check_events.type == sf::Event::TextEntered )
+			// {
+			// 	if (check_events.text.unicode < 128)
+			// 	{
+			// 		printf("%C",check_events.text.unicode);
+			// 	}
+			// }
 		}
-		
-		appWindow.clear();
-		appWindow.display();
 
-		
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))
+		{
 
-		
+			player1.move(0.0f, -0.1f);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
+		{
+
+			player1.move(0.0f, 0.1f);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
+		{
+
+			player1.move(-0.1f, 0.0f);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
+		{
+
+			player1.move(0.1f, 0.0f);
+		}
+
+		gameWindow.clear();
+		gameWindow.draw(player1);
+		gameWindow.display();
 	}
-	
+
+	// gameWindow.clear();
+	// gameWindow.display();
+
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// #include <SFML/Graphics.hpp>
-
-
-
-// int main()
-// {   
-
-//     sf::RenderWindow appWindow(sf::VideoMode(800,600,32), "app");
-
-//     sf:: Event appEvent;
-
-//     while (appWindow.isOpen())
-//     {
-//         while (appWindow.pollEvent(appEvent))
-//         {
-
-//             if (appEvent.type == sf::Event::Closed)
-
-//             {
-//                 appWindow.close();    /* code */
-//             }
-            
-
-//         }
-
-//         appWindow.clear();
-//         appWindow.display();
-//     }
-    
-//     /* code */
-//     return 0;
-// }
