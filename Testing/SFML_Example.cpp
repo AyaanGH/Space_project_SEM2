@@ -1,12 +1,34 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-//  void playerMove(sf::Keyboard::Key){
 
-// }
+struct Vector3{
+	float x;
+	float y;
+	float z;
+};
+
+class Player{
+public:
+	Player() { health = 100; alive = true; position.x = 0.f; position.y = 0.0; position.z = 0.f;};
+	~Player(){};
+
+	int health;
+	bool alive;
+	Vector3 position;
+};
+
+void playerMove(Player* bob){
+	bob->position.x += 0.1f;
+
+}
+
 
 int main(int argc, char **argv)
 {
+
+	Player* myPlayer = new Player;
+
 	//Define window size
 	sf::RenderWindow gameWindow(sf::VideoMode(800, 600, 32), "Space Game	", sf::Style::Close | sf::Style::Resize);
 	sf::RectangleShape player1(sf::Vector2f(100.0f, 100.0f));
