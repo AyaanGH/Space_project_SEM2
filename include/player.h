@@ -1,5 +1,5 @@
-#ifndef PLAYER
-#define PLAYER
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include <iostream>
 
@@ -7,7 +7,7 @@ using std::string;
 
 class Player
 {
-private:
+protected:
     //Attributes
 
     string first_name;
