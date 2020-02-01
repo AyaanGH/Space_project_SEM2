@@ -27,3 +27,35 @@ int main()
 
     return 0;
 }
+
+
+
+// struct Vector3
+// {
+//   float x;
+//   float y;
+//   float z;
+// };
+
+// class Player
+// {
+// public:
+//   Player()
+//   {
+//     health = 100;
+//     alive = true;
+//     position.x = 0.f;
+//     position.y = 0.0;
+//     position.z = 0.f;
+//   };
+//   ~Player(){};
+
+//   int health;
+//   bool alive;
+//   Vector3 position;
+// };
+
+// void playerMove(Player *bob)
+// {
+//   bob->position.x += 0.1f;
+// }
