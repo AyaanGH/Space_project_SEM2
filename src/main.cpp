@@ -1,32 +1,130 @@
 #include <iostream>
 #include "../include/player.h"
+#include <stdio.h>
+#include <conio.h>
+#include <string>
+#include <vector>
+#include <stdlib.h>
+//TODO <conio.h>
+//TODO <stdio.h>
 
 using std::string;
 
-int main()
+
+void menu()
+
 {
+
+   int col_index = 0; 
+   while(true)
+   {
+       /* code */
+   
+   std::vector<string> menuItems {"Inventory","Map","Interact","Player stats"};
+
+   for (int i = 0; i < menuItems.size()-1; i++)
+   {
+       if (i == col_index)
+       {
+           printf("%c[%dm%e\n", 0x1B, 32,menuItems[i]);
+       
+        }
+
+        else
+        {
+            std::cout << (menuItems[i]\t);
+        }
+
+
+        
+   system("cls");
+   
+
+    char move = _getch(); //_getch loads move with one character that the user enters
+       if (move == 'H')
+       {
+           col_index++;
+        //    std::cout<< "UP KEY PRESSED\n";
+
+        //    printf("%c[%dmHELLO!\n", 0x1B, 32);
+        //    printf("\x1B[31mTexting\033[0m\t\t");
+
+       } 
+
+       if (move == 'P')
+       {
+           col_index--;
+       }
+    
+       
+
+   
+
+    
+    }   
+    
+}
+}
+
+int main()
+{  
+   do
+   {
+
+
+       std::cout << "Do you want to see the secret word? (y/n): \n";
+	   char move = _getch(); //_getch loads move with one character that the user enters
+
+
+       if (move == 'H')
+       {
+
+           std::cout<< "UP KEY PRESSED\n";
+
+           printf("%c[%dmHELLO!\n", 0x1B, 32);
+           printf("\x1B[31mTexting\033[0m\t\t");
+
+       } 
+
+       if (move == 'P')
+       {
+           std::cout<< "DOWN KEY PRESSEd \n";
+       }
+       
+       std::cout << move << std::endl;
+			      
+
+       /* code */
+   } while (1);
+   
+     return 0;
+}
     /* code */
 
     //Create player object
 
-    Player player1("Simon", "Billing", 10);
+    // Player player1("Simon", "Billing", 10);
 
-    std::cout << player1.get_first_name() << std::endl;
+    // std::cout << player1.get_first_name() << std::endl;
 
-    std::cout << player1.get_last_name() << std::endl;
+    // std::cout << player1.get_last_name() << std::endl;
 
-    std::cout << player1.get_hp() << std::endl;
+    // std::cout << player1.get_hp() << std::endl;
 
-    player1.set_hp(-5);
+    // player1.set_hp(-5);
 
-    std::cout << player1.get_hp() << std::endl;
+    // std::cout << player1.get_hp() << std::endl;
 
-    player1.decrease_hp(5);
+    // player1.decrease_hp(5);
 
-    std::cout << player1.get_hp() << std::endl;
+    // std::cout << player1.get_hp() << std::endl;
 
-    return 0;
-}
+
+
+
+  
+
+
 
 
 
