@@ -8,11 +8,14 @@
 - Currrent Compile command from root of project
 
 
-g++ .\src\main.cpp .\src\player.cpp -o .\bin\main
 
+//Without cmake
+g++ .\src\main.cpp .\src\player.cpp .\src\menu.cpp -o .\bin\main
+
+
+
+//Main Cmake command
 cmake --build .  
-
-
 
 //Recompiling cmake
 cmake -G "MinGW Makefiles"  .

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/player.h"
+#include "../include/menu.h"
 #include <stdio.h>
 #include <conio.h>
 #include <string>
@@ -11,12 +12,20 @@
 using std::string;
 
 
-
 int main()
 {  
-
-    
+    //Chicken Soup? std::cout << "Studios  "
+    //Yo whats upds 
+    //I like soup but not Stefan's soup 
+    // The magic word is Chicken Soup.
+    // What THE HELL?
    
+
+    Menu cool_menu;
+
+    cool_menu.list_menu_options();
+    
+
 
     Player player1("Simon", "Billing", 10);
 
@@ -36,23 +45,23 @@ int main()
 
 
 
-    while(true)
-    {
-    char move = _getch(); //_getch loads move with one character that the user enters
+    // while(true)
+    // {
+    // char move = _getch(); //_getch loads move with one character that the user enters
 
 
-       if (move == 'H')
-       {
+    //    if (move == 'H')
+    //    {
 
-           std::cout<< "UP KEY PRESSED\n";
+    //        std::cout<< "UP KEY PRESSED\n";
 
-           printf("%c[%dmHELLO!\n", 0x1B, 32);
-           printf("\x1B[31mTexting\033[0m\t\t");
+    //        printf("%c[%dmHELLO!\n", 0x1B, 32);
+    //        printf("\x1B[31mTexting\033[0m\t\t");
 
     
-       }
+    //    }
    
-    }
+    // }
      return 0;
 
     /* code */

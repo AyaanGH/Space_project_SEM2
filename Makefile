@@ -135,6 +135,19 @@ player/fast:
 	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/build
 .PHONY : player/fast
 
+#=============================================================================
+# Target rules for targets named menu
+
+# Build rule for target.
+menu: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 menu
+.PHONY : menu
+
+# fast build rule for target.
+menu/fast:
+	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/build
+.PHONY : menu/fast
+
 src/main.obj: src/main.cpp.obj
 
 .PHONY : src/main.obj
@@ -161,6 +174,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/menu.obj: src/menu.cpp.obj
+
+.PHONY : src/menu.obj
+
+# target to build an object file
+src/menu.cpp.obj:
+	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/src/menu.cpp.obj
+.PHONY : src/menu.cpp.obj
+
+src/menu.i: src/menu.cpp.i
+
+.PHONY : src/menu.i
+
+# target to preprocess a source file
+src/menu.cpp.i:
+	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/src/menu.cpp.i
+.PHONY : src/menu.cpp.i
+
+src/menu.s: src/menu.cpp.s
+
+.PHONY : src/menu.s
+
+# target to generate assembly for a file
+src/menu.cpp.s:
+	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/src/menu.cpp.s
+.PHONY : src/menu.cpp.s
 
 src/player.obj: src/player.cpp.obj
 
@@ -198,10 +238,14 @@ help:
 	@echo ... edit_cache
 	@echo ... main
 	@echo ... player
+	@echo ... menu
 	@echo ... rebuild_cache
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/menu.obj
+	@echo ... src/menu.i
+	@echo ... src/menu.s
 	@echo ... src/player.obj
 	@echo ... src/player.i
 	@echo ... src/player.s

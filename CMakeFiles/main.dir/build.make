@@ -80,6 +80,7 @@ main_EXTERNAL_OBJECTS =
 bin/main.exe: CMakeFiles/main.dir/src/main.cpp.obj
 bin/main.exe: CMakeFiles/main.dir/build.make
 bin/main.exe: builds/lib/libplayer.a
+bin/main.exe: builds/lib/libmenu.a
 bin/main.exe: CMakeFiles/main.dir/linklibs.rsp
 bin/main.exe: CMakeFiles/main.dir/objects1.rsp
 bin/main.exe: CMakeFiles/main.dir/link.txt

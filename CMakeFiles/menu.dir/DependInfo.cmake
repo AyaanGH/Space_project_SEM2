@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/main.cpp" "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/main.dir/src/main.cpp.obj"
+  "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/menu.cpp" "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/menu.dir/src/menu.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,8 +15,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/player.dir/DependInfo.cmake"
-  "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/menu.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

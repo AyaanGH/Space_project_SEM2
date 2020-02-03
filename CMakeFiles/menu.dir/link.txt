@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libmenu.a  CMakeFiles/menu.dir/src/menu.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libmenu.a
