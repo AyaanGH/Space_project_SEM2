@@ -11,119 +11,62 @@
 using std::string;
 
 
-void menu()
-
-{
-
-   int col_index = 0; 
-   while(true)
-   {
-       /* code */
-   
-   std::vector<string> menuItems {"Inventory","Map","Interact","Player stats"};
-
-   for (int i = 0; i < menuItems.size()-1; i++)
-   {
-       if (i == col_index)
-       {
-           printf("%c[%dm%e\n", 0x1B, 32,menuItems[i]);
-       
-        }
-
-        else
-        {
-            std::cout << (menuItems[i]\t);
-        }
-
-
-        
-   system("cls");
-   
-
-    char move = _getch(); //_getch loads move with one character that the user enters
-       if (move == 'H')
-       {
-           col_index++;
-        //    std::cout<< "UP KEY PRESSED\n";
-
-        //    printf("%c[%dmHELLO!\n", 0x1B, 32);
-        //    printf("\x1B[31mTexting\033[0m\t\t");
-
-       } 
-
-       if (move == 'P')
-       {
-           col_index--;
-       }
-    
-       
-
-   
-
-    
-    }   
-    
-}
-}
 
 int main()
 {  
-   do
-   {
 
+    
+   
 
-       std::cout << "Do you want to see the secret word? (y/n): \n";
-	   char move = _getch(); //_getch loads move with one character that the user enters
+    Player player1("Simon", "Billing", 10);
 
+    std::cout << player1.get_first_name() << std::endl;
 
-       if (move == 'H')
-       {
+    std::cout << player1.get_last_name() << std::endl;
 
-           std::cout<< "UP KEY PRESSED\n";
+    std::cout << player1.get_hp() << std::endl;
 
-           printf("%c[%dmHELLO!\n", 0x1B, 32);
-           printf("\x1B[31mTexting\033[0m\t\t");
+    player1.set_hp(-5);
 
-       } 
+    std::cout << player1.get_hp() << std::endl;
 
-       if (move == 'P')
-       {
-           std::cout<< "DOWN KEY PRESSEd \n";
-       }
-       
-       std::cout << move << std::endl;
-			      
+    player1.decrease_hp(5);
 
-       /* code */
-   } while (1);
+    std::cout << player1.get_hp() << std::endl;
+   
    
      return 0;
 }
     /* code */
 
-    //Create player object
-
-    // Player player1("Simon", "Billing", 10);
-
-    // std::cout << player1.get_first_name() << std::endl;
-
-    // std::cout << player1.get_last_name() << std::endl;
-
-    // std::cout << player1.get_hp() << std::endl;
-
-    // player1.set_hp(-5);
-
-    // std::cout << player1.get_hp() << std::endl;
-
-    // player1.decrease_hp(5);
-
-    // std::cout << player1.get_hp() << std::endl;
 
 
 
 
   
 
+
+
+// std::cout << "Do you want to see the secret word? (y/n): \n";
+// 	   char move = _getch(); //_getch loads move with one character that the user enters
+
+
+//        if (move == 'H')
+//        {
+
+//            std::cout<< "UP KEY PRESSED\n";
+
+//            printf("%c[%dmHELLO!\n", 0x1B, 32);
+//            printf("\x1B[31mTexting\033[0m\t\t");
+
+//        } 
+
+//        if (move == 'P')
+//        {
+//            std::cout<< "DOWN KEY PRESSEd \n";
+//        }
+       
+//        std::cout << move << std::endl;
 
 
 
@@ -156,4 +99,84 @@ int main()
 // void playerMove(Player *bob)
 // {
 //   bob->position.x += 0.1f;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+// void menu()
+
+// {
+
+    
+
+
+//    int col_index = 0; 
+//    while(true)
+//    {
+//      char move = _getch(); //_getch loads move with one character that the user enters
+//        if (move == 'H')
+//        {
+//            col_index++;
+//         //    std::cout<< "UP KEY PRESSED\n";
+
+//         //    printf("%c[%dmHELLO!\n", 0x1B, 32);
+//         //    printf("\x1B[31mTexting\033[0m\t\t");
+
+//        } 
+
+//        if (move == 'P')
+//        {
+//            col_index--;
+//        }
+
+//        else
+//        {
+//            continue;
+//        }
+//        /* code */
+   
+//    std::vector<string> menuItems {"Inventory ","Map ","Interact ","Player_stats "};
+//    system("cls");
+
+//    for (int i = 0; i < 4; i++)
+//    {
+//        if (i == col_index)
+//        {
+//         //    printf("%c[%dm%e\n", 0x1B, 32,menuItems[i]);
+
+//         //    std::cout << "0x1B[32mHello" + menuItems[i];
+
+//         std::cout<<"\033[0;35mhello" << std::endl;
+//        //g++ .\src\main.cpp .\src\player.cpp -o .\builds\test
+//         }
+
+//         else
+//         {
+//             std::cout << (menuItems[i]);
+//         }
+//    } 
+
+
+        
+   
+   
+
+       
+    
+       
+
+   
+
+    
+//     }   
+    
 // }

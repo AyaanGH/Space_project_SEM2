@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
+iostream
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/player.cpp
+../include/player.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
+iostream
+-
+

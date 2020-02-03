@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libplayer.a  CMakeFiles/player.dir/src/player.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libplayer.a

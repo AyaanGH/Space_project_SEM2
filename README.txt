@@ -10,3 +10,9 @@
 
 g++ .\src\main.cpp .\src\player.cpp -o .\builds\test
 
+cmake --build .  
+
+
+
+//Recompiling cmake
+cmake -G "MinGW Makefiles"  .
