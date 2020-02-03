@@ -33,14 +33,32 @@ int main()
     player1.decrease_hp(5);
 
     std::cout << player1.get_hp() << std::endl;
+
+
+
+    while(true)
+    {
+    char move = _getch(); //_getch loads move with one character that the user enters
+
+
+       if (move == 'H')
+       {
+
+           std::cout<< "UP KEY PRESSED\n";
+
+           printf("%c[%dmHELLO!\n", 0x1B, 32);
+           printf("\x1B[31mTexting\033[0m\t\t");
+
+    
+       }
    
-   
+    }
      return 0;
-}
+
     /* code */
 
 
-
+}
 
 
   
