@@ -11,6 +11,8 @@
 //TODO <conio.h>
 //TODO <stdio.h>
 
+//https://stackoverflow.com/questions/34842526/update-console-without-flickering-c
+
 using std::string;
 
 
@@ -22,9 +24,9 @@ int main()
    
 
     
-    Menu cool_menu;
+    Menu game_menu;
 
-    cool_menu.list_menu_options();
+    game_menu.list_menu_options();
 
 
     Player player1("Simon", "Billing", 10);
@@ -45,11 +47,14 @@ int main()
     std::cout << player1.get_hp() << std::endl;
 
 
-    int age;
+    
+    
+    
 
-    cool_menu.show_cursor(false);
-    std::cin  >> age;
 
+    
+
+    
 
 
 
@@ -83,10 +88,14 @@ int main()
 
     // while(true)
     // {
-    // int int_width = cool_menu.get_console_size_cr()[0]; 
-    // cool_menu.list_menu_options();
+    // int int_width = game_menu.get_console_size_cr()[0]; 
+    // game_menu.list_menu_options();
 
-    // if (int_width != cool_menu.get_console_size_cr()[0] )
+    // if (int_width != game_menu.get_console_size_cr()[0] )
+    // int int_width = game_menu.get_console_size_cr()[0]; 
+    // game_menu.list_menu_options();
+
+    // if (int_width != game_menu.get_console_size_cr()[0] )
 
     //  system("cls");
     

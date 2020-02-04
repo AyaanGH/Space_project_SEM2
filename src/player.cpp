@@ -80,3 +80,4 @@ int Player::decrease_hp(int decrease_value)
 
     return hp += decrease_value;
 }
+

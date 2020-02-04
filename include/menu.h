@@ -40,9 +40,11 @@ public:
 
     char get_player_input();
 
-    
+    void clear_screen();
 
     //void change_scene_to_player_stats();
+
+
 
 
 
