@@ -32,10 +32,19 @@ public:
 
 
 //Methods
+    void show_cursor(bool showFlag);
 
     void list_menu_options();
 
     std::array<int,2> get_console_size_cr();
+
+    char get_player_input();
+
+    
+
+    //void change_scene_to_player_stats();
+
+
 
 
 };

@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 #include <stdlib.h>
+#include <unistd.h>
+#include <windows.h>
 //TODO <conio.h>
 //TODO <stdio.h>
 
@@ -14,20 +16,19 @@ using std::string;
 
 int main()
 {  
-    //Chicken Soup? std::cout << "Studios  "
-    //Yo whats upds 
-    //I like soup but not Stefan's soup 
-    // The magic word is Chicken Soup.
-    // What THE HELL?
+
+    
+    
    
 
+    
     Menu cool_menu;
 
     cool_menu.list_menu_options();
-    
 
 
     Player player1("Simon", "Billing", 10);
+
 
     std::cout << player1.get_first_name() << std::endl;
 
@@ -42,6 +43,17 @@ int main()
     player1.decrease_hp(5);
 
     std::cout << player1.get_hp() << std::endl;
+
+
+    int age;
+
+    cool_menu.show_cursor(false);
+    std::cin  >> age;
+
+
+
+
+
 
 
 
@@ -69,8 +81,59 @@ int main()
 
 }
 
+    // while(true)
+    // {
+    // int int_width = cool_menu.get_console_size_cr()[0]; 
+    // cool_menu.list_menu_options();
 
-  
+    // if (int_width != cool_menu.get_console_size_cr()[0] )
+
+    //  system("cls");
+    
+    // }
+
+
+
+
+//  for (;;) {
+
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoading   " << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLOading   " << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoAding   " << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoaDing   " << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoadIng   " << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoadiNg   " << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoadinG   " << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoading.  " << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoading.." << std::flush;
+//         Sleep(500);
+//         std::cout << "\b\b\b\b\b\b\b\b\b\bLoading..." << std::flush;
+//         Sleep(500);
+//     }
+ 
+
+
+
+//   std::cout << '-' << std::flush;
+//     for (;;) {
+//         //Sleep(100);
+//         std::cout << "\b\\" << std::flush;
+//         // Sleep(100);
+//         std::cout << "\b|" << std::flush;
+//         // Sleep(100);
+//         std::cout << "\b/" << std::flush;
+//         // Sleep(100);
+//         std::cout << "\b-" << std::flush;
+
+//     }
 
 
 

@@ -1,9 +1,15 @@
 #include "../include/menu.h"
 #include <windows.h>
 #include <iostream>
-
 using std::string;
 #include <array>
+#include <stdio.h>
+#include <conio.h>
+#include <string>
+#include <vector>
+#include <stdlib.h>
+#include <unistd.h>
+
 //constructor
 
 // Menu::Menu()
@@ -46,7 +52,7 @@ void Menu::list_menu_options()
 
     int console_height = get_console_size_cr()[1];
     int console_width = get_console_size_cr()[0];
-    for (int i = 0; i <= (console_width / 2) -32; i++)
+    for (int i = 0; i <= (console_width / 2) - 32; i++)
     {
         std::cout << " ";
     }
@@ -61,3 +67,37 @@ void Menu::list_menu_options()
     }
     std::cout << " \n";
 }
+
+char Menu::get_player_input()
+{
+    char move = _getch(); //_getch loads move with one character that the user enters
+
+    return move;
+}
+
+void Menu::show_cursor(bool showFlag)
+{   
+
+    
+     HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    CONSOLE_CURSOR_INFO     cursorInfo;
+
+    GetConsoleCursorInfo(out, &cursorInfo);
+    cursorInfo.bVisible = showFlag; // set the cursor visibility
+    SetConsoleCursorInfo(out, &cursorInfo);
+}
+
+
+
+
+// void Menu::add_cursor()
+// {
+//     bool showCursor = true;
+ 
+//   HANDLE std_out = GetStdHandle(STD_OUTPUT_HANDLE); // Get standard output
+//   CONSOLE_CURSOR_INFO cursorInfo;                   // 
+//   GetConsoleCursorInfo(OUT, &cursorInfo);           // Get cursorinfo from output
+//   cursorInfo.bVisible = showCursor;                 // Set flag visible.
+//   SetConsoleCursorInfo(OUT, &cursorInfo);
+// }

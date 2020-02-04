@@ -21,4 +21,16 @@ iostream
 -
 array
 -
+stdio.h
+-
+conio.h
+-
+string
+-
+vector
+-
+stdlib.h
+-
+unistd.h
+-
 
