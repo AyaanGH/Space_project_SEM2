@@ -47,7 +47,15 @@ int main()
     std::cout << player1.get_hp() << std::endl;
 
 
-    
+    game_menu.setCursorPosition(30, 20);
+    std::cout << "CHEESE";
+    // game_menu.setCursorPosition(10, 5);
+    // std::cout  <<'W';
+    // game_menu.setCursorPosition(10, 9);
+    // std::cout << 'Z';
+    game_menu.setCursorPosition(10, 5);
+    // std::cout << "     ";  // Overwrite characters with spaces to "erase" them
+    // std::cout.flush();
     
     
 

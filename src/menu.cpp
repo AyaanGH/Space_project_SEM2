@@ -76,29 +76,27 @@ char Menu::get_player_input()
 }
 
 void Menu::show_cursor(bool showFlag)
-{   
+{
 
-    
-     HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+    HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
 
-    CONSOLE_CURSOR_INFO     cursorInfo;
+    CONSOLE_CURSOR_INFO cursorInfo;
 
     GetConsoleCursorInfo(out, &cursorInfo);
     cursorInfo.bVisible = showFlag; // set the cursor visibility
     SetConsoleCursorInfo(out, &cursorInfo);
 }
 
-
 void Menu::clear_screen()
 
 {
 
-// Get the Win32 handle representing standard output.
+    // Get the Win32 handle representing standard output.
     // This generally only has to be done once, so we make it static.
     static const HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
     CONSOLE_SCREEN_BUFFER_INFO csbi;
-    COORD topLeft = { 0, 0 };
+    COORD topLeft = {0, 0};
 
     // std::cout uses a buffer to batch writes to the underlying console.
     // We need to flush that to the console because we're circumventing
@@ -107,7 +105,8 @@ void Menu::clear_screen()
     std::cout.flush();
 
     // Figure out the current width and height of the console window
-    if (!GetConsoleScreenBufferInfo(hOut, &csbi)) {
+    if (!GetConsoleScreenBufferInfo(hOut, &csbi))
+    {
         // TODO: Handle failure!
         abort();
     }
@@ -124,15 +123,22 @@ void Menu::clear_screen()
 
     // Move the cursor back to the top left for the next sequence of writes
     SetConsoleCursorPosition(hOut, topLeft);
+}
 
+void Menu::setCursorPosition(int x, int y)
+{
+    static const HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    std::cout.flush();
+    COORD coord = {(SHORT)x, (SHORT)y};
+    SetConsoleCursorPosition(hOut, coord);
 }
 
 // void Menu::add_cursor()
 // {
 //     bool showCursor = true;
- 
+
 //   HANDLE std_out = GetStdHandle(STD_OUTPUT_HANDLE); // Get standard output
-//   CONSOLE_CURSOR_INFO cursorInfo;                   // 
+//   CONSOLE_CURSOR_INFO cursorInfo;                   //
 //   GetConsoleCursorInfo(OUT, &cursorInfo);           // Get cursorinfo from output
 //   cursorInfo.bVisible = showCursor;                 // Set flag visible.
 //   SetConsoleCursorInfo(OUT, &cursorInfo);

@@ -42,6 +42,8 @@ public:
 
     void clear_screen();
 
+    void setCursorPosition(int x, int y);
+
     //void change_scene_to_player_stats();
 
 
