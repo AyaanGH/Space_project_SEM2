@@ -44,6 +44,8 @@ public:
 
     void setCursorPosition(int x, int y);
 
+    void slow_print(string str_to_print,int time);
+
     //void change_scene_to_player_stats();
 
 

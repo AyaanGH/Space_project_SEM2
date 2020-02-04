@@ -47,15 +47,10 @@ int main()
     std::cout << player1.get_hp() << std::endl;
 
 
-    game_menu.setCursorPosition(30, 20);
-    std::cout << "CHEESE";
-    // game_menu.setCursorPosition(10, 5);
-    // std::cout  <<'W';
-    // game_menu.setCursorPosition(10, 9);
-    // std::cout << 'Z';
-    game_menu.setCursorPosition(10, 5);
-    // std::cout << "     ";  // Overwrite characters with spaces to "erase" them
-    // std::cout.flush();
+    int age;
+
+    game_menu.show_cursor(false);
+    game_menu.slow_print("Note that this eliminates the flicker, too, since there's no longer any need to clear the screen completely before redrawing -- you can simply change what needs changing without doing an intermediate clear, so the previous frame is incrementally updated, persisting until it's completely up to date.",50);
     
     
 

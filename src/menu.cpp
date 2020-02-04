@@ -133,6 +133,24 @@ void Menu::setCursorPosition(int x, int y)
     SetConsoleCursorPosition(hOut, coord);
 }
 
+
+
+void Menu::slow_print(string str_to_print,int time)
+{
+
+    //50 ms
+  for(int i=0;i<str_to_print.length();i++)
+  {
+     
+      std::cout<<str_to_print[i];
+     
+      Sleep(time);
+
+  }
+
+
+}
+
 // void Menu::add_cursor()
 // {
 //     bool showCursor = true;
