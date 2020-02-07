@@ -8,6 +8,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <windows.h>
+#include <cstdlib>
+#include <random>
 //TODO <conio.h>
 //TODO <stdio.h>
 
@@ -15,97 +17,124 @@
 
 using std::string;
 
-
 int main()
-{  
+{
 
-    
-    
-   
-
-    
     Menu game_menu;
 
-    game_menu.list_menu_options();
-
-
-    Player player1("Simon", "Billing", 10);
-
-
-    std::cout << player1.get_first_name() << std::endl;
-
-    std::cout << player1.get_last_name() << std::endl;
-
-    std::cout << player1.get_hp() << std::endl;
-
-    player1.set_hp(-5);
-
-    std::cout << player1.get_hp() << std::endl;
-
-    player1.decrease_hp(5);
-
-    std::cout << player1.get_hp() << std::endl;
-
-
-    int age;
-
+    
     game_menu.show_cursor(false);
-    game_menu.slow_print("Note that this eliminates the flicker, too, since there's no longer any need to clear the screen completely before redrawing -- you can simply change what needs changing without doing an intermediate clear, so the previous frame is incrementally updated, persisting until it's completely up to date.",50);
+    game_menu.show_menu_buttons();
+    game_menu.pressed_button();
+
+    // std::cout<< " \n\n\n\n\n\n";
+    // game_menu.list_menu_options();
     
-    
-
-
-    
-
-    
-
-
-
-
-
-
-
-    // while(true)
-    // {
-    // char move = _getch(); //_getch loads move with one character that the user enters
-
-
-    //    if (move == 'H')
-    //    {
-
-    //        std::cout<< "UP KEY PRESSED\n";
-
-    //        printf("%c[%dmHELLO!\n", 0x1B, 32);
-    //        printf("\x1B[31mTexting\033[0m\t\t");
-
-    
-    //    }
+    //game_menu.print_border();
    
+    //  int width = game_menu.get_console_size_cr()[0];
+    //  int height = game_menu.get_console_size_cr()[1];
+
+    
+     //printf("%c[%dmColouring in terminal is easy!\n", 0x1B, 32);
+     //game_menu.slow_print("The slow printing feature is a cool way to display large chunks of text in an easy to read manner. Makes it interesting.",50);
+   
+    
+        /* code */
+    // int random_integer1; 
+    // int random_integer2;
+    // int lowest=1, highest= 20; 
+    // int range=(highest-lowest)+1; 
+    // for(int index=0; index<20; index++)
+    // { 
+    // random_integer1 = lowest+int(range*rand()/(RAND_MAX + 1.0));
+    // random_integer2 = lowest+int(range*rand()/(RAND_MAX + 1.0)); 
+    // game_menu.setCursorPosition(random_integer1,random_integer2);
+    // std::cout << "." ;
+    // Sleep(100);
     // }
-     return 0;
-
-    /* code */
-
-
+    
+    return 0;
 }
 
-    // while(true)
-    // {
-    // int int_width = game_menu.get_console_size_cr()[0]; 
-    // game_menu.list_menu_options();
 
-    // if (int_width != game_menu.get_console_size_cr()[0] )
-    // int int_width = game_menu.get_console_size_cr()[0]; 
-    // game_menu.list_menu_options();
 
-    // if (int_width != game_menu.get_console_size_cr()[0] )
-
-    //  system("cls");
+// std::random_device rd; // obtain a random number from hardware
+//     std::mt19937 eng(rd()); // seed the generator
+//     std::uniform_int_distribution<> distr(0, width); // define the range
     
-    // }
+//     for(int n=0; n<800; ++n)
+//     {
+//     game_menu.show_cursor(false);
+//          int x = distr(eng);
+//          int y = distr(eng); // generate numbers
+//         game_menu.setCursorPosition(x,y);
+//         game_menu.show_cursor(false);
+//         std::cout << "." ;
+//         Sleep(10);
+
+    
+    // game_menu.
+
+    // Player player1("Peter", "Parker", 10);
 
 
+   
 
+    // std::cout << player1.get_first_name() << std::endl;
+
+    // std::cout << player1.get_last_name() << std::endl;
+
+    // std::cout << player1.get_hp() << std::endl;
+
+    // player1.set_hp(-5);
+
+    // std::cout << player1.get_hp() << std::endl;
+
+    // player1.decrease_hp(5);
+
+    // std::cout << player1.get_hp() << std::endl;
+
+    // int age;
+
+ 
+// while(true)
+// {
+// char move = _getch(); //_getch loads move with one character that the user enters
+
+//    if (move == 'H')
+//    {
+
+//        std::cout<< "UP KEY PRESSED\n";
+
+//        printf("%c[%dmHELLO!\n", 0x1B, 32);
+//        printf("\x1B[31mTexting\033[0m\t\t");
+
+//    }
+
+// }
+
+/* code */
+
+// Beep(523,5000); // 523 hertz (C5) for 500 milliseconds
+//     std::cin.get(); // wait
+//     game_menu.show_cursor(false);
+//     game_menu.slow_print("Note that this eliminates the flicker, too, since there's no longer any need to clear the screen completely before redrawing -- you can simply change what needs changing without doing an intermediate clear, so the previous frame is incrementally updated, persisting until it's completely up to date.",50);
+
+// while(true)
+// {
+// int int_width = game_menu.get_console_size_cr()[0];
+// game_menu.list_menu_options();
+
+// if (int_width != game_menu.get_console_size_cr()[0] )
+// int int_width = game_menu.get_console_size_cr()[0];
+// game_menu.list_menu_options();
+
+// if (int_width != game_menu.get_console_size_cr()[0] )
+
+//  system("cls");
+
+// }
 
 //  for (;;) {
 
@@ -130,9 +159,6 @@ int main()
 //         std::cout << "\b\b\b\b\b\b\b\b\b\bLoading..." << std::flush;
 //         Sleep(500);
 //     }
- 
-
-
 
 //   std::cout << '-' << std::flush;
 //     for (;;) {
@@ -147,11 +173,8 @@ int main()
 
 //     }
 
-
-
 // std::cout << "Do you want to see the secret word? (y/n): \n";
 // 	   char move = _getch(); //_getch loads move with one character that the user enters
-
 
 //        if (move == 'H')
 //        {
@@ -161,17 +184,14 @@ int main()
 //            printf("%c[%dmHELLO!\n", 0x1B, 32);
 //            printf("\x1B[31mTexting\033[0m\t\t");
 
-//        } 
+//        }
 
 //        if (move == 'P')
 //        {
 //            std::cout<< "DOWN KEY PRESSEd \n";
 //        }
-       
+
 //        std::cout << move << std::endl;
-
-
-
 
 // struct Vector3
 // {
@@ -203,25 +223,11 @@ int main()
 //   bob->position.x += 0.1f;
 // }
 
-
-
-
-
-
-
-
-
-
-
-
 // void menu()
 
 // {
 
-    
-
-
-//    int col_index = 0; 
+//    int col_index = 0;
 //    while(true)
 //    {
 //      char move = _getch(); //_getch loads move with one character that the user enters
@@ -233,7 +239,7 @@ int main()
 //         //    printf("%c[%dmHELLO!\n", 0x1B, 32);
 //         //    printf("\x1B[31mTexting\033[0m\t\t");
 
-//        } 
+//        }
 
 //        if (move == 'P')
 //        {
@@ -245,7 +251,7 @@ int main()
 //            continue;
 //        }
 //        /* code */
-   
+
 //    std::vector<string> menuItems {"Inventory ","Map ","Interact ","Player_stats "};
 //    system("cls");
 
@@ -265,20 +271,8 @@ int main()
 //         {
 //             std::cout << (menuItems[i]);
 //         }
-//    } 
+//    }
 
+//     }
 
-        
-   
-   
-
-       
-    
-       
-
-   
-
-    
-//     }   
-    
 // }

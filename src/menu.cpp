@@ -133,31 +133,113 @@ void Menu::setCursorPosition(int x, int y)
     SetConsoleCursorPosition(hOut, coord);
 }
 
-
-
-void Menu::slow_print(string str_to_print,int time)
+void Menu::slow_print(string str_to_print, int time)
 {
 
     //50 ms
-  for(int i=0;i<str_to_print.length();i++)
-  {
-     
-      std::cout<<str_to_print[i];
-     
-      Sleep(time);
+    for (int i = 0; i < str_to_print.length(); i++)
+    {
 
-  }
+        std::cout << str_to_print[i];
 
-
+        Sleep(time);
+    }
 }
 
-// void Menu::add_cursor()
-// {
-//     bool showCursor = true;
+void Menu::show_menu_buttons()
+{
+    int width = get_console_size_cr()[0];
+    int height = get_console_size_cr()[1];
+    show_cursor(false);
+    setCursorPosition((width / 2), 0);
 
-//   HANDLE std_out = GetStdHandle(STD_OUTPUT_HANDLE); // Get standard output
-//   CONSOLE_CURSOR_INFO cursorInfo;                   //
-//   GetConsoleCursorInfo(OUT, &cursorInfo);           // Get cursorinfo from output
-//   cursorInfo.bVisible = showCursor;                 // Set flag visible.
-//   SetConsoleCursorInfo(OUT, &cursorInfo);
-// }
+    const char *longString =
+        R""""(
+              +---------------------++--------------------++--------------------++--------------------++--------------------+
+              |                     ||                    ||                    ||                    ||                    |
+              |    I - Inventory    ||  P - Player Stats  ||   E - Interaction  ||      M - Map       ||     J - Journal    |  
+              |                     ||                    ||                    ||                    ||                    |
+              +---------------------++--------------------++--------------------++--------------------++--------------------+)"""";
+
+    // const char *longString =
+
+    //        "                    +---------------------++--------------------+"
+    //        "                    |                     ||                    |"
+    //        "                    |     Inventory       ||     Player Stats   |"
+    //        "                    |                     ||                    |"
+    //        "                    +---------------------++--------------------+";
+
+    // std::cout << longString;
+
+    // char ship[5][20] =
+    //     {
+    //         "__",
+    //         "| \\",
+    //         "=[_H)--.____",
+    //         "=[+-,------'",
+    //         " [_/"};
+
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     for (int j = 0; j < 20; j++)
+    //     {
+    //         setCursorPosition((width / 2), height + i);
+    //         std::cout << ship[i][j];
+    //     }
+    //     std::cout << " \n";
+    
+    
+    // }
+
+
+    std::cout  <<  longString;
+
+    // std::cout << "+---------------------++--------------------+" ;
+    // setCursorPosition((width / 2 - 46), 5);
+    // std::cout << "|                     ||                    |" ;
+    // setCursorPosition((width / 2 - 46), 4);
+    // std::cout << "|     Inventory       ||     Player Stats   |" ;
+    // setCursorPosition((width / 2 - 46), 3);
+    // std::cout << "|        (I)          ||         (P)        |" ;
+    // setCursorPosition((width / 2 - 46), 2);
+    // std::cout << "|                     ||                    |" ;
+    // setCursorPosition((width / 2 - 46), 1);
+    // std::cout << "+---------------------++--------------------+" ;
+    // setCursorPosition((width / 2 - 46), 0);
+}
+
+void Menu::pressed_button()
+{
+    switch (get_player_input())
+    {
+    
+        case 'i':
+            std::cout << "nice";
+            break;
+        case 'p':
+            std::cout << "not nice";
+            break;
+        case 'e':
+            
+            break;
+        case 'j':   
+        
+            break;
+        case 'm':
+    
+            break;
+    }
+}
+
+    // void
+
+    // void Menu::add_cursor()
+    // {
+    //     bool showCursor = true;
+
+    //   HANDLE std_out = GetStdHandle(STD_OUTPUT_HANDLE); // Get standard output
+    //   CONSOLE_CURSOR_INFO cursorInfo;                   //
+    //   GetConsoleCursorInfo(OUT, &cursorInfo);           // Get cursorinfo from output
+    //   cursorInfo.bVisible = showCursor;                 // Set flag visible.
+    //   SetConsoleCursorInfo(OUT, &cursorInfo);
+    // }

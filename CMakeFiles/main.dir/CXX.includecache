@@ -37,4 +37,8 @@ unistd.h
 -
 windows.h
 -
+cstdlib
+-
+random
+-
 

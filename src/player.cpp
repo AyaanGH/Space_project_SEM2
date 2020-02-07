@@ -59,7 +59,6 @@ int Player::set_hp(int hp)
 
 //Public Methods
 
-
 int Player::increase_hp(int increase_value)
 {
 
@@ -80,4 +79,3 @@ int Player::decrease_hp(int decrease_value)
 
     return hp += decrease_value;
 }
-
