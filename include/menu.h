@@ -1,6 +1,6 @@
 #ifndef MENU_H
 #define Menu_H
-
+#include "player.h"
 #include <iostream>
 #include <array>
 using std::string;
@@ -41,9 +41,9 @@ public:
 
     void show_menu_buttons();
 
-    void pressed_button();
+    void pressed_button(Player *player_object);
 
-    
+    void render_player();
     
     //void change_scene_to_player_stats();
 };

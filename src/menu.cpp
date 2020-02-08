@@ -1,4 +1,5 @@
 #include "../include/menu.h"
+// #include "../include/player.h"
 #include <windows.h>
 #include <iostream>
 using std::string;
@@ -151,15 +152,15 @@ void Menu::show_menu_buttons()
     int width = get_console_size_cr()[0];
     int height = get_console_size_cr()[1];
     show_cursor(false);
-    setCursorPosition((width / 2), 0);
+    setCursorPosition((width / 2), height-5);
 
     const char *longString =
         R""""(
-              +---------------------++--------------------++--------------------++--------------------++--------------------+
-              |                     ||                    ||                    ||                    ||                    |
-              |    I - Inventory    ||  P - Player Stats  ||   E - Interaction  ||      M - Map       ||     J - Journal    |  
-              |                     ||                    ||                    ||                    ||                    |
-              +---------------------++--------------------++--------------------++--------------------++--------------------+)"""";
+                         +---------------------++--------------------++--------------------++--------------------++--------------------+
+                         |                     ||                    ||                    ||                    ||                    |
+                         |    I - Inventory    ||  P - Player Stats  ||   E - Interaction  ||      M - Map       ||     J - Journal    |  
+                         |                     ||                    ||                    ||                    ||                    |
+                         +---------------------++--------------------++--------------------++--------------------++--------------------+)"""";
 
     // const char *longString =
 
@@ -208,16 +209,20 @@ void Menu::show_menu_buttons()
     // setCursorPosition((width / 2 - 46), 0);
 }
 
-void Menu::pressed_button()
+void Menu::pressed_button(Player *player_object)
 {
     switch (get_player_input())
     {
     
         case 'i':
-            std::cout << "nice";
+            
             break;
         case 'p':
-            std::cout << "not nice";
+        clear_screen();
+
+        player_object ->show_stats();
+         
+            
             break;
         case 'e':
             

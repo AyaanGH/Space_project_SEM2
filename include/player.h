@@ -2,7 +2,6 @@
 #define PLAYER_H
 
 #include <iostream>
-
 using std::string;
 
 class Player
@@ -35,6 +34,8 @@ public:
 
     int increase_hp(int increase_value);
     int decrease_hp(int decrease_value);
+
+    void show_stats();
 };
 
 #endif

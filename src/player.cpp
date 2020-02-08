@@ -79,3 +79,17 @@ int Player::decrease_hp(int decrease_value)
 
     return hp += decrease_value;
 }
+
+void Player::show_stats()
+
+{
+
+    std::cout << get_first_name() << std::endl;
+
+    std::cout << get_last_name() << std::endl;
+
+    std::cout << "HP: " << get_hp() << std::endl;
+
+
+
+}

@@ -21,11 +21,21 @@ int main()
 {
 
     Menu game_menu;
-
+    Player myPlayer("Bill","Nye",100);
     
     game_menu.show_cursor(false);
+    
+
+
+    
+        
+    game_menu.clear_screen();    
     game_menu.show_menu_buttons();
-    game_menu.pressed_button();
+    game_menu.pressed_button(&myPlayer);
+       
+        
+    
+    
 
     // std::cout<< " \n\n\n\n\n\n";
     // game_menu.list_menu_options();
