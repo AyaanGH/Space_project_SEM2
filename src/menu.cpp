@@ -88,6 +88,16 @@ void Menu::show_cursor(bool showFlag)
     SetConsoleCursorInfo(out, &cursorInfo);
 }
 
+
+void Menu::clear_screen_ansi()
+
+{
+
+
+
+    std::cout << "\033[2J\033[1;1H";
+}
+
 void Menu::clear_screen()
 
 {
@@ -209,7 +219,7 @@ void Menu::show_menu_buttons()
     // setCursorPosition((width / 2 - 46), 0);
 }
 
-void Menu::pressed_button(Player *player_object)
+void Menu::check_menu_bar_button_press(Player *player_object)
 {
     switch (get_player_input())
     {

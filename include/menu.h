@@ -34,6 +34,7 @@ public:
     char get_player_input();
 
     void clear_screen();
+    void clear_screen_ansi();
 
     void setCursorPosition(int x, int y);
 
@@ -41,7 +42,7 @@ public:
 
     void show_menu_buttons();
 
-    void pressed_button(Player *player_object);
+    void check_menu_bar_button_press(Player *player_object);
 
     void render_player();
     

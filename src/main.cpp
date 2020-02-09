@@ -21,19 +21,29 @@ int main()
 {
 
     Menu game_menu;
+
+
+
     Player myPlayer("Bill","Nye",100);
     
     game_menu.show_cursor(false);
-    
 
-
-    
-        
-    game_menu.clear_screen();    
+    game_menu.clear_screen();   
     game_menu.show_menu_buttons();
-    game_menu.pressed_button(&myPlayer);
+    game_menu.check_menu_bar_button_press(&myPlayer);
        
         
+
+/*
+
+           Docks
+
+    -----> Hotel
+           Market
+           Ship
+
+
+*\
     
     
 
