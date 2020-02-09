@@ -21,8 +21,8 @@ Room::Room(int roomID, string name, string description, std::array<int, 4> conne
 
 //static members
 
-int Room::current_room = 10;
- std::vector<int> Room::list_of_rooms = {};
+int Room::current_room;
+std::vector<int> Room::list_of_rooms = {};
 
 
 //Getters
