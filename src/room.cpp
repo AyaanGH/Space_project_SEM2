@@ -16,7 +16,7 @@ Room::Room(int roomID, string name, string description, std::array<int, 4> conne
     this->description = set_description(description);
     this->connected_rooms = connected_rooms;
 
-    Room::list_of_rooms.push_back({roomID});
+    // Room::list_of_rooms.push_back({roomID});
     Room::list_of_room_objects.push_back({*this});
 }
 
@@ -75,18 +75,21 @@ int Room::set_roomID(int roomID)
         return roomID;
     }
 }
-int Room::set_current_room(int roomID)
-{
-    for (Room room : Room::get_list_of_room_objects())
-    {
-        if (room.get_room_id() == roomID)
-        {
-            return roomID;
-        }
-    }
+void Room::set_current_room(int roomID)
 
-    std::cout << "Room ID doesnt exist";
-    std::cout << 10 / 0;
+{
+
+     current_room = roomID;
+    // for (Room room : Room::get_list_of_room_objects())
+    // {
+    //     if (room.get_room_id() == roomID)
+    //     {
+    //         ;
+    //     }
+    // }
+
+    // std::cout << "Room ID doesnt exist";
+    // std::cout << 10 / 0;
 }
 
 string Room::set_name(string name)

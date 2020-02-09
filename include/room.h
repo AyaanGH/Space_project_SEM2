@@ -48,7 +48,7 @@ public:
     //setters
 
     int set_roomID(int roomID);
-    int set_current_room(int roomID);
+    static void set_current_room(int roomID);
     string set_name(string name);
     string set_description(string description);
     // int set_connected_rooms(std::array<int, 4> connected_rooms);

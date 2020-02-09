@@ -28,18 +28,33 @@ int main()
 
 
 
-    bedroom.set_current_room(10);
+    Room::set_current_room(10);
 
     std::cout << "Connected rooms: \n"; 
 
     Room::show_adjacent_rooms(&bedroom);
- 
 
-    for(Room objects: Room::get_list_of_room_objects() )
+
+    for(Room room_object: Room::get_list_of_room_objects() )
     {
-        std::cout << objects.get_name() << std::endl;
+        std::cout << room_object.get_name() << std::endl;
+
+        if(room_object.get_room_id()== Room::get_current_room())
 
     }
+
+    Sleep(3000);
+
+    int selected_room;
+
+    while (true)
+    {
+        /* code */
+
+        if(selected_room < )
+    }
+    
+
     // {
     //     std::cout << con_room <<" ";
     // for(int con_room : bedroom.get_connected_rooms())
