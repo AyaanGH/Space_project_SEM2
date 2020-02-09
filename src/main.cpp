@@ -1,6 +1,7 @@
 #include <iostream>
 #include "../include/player.h"
 #include "../include/menu.h"
+#include "../include/room.h"
 #include <stdio.h>
 #include <conio.h>
 #include <string>
@@ -22,15 +23,42 @@ int main()
 
     Menu game_menu;
 
+    Room bedroom(10,"bedroom","Where you sleep",{11,-1,-1,-1});
+    Room bathroom(11,"bathroom","Where you brush your teeth",{-1,-1,10,-1});
 
 
-    Player myPlayer("Bill","Nye",100);
+
+    bedroom.set_current_room(10);
+
+    std::cout << "Connected rooms: "; 
+    for(int con_room : bedroom.get_connected_rooms())
+    {
+        std::cout << con_room <<" ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Current room: " << bedroom.get_current_room() << std::endl;
+
+    std::cout << "Room ID: " << bedroom.get_room_id() << std::endl;
+
+    std::cout << "Name : " << bedroom.get_name() << std::endl;
+    std::cout << "Description" << bedroom.get_description() << std::endl;
+
+    std::cout << "List of rooms: ";
+    for(int room : bedroom.get_list_of_rooms())
+    {
+        std::cout << room <<" ";
+    }
+
+
+
+    // Player myPlayer("Bill","Nye",100);
     
-    game_menu.show_cursor(false);
+    // game_menu.show_cursor(false);
 
-    game_menu.clear_screen();   
-    game_menu.show_menu_buttons();
-    game_menu.check_menu_bar_button_press(&myPlayer);
+    // game_menu.clear_screen();   
+    // game_menu.show_menu_buttons();
+    // game_menu.check_menu_bar_button_press(&myPlayer);
        
         
 

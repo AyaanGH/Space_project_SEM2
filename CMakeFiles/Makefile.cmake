@@ -47,5 +47,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
   "CMakeFiles/player.dir/DependInfo.cmake"
+  "CMakeFiles/room.dir/DependInfo.cmake"
   "CMakeFiles/menu.dir/DependInfo.cmake"
   )

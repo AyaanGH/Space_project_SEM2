@@ -136,6 +136,19 @@ player/fast:
 .PHONY : player/fast
 
 #=============================================================================
+# Target rules for targets named room
+
+# Build rule for target.
+room: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 room
+.PHONY : room
+
+# fast build rule for target.
+room/fast:
+	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/build
+.PHONY : room/fast
+
+#=============================================================================
 # Target rules for targets named menu
 
 # Build rule for target.
@@ -229,6 +242,33 @@ src/player.cpp.s:
 	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
 
+src/room.obj: src/room.cpp.obj
+
+.PHONY : src/room.obj
+
+# target to build an object file
+src/room.cpp.obj:
+	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/src/room.cpp.obj
+.PHONY : src/room.cpp.obj
+
+src/room.i: src/room.cpp.i
+
+.PHONY : src/room.i
+
+# target to preprocess a source file
+src/room.cpp.i:
+	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/src/room.cpp.i
+.PHONY : src/room.cpp.i
+
+src/room.s: src/room.cpp.s
+
+.PHONY : src/room.s
+
+# target to generate assembly for a file
+src/room.cpp.s:
+	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/src/room.cpp.s
+.PHONY : src/room.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -238,6 +278,7 @@ help:
 	@echo ... edit_cache
 	@echo ... main
 	@echo ... player
+	@echo ... room
 	@echo ... menu
 	@echo ... rebuild_cache
 	@echo ... src/main.obj
@@ -249,6 +290,9 @@ help:
 	@echo ... src/player.obj
 	@echo ... src/player.i
 	@echo ... src/player.s
+	@echo ... src/room.obj
+	@echo ... src/room.i
+	@echo ... src/room.s
 .PHONY : help
 
 

@@ -3,5 +3,6 @@
 
 CMakeFiles/main.dir/src/main.cpp.obj: include/menu.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/player.h
+CMakeFiles/main.dir/src/main.cpp.obj: include/room.h
 CMakeFiles/main.dir/src/main.cpp.obj: src/main.cpp
 

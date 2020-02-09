@@ -28,6 +28,7 @@ SET(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/builds/lib)
 
 add_library( player src/player.cpp )
 add_library( menu src/menu.cpp )
+add_library( room src/room.cpp )
 add_executable( main src/main.cpp )
-target_link_libraries( main player menu )
+target_link_libraries( main player menu room )
 
