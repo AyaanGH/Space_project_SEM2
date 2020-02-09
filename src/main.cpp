@@ -30,25 +30,36 @@ int main()
 
     bedroom.set_current_room(10);
 
-    std::cout << "Connected rooms: "; 
-    for(int con_room : bedroom.get_connected_rooms())
+    std::cout << "Connected rooms: \n"; 
+
+    Room::show_adjacent_rooms(&bedroom);
+ 
+
+    for(Room objects: Room::get_list_of_room_objects() )
     {
-        std::cout << con_room <<" ";
+        std::cout << objects.get_name() << std::endl;
+
     }
-    std::cout << std::endl;
+    // {
+    //     std::cout << con_room <<" ";
+    // for(int con_room : bedroom.get_connected_rooms())
+    // {
+    //     std::cout << con_room <<" ";
+    // }
+    // std::cout << std::endl;
 
-    std::cout << "Current room: " << bedroom.get_current_room() << std::endl;
+    // std::cout << "Current room: " << bedroom.get_current_room() << std::endl;
 
-    std::cout << "Room ID: " << bedroom.get_room_id() << std::endl;
+    // std::cout << "Room ID: " << bedroom.get_room_id() << std::endl;
 
-    std::cout << "Name : " << bedroom.get_name() << std::endl;
-    std::cout << "Description" << bedroom.get_description() << std::endl;
+    // std::cout << "Name : " << bedroom.get_name() << std::endl;
+    // std::cout << "Description" << bedroom.get_description() << std::endl;
 
-    std::cout << "List of rooms: ";
-    for(int room : bedroom.get_list_of_rooms())
-    {
-        std::cout << room <<" ";
-    }
+    // std::cout << "List of rooms: ";
+    // for(int room : bedroom.get_list_of_rooms())
+    // {
+    //     std::cout << room <<" ";
+    // }
 
 
 

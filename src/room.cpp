@@ -17,13 +17,14 @@ Room::Room(int roomID, string name, string description, std::array<int, 4> conne
     this->connected_rooms = connected_rooms;
 
     Room::list_of_rooms.push_back({roomID});
+    Room::list_of_room_objects.push_back({*this});
 }
 
 //static members
 
 int Room::current_room;
-std::vector<int> Room::list_of_rooms = {};
-
+// std::vector<int> Room::list_of_rooms = {};
+std::vector<Room> Room::list_of_room_objects = {};
 
 //Getters
 
@@ -32,11 +33,11 @@ int Room::get_room_id()
     return roomID;
 }
 
-std::vector<int> Room::get_list_of_rooms()
-{
+// std::vector<int> Room::get_list_of_rooms()
+// {
 
-    return Room::list_of_rooms;
-}
+//     return Room::list_of_rooms;
+// }
 
 int Room::get_current_room()
 {
@@ -60,37 +61,33 @@ string Room::get_name()
 
 //Setters
 
-
 int Room::set_roomID(int roomID)
 {
-    if (roomID<10)
+    if (roomID < 10)
     {
         std::cout << "Cant set room ID to less than 10. Throwing error";
 
-        std::cout << 10/0 ;
+        std::cout << 10 / 0;
     }
 
     else
     {
         return roomID;
     }
-    
-
 }
 int Room::set_current_room(int roomID)
 {
-   for(int room : Room::list_of_rooms)
-   {
-       if(room==roomID)
-       {
-           return roomID;
-       }
-   }
+    for (Room room : Room::get_list_of_room_objects())
+    {
+        if (room.get_room_id() == roomID)
+        {
+            return roomID;
+        }
+    }
 
-   std::cout << "Room ID doesnt exist";
-   std::cout << 10/0;
+    std::cout << "Room ID doesnt exist";
+    std::cout << 10 / 0;
 }
-
 
 string Room::set_name(string name)
 {
@@ -101,7 +98,28 @@ string Room::set_description(string description)
     return description;
 }
 
-
-
-
 //Methods
+
+//Static Methods
+void Room::show_adjacent_rooms(Room *room_object)
+
+{
+
+    std::array<int, 4> con_rooms = room_object->get_connected_rooms();
+
+    for (int room : con_rooms)
+    {
+
+        std::cout << room << std::endl;
+    }
+}
+
+
+std::vector<Room> Room::get_list_of_room_objects()
+{
+
+    return list_of_room_objects;
+
+
+}
+

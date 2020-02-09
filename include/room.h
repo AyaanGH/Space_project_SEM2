@@ -14,9 +14,10 @@ class Room
 private:
 
     static int current_room;
+    static std::vector<Room> list_of_room_objects;
 
 
-    static std::vector<int> list_of_rooms;
+    // static std::vector<int> list_of_rooms;
 
     int roomID;
     std::array<int, 4> connected_rooms; // {north,east,south,west}
@@ -42,6 +43,8 @@ public:
 
     string get_name();
 
+    static std::vector<Room> get_list_of_room_objects();
+
     //setters
 
     int set_roomID(int roomID);
@@ -51,6 +54,14 @@ public:
     // int set_connected_rooms(std::array<int, 4> connected_rooms);
 
     //methods
+
+    static void show_adjacent_rooms(Room *room_object);
+
+    
+
+
+
+
 };
 
 #endif
