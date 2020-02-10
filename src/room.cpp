@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <vector>
+#include <windows.h>
 #include <array>
+#include <string>
 using std::string;
 
 //Constructor
@@ -128,6 +130,8 @@ std::vector<Room> Room::get_list_of_room_objects()
 void Room::display_room_selection(Room *room_object)
 {
     
+    std::cout << "Now in Display room selection \n";
+    Sleep(3000);
     int user_selection = 0;
     int connected_room_number = 0;
     char user_input;
@@ -161,42 +165,73 @@ void Room::display_room_selection(Room *room_object)
             }
         }
 
+        std::cout << " selection" << user_selection <<std::endl;
+        // Sleep(3000);
+
         Menu::clear_screen();
         std::cout << room_object->get_name() << std::endl;
+        std::cout<< "------------------\n\n";
 
         for (int index_of_array = 0; index_of_array < 4; index_of_array++)
         {
+
+            // std::cout << index_of_array << ":::Array index\n\n";
             if (room_object->get_connected_rooms()[index_of_array] == -1)
             {
+                // std::cout << " If Array Index is -1, continue : (Value of object array) \n" << room_object->get_connected_rooms()[index_of_array];
+                // Sleep(3000);
                 continue;
             }
 
-            if (room_object->get_connected_rooms()[index_of_array] == user_selection)
+            if (index_of_array == user_selection)
             {
 
-                std::cout << room_object->get_name() + "  <--------\n";
+                // std::cout << " If Array Index is equal to user selection:"<<user_selection <<"(Value of object array) \n" << room_object->get_connected_rooms()[index_of_array];
+                // Sleep(3000);    
+                // std::cout << room_object->get_connected_rooms()[index_of_array] + "  <--------\n";
+
+                auto s = std::to_string( room_object->get_connected_rooms()[index_of_array]);
+                std::cout << s + "  <--------\n";
+
             }
 
             else
-            {
-                std::cout << room_object->get_name() << std::endl;
+            {   
+
+                // std::cout << " If Array Index is not selected:"<<user_selection <<"(Value of object array) \n" << room_object->get_connected_rooms()[index_of_array];
+                // Sleep(3000);    
+                std::cout << room_object->get_connected_rooms()[index_of_array] << std::endl;
             }
         }
 
+        std::cout << "waiting for input\n";
         char user_input = _getch();
 
         switch (user_input)
         {
-        case 'H':
+        case 'm':
             /* code */
+            std::cout << " Up arrow:";
+            Sleep(300); 
             user_selection--;
             break;
 
-        case 'P':
+        case 'n':
             /* code */
+            std::cout << " Down arrow:";
+            Sleep(300); 
             user_selection++;
             break;
+        case 'r':
+            /* code */
+            std::cout << " return ";
+            Sleep(3000); 
+            break;
 
+        default:
+            std::cout << " No valid keypress:";
+            Sleep(300); 
+            break;
         
         }
     }

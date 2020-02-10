@@ -41,6 +41,10 @@ iostream
 -
 vector
 -
+windows.h
+-
 array
+-
+string
 -
 
