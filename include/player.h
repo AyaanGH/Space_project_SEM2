@@ -27,7 +27,7 @@ public:
     string get_last_name();
     int get_hp();
 
-    Room get_current_room_object();
+    Room* get_current_room_object();
 
     //Setters
 

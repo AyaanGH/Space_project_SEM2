@@ -1,10 +1,11 @@
 #include "../include/menu.h"
 #include "../include/room.h"
+// #include "../include/player.h"
 #include <windows.h>
 #include <iostream>
 using std::string;
 #include <array>
-#include <stdio.h>
+#include <stdio.h>  
 #include <conio.h>
 #include <string>
 #include <vector>
@@ -221,6 +222,7 @@ void Menu::show_menu_buttons()
 
 void Menu::check_menu_bar_button_press(Player *player_object)
 {
+    
     switch (get_player_input())
     {
     
@@ -243,7 +245,8 @@ void Menu::check_menu_bar_button_press(Player *player_object)
         case 'm':
 
             clear_screen();
-            Room::display_room_selection(&player_object ->get_current_room_object());
+            Room::display_room_selection((player_object ->get_current_room_object()));
+            
 
             break;
     }

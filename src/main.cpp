@@ -56,6 +56,7 @@ int main()
     Menu::clear_screen();
 
     game_menu.show_menu_buttons();
+    
     game_menu.check_menu_bar_button_press(&myPlayer);
 
 

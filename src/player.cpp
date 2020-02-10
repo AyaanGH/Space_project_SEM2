@@ -39,9 +39,9 @@ int Player::get_hp()
 }
 
 
-Room Player::get_current_room_object()
+Room* Player::get_current_room_object()
 {
-    return *Player::current_room_object;
+    return Player::current_room_object;
 }
 
 //Setters

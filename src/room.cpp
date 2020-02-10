@@ -125,8 +125,9 @@ std::vector<Room> Room::get_list_of_room_objects()
     return list_of_room_objects;
 }
 
-void display_room_selection(Room *room_object)
+void Room::display_room_selection(Room *room_object)
 {
+    
     int user_selection = 0;
     int connected_room_number = 0;
     char user_input;

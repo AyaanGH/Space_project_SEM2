@@ -56,11 +56,11 @@ public:
     // int set_connected_rooms(std::array<int, 4> connected_rooms);
 
     //methods
+    static void display_room_selection(Room *room_object);
 
     static void show_adjacent_rooms(Room *room_object);
 
 
-    static void display_room_selection(Room *room_object);
 
     
 
