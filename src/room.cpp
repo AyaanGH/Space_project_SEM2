@@ -22,7 +22,7 @@ Room::Room(int roomID, string name, string description, std::array<int, 4> conne
 
 //static members
 
-int Room::current_room;
+Room *Room::current_room_object;
 // std::vector<int> Room::list_of_rooms = {};
 std::vector<Room> Room::list_of_room_objects = {};
 
@@ -39,9 +39,9 @@ int Room::get_room_id()
 //     return Room::list_of_rooms;
 // }
 
-int Room::get_current_room()
+Room Room::get_current_room_object()
 {
-    return Room::current_room;
+    return *Room::current_room_object;
 }
 
 std::array<int, 4> Room::get_connected_rooms()
@@ -75,11 +75,13 @@ int Room::set_roomID(int roomID)
         return roomID;
     }
 }
-void Room::set_current_room(int roomID)
+void Room::set_current_room(Room *room_object)
 
 {
 
-     current_room = roomID;
+     current_room_object = room_object;
+
+
     // for (Room room : Room::get_list_of_room_objects())
     // {
     //     if (room.get_room_id() == roomID)

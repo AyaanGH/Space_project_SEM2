@@ -27,32 +27,44 @@ int main()
     Room bathroom(11,"bathroom","Where you brush your teeth",{-1,-1,10,-1});
 
 
-
-    Room::set_current_room(10);
+    //Changes to object
+    Room::set_current_room(&bedroom);
 
     std::cout << "Connected rooms: \n"; 
 
     Room::show_adjacent_rooms(&bedroom);
 
 
+
     for(Room room_object: Room::get_list_of_room_objects() )
     {
         std::cout << room_object.get_name() << std::endl;
 
-        if(room_object.get_room_id()== Room::get_current_room())
+        // if(room_object.get_room_id() == Room::get_current_room_object().get_room_id())
+        // {
+
+        //     room_selected = &Room::get_current_room_object();
+        // }
 
     }
 
     Sleep(3000);
 
-    int selected_room;
+    
+   //Question. Want to reassign this to a easier to type variable.
+   //Question regarding exceptions
+//    Room::get_current_room_object()
+   
+   
+    
+    //int user_selection;
+    // while (true)
+    // {
+    //     /* code */
 
-    while (true)
-    {
-        /* code */
-
-        if(selected_room < )
-    }
+    //     if user_selection < choices and > .....
+    //     correct it
+    // }
     
 
     // {
