@@ -52,8 +52,9 @@ int main()
 
     
    //Question. Want to reassign this to a easier to type variable.
-   //Question regarding exceptions
-//    Room::get_current_room_object()
+
+    auto here = Room::get_current_room_object();
+    
    
    
     
