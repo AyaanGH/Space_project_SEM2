@@ -1,4 +1,5 @@
 #include "../include/room.h"
+#include "../include/menu.h"
 
 #include <iostream>
 #include <vector>
@@ -81,7 +82,6 @@ int Room::set_roomID(int roomID)
 
 //      current_room_object = room_object;
 
-
 //     // for (Room room : Room::get_list_of_room_objects())
 //     // {
 //     //     if (room.get_room_id() == roomID)
@@ -119,12 +119,84 @@ void Room::show_adjacent_rooms(Room *room_object)
     }
 }
 
-
 std::vector<Room> Room::get_list_of_room_objects()
 {
 
     return list_of_room_objects;
-
-
 }
 
+void display_room_selection(Room *room_object)
+{
+    int user_selection = 0;
+    int connected_room_number = 0;
+    char user_input;
+
+    while (user_input != 'r')
+
+    {
+
+        //User selection in the index position which the arrow is rendered on. Making sure that the user doesn't go out of bounds of the array
+        while (true)
+        {
+            if (user_selection < 0)
+            {
+                user_selection = 3;
+            }
+
+            if (user_selection > 3)
+            {
+                user_selection = 0;
+            }
+
+            if (room_object->get_connected_rooms()[user_selection] == -1)
+            {
+
+                user_selection++;
+            }
+
+            else
+            {
+                break;
+            }
+        }
+
+        Menu::clear_screen();
+        std::cout << room_object->get_name() << std::endl;
+
+        for (int index_of_array = 0; index_of_array < 4; index_of_array++)
+        {
+            if (room_object->get_connected_rooms()[index_of_array] == -1)
+            {
+                continue;
+            }
+
+            if (room_object->get_connected_rooms()[index_of_array] == user_selection)
+            {
+
+                std::cout << room_object->get_name() + "  <--------\n";
+            }
+
+            else
+            {
+                std::cout << room_object->get_name() << std::endl;
+            }
+        }
+
+        char user_input = _getch();
+
+        switch (user_input)
+        {
+        case 'H':
+            /* code */
+            user_selection--;
+            break;
+
+        case 'P':
+            /* code */
+            user_selection++;
+            break;
+
+        
+        }
+    }
+}

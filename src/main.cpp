@@ -24,7 +24,7 @@ int main()
     Menu game_menu;
     Player myPlayer("Bill","Nye",100);
 
-    Room bedroom(10,"bedroom","Where you sleep",{10,-1,-1,-1});
+    Room bedroom(10,"bedroom","Where you sleep",{11,-1,-1,-1});
     Room bathroom(11,"bathroom","Where you brush your teeth",{-1,-1,10,-1});
 
 
@@ -52,6 +52,13 @@ int main()
     }
 
     Sleep(3000);
+
+    Menu::clear_screen();
+
+    game_menu.show_menu_buttons();
+    game_menu.check_menu_bar_button_press(&myPlayer);
+
+
 
     
    //Question. Want to reassign this to a easier to type variable.

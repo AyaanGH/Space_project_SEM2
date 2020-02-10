@@ -33,8 +33,8 @@ public:
 
     char get_player_input();
 
-    void clear_screen();
-    void clear_screen_ansi();
+    static void clear_screen();
+    static void clear_screen_ansi();
 
     void setCursorPosition(int x, int y);
 

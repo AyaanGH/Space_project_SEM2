@@ -5,6 +5,7 @@
 #include <vector>
 #include <array>
 #include <string>
+#include <conio.h>
 
 using std::string;
 
@@ -57,6 +58,9 @@ public:
     //methods
 
     static void show_adjacent_rooms(Room *room_object);
+
+
+    static void display_room_selection(Room *room_object);
 
     
 

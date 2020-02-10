@@ -1,5 +1,5 @@
 #include "../include/menu.h"
-// #include "../include/player.h"
+#include "../include/room.h"
 #include <windows.h>
 #include <iostream>
 using std::string;
@@ -241,7 +241,10 @@ void Menu::check_menu_bar_button_press(Player *player_object)
         
             break;
         case 'm':
-    
+
+            clear_screen();
+            Room::display_room_selection(&player_object ->get_current_room_object());
+
             break;
     }
 }
