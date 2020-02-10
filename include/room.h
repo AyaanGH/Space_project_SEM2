@@ -5,6 +5,7 @@
 #include <vector>
 #include <array>
 #include <string>
+
 using std::string;
 
 class Room
@@ -13,7 +14,7 @@ class Room
 
 private:
 
-    static Room *current_room_object;
+    // static Room *current_room_object;
     static std::vector<Room> list_of_room_objects;
 
 
@@ -35,7 +36,7 @@ public:
 
     std::vector<int> get_list_of_rooms();
 
-    static Room get_current_room_object();
+    // static Room get_current_room_object();
 
     std::array<int, 4> get_connected_rooms();
 
@@ -48,7 +49,7 @@ public:
     //setters
 
     int set_roomID(int roomID);
-    static void set_current_room(Room *room_object);
+    // static void set_current_room(Room *room_object);
     string set_name(string name);
     string set_description(string description);
     // int set_connected_rooms(std::array<int, 4> connected_rooms);

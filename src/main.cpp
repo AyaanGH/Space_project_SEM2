@@ -22,13 +22,16 @@ int main()
 {
 
     Menu game_menu;
+    Player myPlayer("Bill","Nye",100);
 
-    Room bedroom(10,"bedroom","Where you sleep",{11,-1,-1,-1});
+    Room bedroom(10,"bedroom","Where you sleep",{10,-1,-1,-1});
     Room bathroom(11,"bathroom","Where you brush your teeth",{-1,-1,10,-1});
 
 
     //Changes to object
-    Room::set_current_room(&bedroom);
+    // Room::set_current_room(&bedroom);
+
+    myPlayer.set_current_room(&bedroom); 
 
     std::cout << "Connected rooms: \n"; 
 
@@ -53,10 +56,10 @@ int main()
     
    //Question. Want to reassign this to a easier to type variable.
 
-    auto here = Room::get_current_room_object();
+    // auto here = Room::get_current_room_object();
     
    
-   
+
     
     //int user_selection;
     // while (true)

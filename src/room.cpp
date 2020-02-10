@@ -22,7 +22,7 @@ Room::Room(int roomID, string name, string description, std::array<int, 4> conne
 
 //static members
 
-Room *Room::current_room_object;
+// Room *Room::current_room_object;
 // std::vector<int> Room::list_of_rooms = {};
 std::vector<Room> Room::list_of_room_objects = {};
 
@@ -39,10 +39,10 @@ int Room::get_room_id()
 //     return Room::list_of_rooms;
 // }
 
-Room Room::get_current_room_object()
-{
-    return *Room::current_room_object;
-}
+// Room Room::get_current_room_object()
+// {
+//     return *Room::current_room_object;
+// }
 
 std::array<int, 4> Room::get_connected_rooms()
 {
@@ -67,7 +67,7 @@ int Room::set_roomID(int roomID)
     {
         std::cout << "Cant set room ID to less than 10. Throwing error";
 
-        std::cout << 10 / 0;
+        throw "Error, cant set room ID to less than 10";
     }
 
     else
@@ -75,24 +75,24 @@ int Room::set_roomID(int roomID)
         return roomID;
     }
 }
-void Room::set_current_room(Room *room_object)
+// void Room::set_current_room(Room *room_object)
 
-{
+// {
 
-     current_room_object = room_object;
+//      current_room_object = room_object;
 
 
-    // for (Room room : Room::get_list_of_room_objects())
-    // {
-    //     if (room.get_room_id() == roomID)
-    //     {
-    //         ;
-    //     }
-    // }
+//     // for (Room room : Room::get_list_of_room_objects())
+//     // {
+//     //     if (room.get_room_id() == roomID)
+//     //     {
+//     //         ;
+//     //     }
+//     // }
 
-    // std::cout << "Room ID doesnt exist";
-    // std::cout << 10 / 0;
-}
+//     // std::cout << "Room ID doesnt exist";
+//     // std::cout << 10 / 0;
+// }
 
 string Room::set_name(string name)
 {

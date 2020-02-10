@@ -3,5 +3,6 @@
 
 CMakeFiles/menu.dir/src/menu.cpp.obj: include/menu.h
 CMakeFiles/menu.dir/src/menu.cpp.obj: include/player.h
+CMakeFiles/menu.dir/src/menu.cpp.obj: include/room.h
 CMakeFiles/menu.dir/src/menu.cpp.obj: src/menu.cpp
 

@@ -13,6 +13,11 @@ Player::Player(string first_name, string last_name, int hp)
     this->hp = set_hp(hp);
 }
 
+
+Room *current_room_object;
+
+
+
 //Getters
 
 string Player::get_first_name()
@@ -31,6 +36,12 @@ int Player::get_hp()
 {
 
     return hp;
+}
+
+
+Room Player::get_current_room_object()
+{
+    return *Player::current_room_object;
 }
 
 //Setters
@@ -55,6 +66,15 @@ int Player::set_hp(int hp)
         std::cout << "HP cannot be SET lower than zero, current hp --> 0\n";
     }
     return hp;
+}
+
+
+void Player::set_current_room(Room *room_object)
+
+{
+
+     current_room_object = room_object;
+
 }
 
 //Public Methods
