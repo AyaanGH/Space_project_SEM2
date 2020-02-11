@@ -10,6 +10,7 @@ using std::string;
 
 //Constructor
 
+
 Room::Room(int roomID, string name, string description, std::array<int, 4> connected_rooms)
 
 {
@@ -127,7 +128,7 @@ std::vector<Room> Room::get_list_of_room_objects()
     return list_of_room_objects;
 }
 
-void Room::display_room_selection(Room *room_object)
+void Room::display_room_selection(Room *room_object, Player *player_object)
 {
 
     std::cout << "Now in Display room selection \n";
@@ -195,7 +196,10 @@ void Room::display_room_selection(Room *room_object)
                 // std::cout << s + "  <--------\n";
 
 
-                std::cout << get_room_obect_from_ID(room_object->get_connected_rooms()[index_of_array]).get_name() + "<---------\n";
+                std::cout << get_room_obect_from_ID(room_object->get_connected_rooms()[index_of_array]) ->  get_name() + "<---------\n";
+
+                
+               
             }
 
             else
@@ -204,7 +208,7 @@ void Room::display_room_selection(Room *room_object)
                 // std::cout << " If Array Index is not selected:"<<user_selection <<"(Value of object array) \n" << room_object->get_connected_rooms()[index_of_array];
                 // Sleep(3000);
                 // std::cout << room_object->get_connected_rooms()[index_of_array] << std::endl;
-                std::cout << get_room_obect_from_ID(room_object->get_connected_rooms()[index_of_array]).get_name() <<std::endl;
+                std::cout << get_room_obect_from_ID(room_object->get_connected_rooms()[index_of_array]) -> get_name() <<std::endl;
             }
         }
 
@@ -245,6 +249,12 @@ void Room::display_room_selection(Room *room_object)
             std::cout << " Enter key selected ";
             Sleep(1000);
             user_is_selecting = false;
+
+            player_object ->set_current_room( get_room_obect_from_ID(room_object->get_connected_rooms()[user_selection])); 
+
+            
+
+            
             
             break;
 
@@ -261,23 +271,32 @@ void Room::display_room_selection(Room *room_object)
 }
 
 
-Room Room::get_room_obect_from_ID(int ID)
+Room* Room::get_room_obect_from_ID(int ID)
 {
-// std::cout << "Getting object from ID" <<ID << std::endl;
-// Sleep(1000);
+
+// for (Room* room_object : list_of_room_objects)
+// {
+    
+//     if (room_object.get_room_id() == ID)
+//     {
+//         return &room_object;
+//     }
+    
+// }
 
 
-// BIG THINGS TO CORRECT, SHOULD BE  GETTER
-for (Room room_object : list_of_room_objects)
+for (int i = 0; i < list_of_room_objects.size() ; i++)
 {
-    // std::cout << room_object.get_room_id() << "ROOM IDs in array";
-    // Sleep(1000);
-    if (room_object.get_room_id() == ID)
+    /* code */
+
+
+    if (list_of_room_objects[i].get_room_id() == ID )
     {
-        return room_object;
+        return &list_of_room_objects[i];
     }
     
 }
+
 
 throw "ROOM ID DOES NOT EXIST THAT U ARE TRYING TO FIND";
 

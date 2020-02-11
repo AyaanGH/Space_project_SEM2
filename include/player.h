@@ -6,6 +6,10 @@
 #include <iostream>
 using std::string;
 
+//forward declarations
+
+class Room;
+
 class Player
 {
 private:

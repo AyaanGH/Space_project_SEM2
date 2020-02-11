@@ -30,10 +30,10 @@ int main()
     Menu game_menu;
     Player myPlayer("Bill","Nye",100);
 
-    Room bedroom(10,"Bedroom","Where you sleep",{12,13,14,-1});
-    Room lounge(12,"Lounge","relax",{-1,-1,-1,-1});
-    Room kitchen(13,"Kitchen","Eat",{-1,-1,10,-1});
-    Room garden(14,"Garden","Grass",{-1,-1,10,-1});
+    Room bedroom(10,"Bedroom","Where you sleep",{12,-1,14,-1});
+    Room lounge(12,"Lounge","relax",{-1,13,10,-1});
+    Room kitchen(13,"Kitchen","Eat",{-1,-1,-1,12});
+    Room garden(14,"Garden","Grass",{10,-1,-1,-1});
     
 
 
@@ -69,6 +69,8 @@ while (true)
     Menu::clear_screen();
 
     game_menu.show_menu_buttons();
+
+
 
     game_menu.check_menu_bar_button_press(&myPlayer);
 

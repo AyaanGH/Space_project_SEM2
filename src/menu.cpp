@@ -245,7 +245,7 @@ void Menu::check_menu_bar_button_press(Player *player_object)
         case 'm':
 
             clear_screen();
-            Room::display_room_selection((player_object ->get_current_room_object()));
+            Room::display_room_selection((player_object ->get_current_room_object()), player_object);
             
 
             break;
