@@ -135,9 +135,9 @@ void Room::display_room_selection(Room *room_object)
     int user_selection = 0;
     int connected_room_number = 0;
     char user_input;
-    bool return_pressed = false;
+    bool user_is_selecting = true;
 
-    while (true)
+    while (user_is_selecting)
 
     {
 
@@ -213,14 +213,14 @@ void Room::display_room_selection(Room *room_object)
 
         switch (user_input)
         {
-        case 'm':
+        case 'H':
             /* code */
             std::cout << " Up arrow:";
             Sleep(100);
             user_selection--;
             break;
 
-        case 'n':
+        case 'P':
             /* code */
             std::cout << " Down arrow:";
             Sleep(100);
@@ -230,7 +230,22 @@ void Room::display_room_selection(Room *room_object)
             /* code */
             std::cout << " return ";
             Sleep(1000);
-            return_pressed = true;
+            user_is_selecting = false;
+            break;
+
+        case '\b':
+            /* code */
+            std::cout << " return ";
+            Sleep(1000);
+            user_is_selecting = false;
+            break;
+        
+        case '\r':
+            /* code */
+            std::cout << " Enter key selected ";
+            Sleep(1000);
+            user_is_selecting = false;
+            
             break;
 
         default:
@@ -240,9 +255,9 @@ void Room::display_room_selection(Room *room_object)
         }
     }
 
-    Menu::clear_screen;
+    
 
-    Menu::show_menu_buttons;
+    
 }
 
 

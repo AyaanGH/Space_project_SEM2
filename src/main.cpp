@@ -21,6 +21,12 @@ using std::string;
 int main()
 {
 
+    // while(true)
+    //     {
+    //     char move = _getch();
+
+    //     std::cout<< move << std::endl;
+    //     }
     Menu game_menu;
     Player myPlayer("Bill","Nye",100);
 
@@ -56,13 +62,17 @@ int main()
 
     Sleep(3000);
 
+
+while (true)
+
+{
     Menu::clear_screen();
 
     game_menu.show_menu_buttons();
 
     game_menu.check_menu_bar_button_press(&myPlayer);
 
-
+}
 
     
    //Question. Want to reassign this to a easier to type variable.
