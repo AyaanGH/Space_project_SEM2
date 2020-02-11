@@ -129,14 +129,15 @@ std::vector<Room> Room::get_list_of_room_objects()
 
 void Room::display_room_selection(Room *room_object)
 {
-    
+
     std::cout << "Now in Display room selection \n";
     Sleep(3000);
     int user_selection = 0;
     int connected_room_number = 0;
     char user_input;
+    bool return_pressed = false;
 
-    while (user_input != 'r')
+    while (true)
 
     {
 
@@ -165,12 +166,12 @@ void Room::display_room_selection(Room *room_object)
             }
         }
 
-        std::cout << " selection" << user_selection <<std::endl;
-        // Sleep(3000);
+        // std::cout << " selection" << user_selection << std::endl;
+        //  Sleep(3000);
 
         Menu::clear_screen();
         std::cout << room_object->get_name() << std::endl;
-        std::cout<< "------------------\n\n";
+        std::cout << "------------------\n\n";
 
         for (int index_of_array = 0; index_of_array < 4; index_of_array++)
         {
@@ -187,24 +188,27 @@ void Room::display_room_selection(Room *room_object)
             {
 
                 // std::cout << " If Array Index is equal to user selection:"<<user_selection <<"(Value of object array) \n" << room_object->get_connected_rooms()[index_of_array];
-                // Sleep(3000);    
+                // Sleep(3000);
                 // std::cout << room_object->get_connected_rooms()[index_of_array] + "  <--------\n";
 
-                auto s = std::to_string( room_object->get_connected_rooms()[index_of_array]);
-                std::cout << s + "  <--------\n";
+                // auto s = std::to_string(room_object->get_connected_rooms()[index_of_array]);
+                // std::cout << s + "  <--------\n";
 
+
+                std::cout << get_room_obect_from_ID(room_object->get_connected_rooms()[index_of_array]).get_name() + "<---------\n";
             }
 
             else
-            {   
+            {
 
                 // std::cout << " If Array Index is not selected:"<<user_selection <<"(Value of object array) \n" << room_object->get_connected_rooms()[index_of_array];
-                // Sleep(3000);    
-                std::cout << room_object->get_connected_rooms()[index_of_array] << std::endl;
+                // Sleep(3000);
+                // std::cout << room_object->get_connected_rooms()[index_of_array] << std::endl;
+                std::cout << get_room_obect_from_ID(room_object->get_connected_rooms()[index_of_array]).get_name() <<std::endl;
             }
         }
 
-        std::cout << "waiting for input\n";
+        std::cout << "\n\n\n\nwaiting for input\n";
         char user_input = _getch();
 
         switch (user_input)
@@ -212,27 +216,57 @@ void Room::display_room_selection(Room *room_object)
         case 'm':
             /* code */
             std::cout << " Up arrow:";
-            Sleep(300); 
+            Sleep(100);
             user_selection--;
             break;
 
         case 'n':
             /* code */
             std::cout << " Down arrow:";
-            Sleep(300); 
+            Sleep(100);
             user_selection++;
             break;
         case 'r':
             /* code */
             std::cout << " return ";
-            Sleep(3000); 
+            Sleep(1000);
+            return_pressed = true;
             break;
 
         default:
             std::cout << " No valid keypress:";
-            Sleep(300); 
+            Sleep(100);
             break;
-        
         }
     }
+
+    Menu::clear_screen;
+
+    Menu::show_menu_buttons;
+}
+
+
+Room Room::get_room_obect_from_ID(int ID)
+{
+// std::cout << "Getting object from ID" <<ID << std::endl;
+// Sleep(1000);
+
+
+// BIG THINGS TO CORRECT, SHOULD BE  GETTER
+for (Room room_object : list_of_room_objects)
+{
+    // std::cout << room_object.get_room_id() << "ROOM IDs in array";
+    // Sleep(1000);
+    if (room_object.get_room_id() == ID)
+    {
+        return room_object;
+    }
+    
+}
+
+throw "ROOM ID DOES NOT EXIST THAT U ARE TRYING TO FIND";
+
+
+//
+
 }

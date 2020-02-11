@@ -60,6 +60,8 @@ public:
 
     static void show_adjacent_rooms(Room *room_object);
 
+    static Room get_room_obect_from_ID(int ID);
+
 
 
     

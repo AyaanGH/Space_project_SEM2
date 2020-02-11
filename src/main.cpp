@@ -24,8 +24,11 @@ int main()
     Menu game_menu;
     Player myPlayer("Bill","Nye",100);
 
-    Room bedroom(10,"bedroom","Where you sleep",{50,60,70,-1});
-    Room bathroom(11,"bathroom","Where you brush your teeth",{-1,-1,10,-1});
+    Room bedroom(10,"Bedroom","Where you sleep",{12,13,14,-1});
+    Room lounge(12,"Lounge","relax",{-1,-1,-1,-1});
+    Room kitchen(13,"Kitchen","Eat",{-1,-1,10,-1});
+    Room garden(14,"Garden","Grass",{-1,-1,10,-1});
+    
 
 
     //Changes to object
