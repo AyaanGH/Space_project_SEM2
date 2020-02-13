@@ -91,6 +91,7 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
     int user_selection = 0;
     int connected_room_number = 0;
     char user_input;
+    bool user_going_down = true;
     bool user_is_selecting = true;
 
     while (user_is_selecting)
@@ -112,8 +113,16 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
 
             if (room_object->get_connected_rooms()[user_selection] == -1)
             {
-
-                 user_selection++;
+                if (user_going_down == true)
+                {
+                    user_selection++;
+                }
+                
+                else
+                {
+                    user_selection--;
+                }
+                 
             }
 
             else
@@ -154,10 +163,12 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
         case 'H':
 
             user_selection--;
+            user_going_down = false;
             break;
 
         case 'P':
             user_selection++;
+            user_going_down = true;
             break;
 
         case '\b':
