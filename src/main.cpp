@@ -27,63 +27,37 @@ int main()
 
     //     std::cout<< move << std::endl;
     //     }
+
+    //      L K
+    //      b
+    //      G
+    //TODO: Pass current room to constructor
+
     Menu game_menu;
-    Player myPlayer("Bill","Nye",100);
 
-    Room bedroom(10,"Bedroom","Where you sleep",{12,-1,14,-1});
-    Room lounge(12,"Lounge","relax",{-1,13,10,-1});
-    Room kitchen(13,"Kitchen","Eat",{-1,-1,-1,12});
-    Room garden(14,"Garden","Grass",{10,-1,-1,-1});
-    
+    game_menu.show_cursor(false);
 
+    Player myPlayer("Peter", "Parker", 100);
 
-    //Changes to object
-    // Room::set_current_room(&bedroom);
+    Room market(10, "Marketplace", "Can purchase items", {12, -1, 14, 15});
+    Room power_plant(15, "Power Plant", "Can purchase items", {-1, 10, -1, -1});
+    Room dock(12, "Docks", "Space ships dock", {-1, 13, 10, -1});
+    Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
+    Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
-    myPlayer.set_current_room(&bedroom); 
+    myPlayer.set_current_room(&market);
 
-    std::cout << "Connected rooms: \n"; 
-
-    Room::show_adjacent_rooms(&bedroom);
-
-
-
-    for(Room room_object: Room::get_list_of_room_objects() )
+    while (true)
     {
-        std::cout << room_object.get_name() << std::endl;
-
-        // if(room_object.get_room_id() == Room::get_current_room_object().get_room_id())
-        // {
-
-        //     room_selected = &Room::get_current_room_object();
-        // }
-
+        Menu::clear_screen();
+        game_menu.show_menu_buttons();
+        game_menu.check_menu_bar_button_press(&myPlayer);
     }
 
-    Sleep(3000);
-
-
-while (true)
-
-{
-    Menu::clear_screen();
-
-    game_menu.show_menu_buttons();
-
-
-
-    game_menu.check_menu_bar_button_press(&myPlayer);
-
-}
-
-    
-   //Question. Want to reassign this to a easier to type variable.
+    //Question. Want to reassign this to a easier to type variable.
 
     // auto here = Room::get_current_room_object();
-    
-   
 
-    
     //int user_selection;
     // while (true)
     // {
@@ -92,7 +66,6 @@ while (true)
     //     if user_selection < choices and > .....
     //     correct it
     // }
-    
 
     // {
     //     std::cout << con_room <<" ";
@@ -115,19 +88,15 @@ while (true)
     //     std::cout << room <<" ";
     // }
 
-
-
     // Player myPlayer("Bill","Nye",100);
-    
+
     // game_menu.show_cursor(false);
 
-    // game_menu.clear_screen();   
+    // game_menu.clear_screen();
     // game_menu.show_menu_buttons();
     // game_menu.check_menu_bar_button_press(&myPlayer);
-       
-        
 
-/*
+    /*
 
            Docks
 
@@ -154,28 +123,26 @@ while (true)
    
     
         /* code */
-    // int random_integer1; 
+    // int random_integer1;
     // int random_integer2;
-    // int lowest=1, highest= 20; 
-    // int range=(highest-lowest)+1; 
+    // int lowest=1, highest= 20;
+    // int range=(highest-lowest)+1;
     // for(int index=0; index<20; index++)
-    // { 
+    // {
     // random_integer1 = lowest+int(range*rand()/(RAND_MAX + 1.0));
-    // random_integer2 = lowest+int(range*rand()/(RAND_MAX + 1.0)); 
+    // random_integer2 = lowest+int(range*rand()/(RAND_MAX + 1.0));
     // game_menu.setCursorPosition(random_integer1,random_integer2);
     // std::cout << "." ;
     // Sleep(100);
     // }
-    
+
     return 0;
 }
-
-
 
 // std::random_device rd; // obtain a random number from hardware
 //     std::mt19937 eng(rd()); // seed the generator
 //     std::uniform_int_distribution<> distr(0, width); // define the range
-    
+
 //     for(int n=0; n<800; ++n)
 //     {
 //     game_menu.show_cursor(false);
@@ -186,31 +153,26 @@ while (true)
 //         std::cout << "." ;
 //         Sleep(10);
 
-    
-    // game_menu.
+// game_menu.
 
-    // Player player1("Peter", "Parker", 10);
+// Player player1("Peter", "Parker", 10);
 
+// std::cout << player1.get_first_name() << std::endl;
 
-   
+// std::cout << player1.get_last_name() << std::endl;
 
-    // std::cout << player1.get_first_name() << std::endl;
+// std::cout << player1.get_hp() << std::endl;
 
-    // std::cout << player1.get_last_name() << std::endl;
+// player1.set_hp(-5);
 
-    // std::cout << player1.get_hp() << std::endl;
+// std::cout << player1.get_hp() << std::endl;
 
-    // player1.set_hp(-5);
+// player1.decrease_hp(5);
 
-    // std::cout << player1.get_hp() << std::endl;
+// std::cout << player1.get_hp() << std::endl;
 
-    // player1.decrease_hp(5);
+// int age;
 
-    // std::cout << player1.get_hp() << std::endl;
-
-    // int age;
-
- 
 // while(true)
 // {
 // char move = _getch(); //_getch loads move with one character that the user enters

@@ -5,7 +5,7 @@
 #include <iostream>
 using std::string;
 #include <array>
-#include <stdio.h>  
+#include <stdio.h>
 #include <conio.h>
 #include <string>
 #include <vector>
@@ -89,12 +89,9 @@ void Menu::show_cursor(bool showFlag)
     SetConsoleCursorInfo(out, &cursorInfo);
 }
 
-
 void Menu::clear_screen_ansi()
 
 {
-
-
 
     std::cout << "\033[2J\033[1;1H";
 }
@@ -160,10 +157,12 @@ void Menu::slow_print(string str_to_print, int time)
 
 void Menu::show_menu_buttons()
 {
+
+    //TODO: Show current room in menu
     int width = get_console_size_cr()[0];
     int height = get_console_size_cr()[1];
     show_cursor(false);
-    setCursorPosition((width / 2), height-5);
+    setCursorPosition((width / 2), height - 5);
 
     const char *longString =
         R""""(
@@ -199,12 +198,10 @@ void Menu::show_menu_buttons()
     //         std::cout << ship[i][j];
     //     }
     //     std::cout << " \n";
-    
-    
+
     // }
 
-
-    std::cout  <<  longString;
+    std::cout << longString;
 
     // std::cout << "+---------------------++--------------------+" ;
     // setCursorPosition((width / 2 - 46), 5);
@@ -222,45 +219,43 @@ void Menu::show_menu_buttons()
 
 void Menu::check_menu_bar_button_press(Player *player_object)
 {
-    
+
     switch (get_player_input())
     {
-    
-        case 'i':
-            
-            break;
-        case 'p':
+
+    case 'i':
+
+        break;
+    case 'p':
         clear_screen();
 
-        player_object ->show_stats();
-         
-            
-            break;
-        case 'e':
-            
-            break;
-        case 'j':   
-        
-            break;
-        case 'm':
+        player_object->show_stats();
 
-            clear_screen();
-            Room::display_room_selection((player_object ->get_current_room_object()), player_object);
-            
+        break;
+    case 'e':
 
-            break;
+        break;
+    case 'j':
+
+        break;
+    case 'm':
+
+        clear_screen();
+        Room::display_room_selection((player_object->get_current_room_object()), player_object);
+
+        break;
     }
 }
 
-    // void
+// void
 
-    // void Menu::add_cursor()
-    // {
-    //     bool showCursor = true;
+// void Menu::add_cursor()
+// {
+//     bool showCursor = true;
 
-    //   HANDLE std_out = GetStdHandle(STD_OUTPUT_HANDLE); // Get standard output
-    //   CONSOLE_CURSOR_INFO cursorInfo;                   //
-    //   GetConsoleCursorInfo(OUT, &cursorInfo);           // Get cursorinfo from output
-    //   cursorInfo.bVisible = showCursor;                 // Set flag visible.
-    //   SetConsoleCursorInfo(OUT, &cursorInfo);
-    // }
+//   HANDLE std_out = GetStdHandle(STD_OUTPUT_HANDLE); // Get standard output
+//   CONSOLE_CURSOR_INFO cursorInfo;                   //
+//   GetConsoleCursorInfo(OUT, &cursorInfo);           // Get cursorinfo from output
+//   cursorInfo.bVisible = showCursor;                 // Set flag visible.
+//   SetConsoleCursorInfo(OUT, &cursorInfo);
+// }

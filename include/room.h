@@ -9,27 +9,18 @@
 
 #include "player.h"
 
-
 using std::string;
-
-
 
 //forward declaration
 
 class Player;
 
-
 class Room
-
 {
 
 private:
-
-    // static Room *current_room_object;
+    
     static std::vector<Room> list_of_room_objects;
-
-
-    // static std::vector<int> list_of_rooms;
 
     int roomID;
     std::array<int, 4> connected_rooms; // {north,east,south,west}
@@ -39,7 +30,6 @@ private:
 public:
     //constructor
     Room(int roomID, string name, string description, std::array<int, 4> connected_rooms);
-    
 
     //getters
 
@@ -66,19 +56,9 @@ public:
     // int set_connected_rooms(std::array<int, 4> connected_rooms);
 
     //methods
+
     static void display_room_selection(Room *room_object, Player *player_object);
-
-    static void show_adjacent_rooms(Room *room_object);
-
-    static Room* get_room_obect_from_ID(int ID);
-
-
-
-    
-
-
-
-
+    static Room *get_room_object_from_ID(int ID);
 };
 
 #endif
