@@ -12,7 +12,7 @@ class Room;
 
 class Player
 {
-private:
+protected:
     //Attributes
     Room *current_room_object;
 

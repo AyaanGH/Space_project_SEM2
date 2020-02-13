@@ -30,7 +30,7 @@ private:
 public:
     //constructor
     Room(int roomID, string name, string description, std::array<int, 4> connected_rooms);
-
+    
     //getters
 
     int get_room_id();

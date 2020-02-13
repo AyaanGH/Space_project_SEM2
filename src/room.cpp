@@ -89,7 +89,6 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
     //FIXME: Arrow keys sometimes not working
 
     int user_selection = 0;
-    int connected_room_number = 0;
     char user_input;
     bool user_going_down = true;
     bool user_is_selecting = true;
