@@ -42,8 +42,11 @@ int main()
     Room market(10, "Marketplace", "Can purchase items", {12, -1, 14, 15});
     Room power_plant(15, "Power Plant", "Can purchase items", {-1, 10, -1, -1});
     Room dock(12, "Docks", "Space ships dock", {-1, 13, 10, -1});
-    Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
+    Room ship_yard(13, "Ship Yard", "Construction", {16, -1, -1, 12});
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
+
+
+    Room scrapyard(16,"Scrap yard","Scrap",{-1,-1,13,-1});
 
     myPlayer.set_current_room(&market);
 

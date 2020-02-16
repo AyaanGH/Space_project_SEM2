@@ -13,7 +13,7 @@ Simon The Shopkeeper
 "Looking to protect yourself or deal some damage? "
 -----------
 
-- option.name()
+- Buy stuff
 - Ask him about his favourite video game
 - Walk Away
 

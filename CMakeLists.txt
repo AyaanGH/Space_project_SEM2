@@ -32,3 +32,7 @@ add_library( room src/room.cpp )
 add_executable( main src/main.cpp )
 target_link_libraries( main player menu room )
 
+
+
+#cmake -G "MinGW Makefiles"  .
+#-lpdcurses 
