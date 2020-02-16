@@ -145,7 +145,7 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
             if (index_of_array == user_selection)
             {
 
-                std::cout << get_room_object_from_ID(room_object->get_connected_rooms()[index_of_array])->get_name() + "<---------\n";
+                std::cout << get_room_object_from_ID(room_object->get_connected_rooms()[index_of_array])->get_name() + " <--------- "+ get_room_object_from_ID(room_object->get_connected_rooms()[index_of_array])->get_description() + " \n";
             }
 
             else
@@ -172,15 +172,35 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
 
         case '\b':
             /* code */
-            std::cout << " \n\n\nReturning back to menu ";
-            Sleep(1000);
+            std::cout << " \n\n\nReturning back to menu";
+             for(int i=0;i<2;i++)
+            {
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "\b\b\b   \b\b\b" << std::flush;
+            }
             user_is_selecting = false;
             break;
 
         case '\r':
             /* code */
-            std::cout << "\n\n\nRoom Selected ";
-            Sleep(1000);
+            std::cout << "\n\n\nSelecting room";
+             for(int i=0;i<2;i++)
+            {
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "\b\b\b   \b\b\b" << std::flush;
+            }
             user_is_selecting = false;
 
             player_object->set_current_room(get_room_object_from_ID(room_object->get_connected_rooms()[user_selection]));

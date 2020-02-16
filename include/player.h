@@ -23,7 +23,7 @@ protected:
 public:
     //constructor
 
-    Player(string first_name, string last_name, int hp);
+    Player(string first_name, string last_name, int hp, Room *current_room_object); //&bathroom
 
     //Getters
 

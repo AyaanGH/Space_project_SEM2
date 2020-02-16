@@ -5,12 +5,13 @@
 using std::string;
 
 //Constructor
-Player::Player(string first_name, string last_name, int hp)
+Player::Player(string first_name, string last_name, int hp,  Room *current_room_object) 
 
 {
     this->first_name = set_first_name(first_name);
     this->last_name = set_first_name(last_name);
     this->hp = set_hp(hp);
+    Player::set_current_room(current_room_object);
 }
 
 
