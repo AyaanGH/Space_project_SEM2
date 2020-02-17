@@ -201,8 +201,11 @@ void Menu::check_menu_bar_button_press(Player *player_object)
 
         break;
     case 'e':
-
+        
+        clear_screen();
+        Room::display_npc_selection(player_object->get_current_room_object());
         break;
+
     case 'j':
 
         break;
@@ -210,7 +213,6 @@ void Menu::check_menu_bar_button_press(Player *player_object)
 
         clear_screen();
         Room::display_room_selection((player_object->get_current_room_object()), player_object);
-
         break;
     }
 }

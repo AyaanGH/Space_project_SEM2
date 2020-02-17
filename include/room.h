@@ -70,6 +70,9 @@ public:
 
     void add_npc_to_list(NPC* npc_object);
     static void display_room_selection(Room *room_object, Player *player_object);
+    static void display_npc_selection(Room *room_object);
+
+
     static Room *get_room_object_from_ID(int ID);
 };
 

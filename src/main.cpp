@@ -37,7 +37,7 @@ int main()
         std::cout<<market.get_list_of_npc_objects()[i].get_first_name()<<" \n";
     }
 
-    Sleep(19999);
+    Sleep(3000);
     while (true)
     {
         Menu::clear_screen();

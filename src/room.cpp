@@ -3,7 +3,6 @@
 #include "../include/player.h"
 #include "../include/npc.h"
 
-
 #include <iostream>
 #include <vector>
 #include <windows.h>
@@ -55,7 +54,6 @@ std::vector<NPC> Room::get_list_of_npc_objects()
 {
 
     return list_of_npc_objects;
-    
 }
 
 //Setters
@@ -86,12 +84,10 @@ string Room::set_description(string description)
 
 //Methods
 
-
-void Room::add_npc_to_list(NPC* npc_object)
+void Room::add_npc_to_list(NPC *npc_object)
 {
 
     list_of_npc_objects.push_back({*npc_object});
-
 }
 
 //Static Methods
@@ -134,12 +130,11 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
                 {
                     user_selection++;
                 }
-                
+
                 else
                 {
                     user_selection--;
                 }
-                 
             }
 
             else
@@ -163,7 +158,7 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
             if (index_of_array == user_selection)
             {
 
-                std::cout << get_room_object_from_ID(room_object->get_connected_rooms()[index_of_array])->get_name() + " <--------- "+ get_room_object_from_ID(room_object->get_connected_rooms()[index_of_array])->get_description() + " \n";
+                std::cout << get_room_object_from_ID(room_object->get_connected_rooms()[index_of_array])->get_name() + " <--------- " + get_room_object_from_ID(room_object->get_connected_rooms()[index_of_array])->get_description() + " \n";
             }
 
             else
@@ -191,7 +186,7 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
         case '\b':
             /* code */
             std::cout << " \n\n\nReturning back to menu";
-             for(int i=0;i<2;i++)
+            for (int i = 0; i < 2; i++)
             {
                 Sleep(200);
                 std::cout << "." << std::flush;
@@ -208,7 +203,7 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
         case '\r':
             /* code */
             std::cout << "\n\n\nSelecting room";
-             for(int i=0;i<2;i++)
+            for (int i = 0; i < 2; i++)
             {
                 Sleep(200);
                 std::cout << "." << std::flush;
@@ -250,3 +245,128 @@ Room *Room::get_room_object_from_ID(int ID)
 
     //
 }
+
+void Room::display_npc_selection(Room *room_object)
+{
+
+    //FIXME: If no npc in room
+    
+    NPC* current_selection;
+    int user_selection = 0;
+    char user_input;
+    bool user_is_selecting = true;
+    int num_npc = room_object->get_list_of_npc_objects().size();
+
+    std::cout << num_npc << std::endl;
+    Sleep(2000);
+
+    while (user_is_selecting)
+    {
+
+        while (true)
+        {
+            if (user_selection < 0)
+            {
+                user_selection = num_npc - 1;
+            }
+
+            if (user_selection > num_npc - 1)
+            {
+                user_selection = 0;
+            }
+
+            else
+            {
+                break;
+            }
+        }
+
+        Menu::clear_screen();
+        std::cout <<"NPCs in "<< room_object->get_name() << std::endl;
+        std::cout << "------------------\n\n";
+        
+        for (int index_of_array = 0; index_of_array < num_npc; index_of_array++)
+        {
+
+
+            if (index_of_array == user_selection)
+            {
+
+                std::cout << room_object ->get_list_of_npc_objects()[index_of_array].get_first_name() + " <--------- " + " \n";
+                current_selection = &(room_object ->get_list_of_npc_objects()[index_of_array]);
+
+                
+            }
+
+            else
+            {
+
+                 std::cout << room_object ->get_list_of_npc_objects()[index_of_array].get_first_name() + " \n";
+            }
+        }
+
+
+
+        char user_input = _getch();
+
+        switch (user_input)
+        {
+        case 'H':
+
+            user_selection--;
+            break;
+
+        case 'P':
+            user_selection++;
+            break;
+
+        case '\b':
+            /* code */
+            std::cout << " \n\n\nReturning back to menu";
+            for (int i = 0; i < 2; i++)
+            {
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "\b\b\b   \b\b\b" << std::flush;
+            }
+            user_is_selecting = false;
+            break;
+
+        case '\r':
+            /* code */
+            std::cout << "\n\n\nTalking to " + (current_selection -> get_first_name())<< std::endl;
+
+            Sleep(10000);
+            for (int i = 0; i < 2; i++)
+            {
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "\b\b\b   \b\b\b" << std::flush;
+            }
+            user_is_selecting = false;
+
+            // player_object->set_current_room(get_room_object_from_ID(room_object->get_connected_rooms()[user_selection]));
+            Menu::clear_screen();
+            std::cout << "\n\n NPC MENU HERE"<< std::endl;
+            Sleep(5000);
+
+            break;
+
+        default:
+
+            break;
+        }
+    }
+}
+
+
