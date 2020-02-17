@@ -1,5 +1,8 @@
 #include "../include/room.h"
 #include "../include/menu.h"
+#include "../include/player.h"
+#include "../include/npc.h"
+
 
 #include <iostream>
 #include <vector>

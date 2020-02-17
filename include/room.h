@@ -7,13 +7,16 @@
 #include <string>
 #include <conio.h>
 
-#include "player.h"
+//#include "player.h"
+// #include "player.h"
+// #include "npc.h"
 
 using std::string;
 
 //forward declaration
 
 class Player;
+class NPC;
 
 class Room
 {
@@ -21,13 +24,19 @@ class Room
 private:
     
     static std::vector<Room> list_of_room_objects;
+    
 
     int roomID;
     std::array<int, 4> connected_rooms; // {north,east,south,west}
     string description;
     string name;
 
+
+
 public:
+    //member
+    std::vector<NPC> list_of_npc_objects;
+
     //constructor
     Room(int roomID, string name, string description, std::array<int, 4> connected_rooms);
     

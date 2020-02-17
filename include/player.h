@@ -2,13 +2,15 @@
 #define PLAYER_H
 
 
-#include "room.h"
+// #include "room.h"
+//#include "npc.h"
 #include <iostream>
 using std::string;
 
 //forward declarations
 
 class Room;
+// class NPC;s
 
 class Player
 {

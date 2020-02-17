@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libnpc.a  CMakeFiles/npc.dir/src/npc.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libnpc.a

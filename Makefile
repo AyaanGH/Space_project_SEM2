@@ -123,6 +123,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named npc
+
+# Build rule for target.
+npc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 npc
+.PHONY : npc
+
+# fast build rule for target.
+npc/fast:
+	$(MAKE) -f CMakeFiles\npc.dir\build.make CMakeFiles/npc.dir/build
+.PHONY : npc/fast
+
+#=============================================================================
 # Target rules for targets named player
 
 # Build rule for target.
@@ -215,6 +228,33 @@ src/menu.cpp.s:
 	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/src/menu.cpp.s
 .PHONY : src/menu.cpp.s
 
+src/npc.obj: src/npc.cpp.obj
+
+.PHONY : src/npc.obj
+
+# target to build an object file
+src/npc.cpp.obj:
+	$(MAKE) -f CMakeFiles\npc.dir\build.make CMakeFiles/npc.dir/src/npc.cpp.obj
+.PHONY : src/npc.cpp.obj
+
+src/npc.i: src/npc.cpp.i
+
+.PHONY : src/npc.i
+
+# target to preprocess a source file
+src/npc.cpp.i:
+	$(MAKE) -f CMakeFiles\npc.dir\build.make CMakeFiles/npc.dir/src/npc.cpp.i
+.PHONY : src/npc.cpp.i
+
+src/npc.s: src/npc.cpp.s
+
+.PHONY : src/npc.s
+
+# target to generate assembly for a file
+src/npc.cpp.s:
+	$(MAKE) -f CMakeFiles\npc.dir\build.make CMakeFiles/npc.dir/src/npc.cpp.s
+.PHONY : src/npc.cpp.s
+
 src/player.obj: src/player.cpp.obj
 
 .PHONY : src/player.obj
@@ -277,6 +317,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... main
+	@echo ... npc
 	@echo ... player
 	@echo ... room
 	@echo ... menu
@@ -287,6 +328,9 @@ help:
 	@echo ... src/menu.obj
 	@echo ... src/menu.i
 	@echo ... src/menu.s
+	@echo ... src/npc.obj
+	@echo ... src/npc.i
+	@echo ... src/npc.s
 	@echo ... src/player.obj
 	@echo ... src/player.i
 	@echo ... src/player.s

@@ -1,4 +1,5 @@
 #include "../include/npc.h"
+#include "../include/room.h"
 
 
 #include <iostream>
@@ -24,4 +25,11 @@ using std::string;
 NPC::NPC(string first_name, string last_name, int hp, Room *current_room_object) : Player( first_name, last_name, hp, current_room_object) 
 {
 
+std::cout << current_room_object ->get_description();
+
+current_room_object -> list_of_npc_objects.push_back({*this});
+
+
 }
+
+

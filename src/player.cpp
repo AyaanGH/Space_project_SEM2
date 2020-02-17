@@ -1,4 +1,5 @@
 #include "../include/player.h"
+#include "../include/room.h"
 
 #include <iostream>
 

@@ -2,6 +2,7 @@
 #include "../include/player.h"
 #include "../include/menu.h"
 #include "../include/room.h"
+#include "../include/npc.h"
 #include <stdio.h>
 #include <conio.h>
 #include <string>
@@ -28,7 +29,9 @@ int main()
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
     Player myPlayer("Peter", "Parker", 100, &dock);
+    NPC npc("Sim","bill",100,&market);
 
+    Sleep(9000);
     while (true)
     {
         Menu::clear_screen();
