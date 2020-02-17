@@ -8,7 +8,7 @@ NPC Menu                  /\
     |
     |---> Display list of interactions    
     
-Simon The Shopkeeper
+Bill The Shopkeeper
 
 "Looking to protect yourself or deal some damage? "
 -----------
@@ -40,3 +40,7 @@ Menu 2
 -" GIVE It TO ME NOW" = 10 * intimidation_value
 -" But I din't want it in the first place " = +10 reputation 
 - "Need to feed my children" = Persuation_stat * 4pts
+
+
+
+TODO: -References, shared pointers, smart pointer, polymorphism

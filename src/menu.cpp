@@ -172,16 +172,6 @@ void Menu::show_menu_buttons()
                          |                     ||                    ||                    ||                    ||                    |
                          +---------------------++--------------------++--------------------++--------------------++--------------------+)"""";
 
-    // const char *longString =
-
-    //        "                    +---------------------++--------------------+"
-    //        "                    |                     ||                    |"
-    //        "                    |     Inventory       ||     Player Stats   |"
-    //        "                    |                     ||                    |"
-    //        "                    +---------------------++--------------------+";
-
-    // std::cout << longString;
-
     // char ship[5][20] =
     //     {
     //         "__",
@@ -190,31 +180,9 @@ void Menu::show_menu_buttons()
     //         "=[+-,------'",
     //         " [_/"};
 
-    // for (int i = 0; i < 5; i++)
-    // {
-    //     for (int j = 0; j < 20; j++)
-    //     {
-    //         setCursorPosition((width / 2), height + i);
-    //         std::cout << ship[i][j];
-    //     }
-    //     std::cout << " \n";
-
-    // }
 
     std::cout << longString;
 
-    // std::cout << "+---------------------++--------------------+" ;
-    // setCursorPosition((width / 2 - 46), 5);
-    // std::cout << "|                     ||                    |" ;
-    // setCursorPosition((width / 2 - 46), 4);
-    // std::cout << "|     Inventory       ||     Player Stats   |" ;
-    // setCursorPosition((width / 2 - 46), 3);
-    // std::cout << "|        (I)          ||         (P)        |" ;
-    // setCursorPosition((width / 2 - 46), 2);
-    // std::cout << "|                     ||                    |" ;
-    // setCursorPosition((width / 2 - 46), 1);
-    // std::cout << "+---------------------++--------------------+" ;
-    // setCursorPosition((width / 2 - 46), 0);
 }
 
 void Menu::check_menu_bar_button_press(Player *player_object)
