@@ -251,11 +251,17 @@ void Room::display_npc_selection(Room *room_object)
 
     //FIXME: If no npc in room
     
-    NPC* current_selection;
+  
+
+    // NPC &current_selection = room_object->get_list_of_npc_objects()[0];
+
+    
     int user_selection = 0;
     char user_input;
     bool user_is_selecting = true;
     int num_npc = room_object->get_list_of_npc_objects().size();
+
+    int saved_index;
 
     std::cout << num_npc << std::endl;
     Sleep(2000);
@@ -291,10 +297,13 @@ void Room::display_npc_selection(Room *room_object)
 
             if (index_of_array == user_selection)
             {
+                // current_selection = room_object->get_list_of_npc_objects()[index_of_array];
 
+                // std::cout << current_selection.get_first_name() + "<--------" + " \n";
+                
                 std::cout << room_object ->get_list_of_npc_objects()[index_of_array].get_first_name() + " <--------- " + " \n";
-                current_selection = &(room_object ->get_list_of_npc_objects()[index_of_array]);
-
+                saved_index = index_of_array;
+            
                 
             }
 
@@ -339,9 +348,7 @@ void Room::display_npc_selection(Room *room_object)
 
         case '\r':
             /* code */
-            std::cout << "\n\n\nTalking to " + (current_selection -> get_first_name())<< std::endl;
-
-            Sleep(10000);
+            std::cout << "\n\n\nTalking to " + room_object->get_list_of_npc_objects()[saved_index].get_first_name();//+ (current_selection.get_first_name())<< std::endl;
             for (int i = 0; i < 2; i++)
             {
                 Sleep(200);

@@ -29,7 +29,7 @@ int main()
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
     Player myPlayer("Peter", "Parker", 100, &market);
-    NPC npc("Sim","bill",100,&market);
+    NPC npc("Guy","bill",100,&market);
     NPC npc2("Big","dude",100,&market);
     
     for(int i=0; i<market.get_list_of_npc_objects().size(); i++)
