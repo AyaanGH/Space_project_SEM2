@@ -27,7 +27,7 @@ int main()
     Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
-    Player myPlayer("Peter", "Parker", 100, &power_plant);
+    Player myPlayer("Peter", "Parker", 100, &dock);
 
     while (true)
     {
