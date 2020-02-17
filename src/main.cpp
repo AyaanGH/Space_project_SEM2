@@ -28,10 +28,16 @@ int main()
     Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
-    Player myPlayer("Peter", "Parker", 100, &dock);
+    Player myPlayer("Peter", "Parker", 100, &market);
     NPC npc("Sim","bill",100,&market);
+    NPC npc2("Big","dude",100,&market);
+    
+    for(int i=0; i<market.get_list_of_npc_objects().size(); i++)
+    {
+        std::cout<<market.get_list_of_npc_objects()[i].get_first_name()<<" \n";
+    }
 
-    Sleep(9000);
+    Sleep(19999);
     while (true)
     {
         Menu::clear_screen();

@@ -25,9 +25,9 @@ using std::string;
 NPC::NPC(string first_name, string last_name, int hp, Room *current_room_object) : Player( first_name, last_name, hp, current_room_object) 
 {
 
-std::cout << current_room_object ->get_description();
+std::cout << current_room_object ->get_name()<<" \n";
 
-current_room_object -> list_of_npc_objects.push_back({*this});
+current_room_object->add_npc_to_list({this});
 
 
 }

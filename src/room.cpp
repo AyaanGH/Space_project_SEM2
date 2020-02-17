@@ -51,6 +51,13 @@ string Room::get_name()
     return name;
 }
 
+std::vector<NPC> Room::get_list_of_npc_objects()
+{
+
+    return list_of_npc_objects;
+    
+}
+
 //Setters
 
 int Room::set_roomID(int roomID)
@@ -78,6 +85,14 @@ string Room::set_description(string description)
 }
 
 //Methods
+
+
+void Room::add_npc_to_list(NPC* npc_object)
+{
+
+    list_of_npc_objects.push_back({*npc_object});
+
+}
 
 //Static Methods
 

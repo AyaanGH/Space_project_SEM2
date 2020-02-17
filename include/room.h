@@ -25,6 +25,7 @@ private:
     
     static std::vector<Room> list_of_room_objects;
     
+    std::vector<NPC> list_of_npc_objects;
 
     int roomID;
     std::array<int, 4> connected_rooms; // {north,east,south,west}
@@ -35,7 +36,6 @@ private:
 
 public:
     //member
-    std::vector<NPC> list_of_npc_objects;
 
     //constructor
     Room(int roomID, string name, string description, std::array<int, 4> connected_rooms);
@@ -56,6 +56,8 @@ public:
 
     static std::vector<Room> get_list_of_room_objects();
 
+    std::vector<NPC> get_list_of_npc_objects();
+
     //setters
 
     int set_roomID(int roomID);
@@ -66,6 +68,7 @@ public:
 
     //methods
 
+    void add_npc_to_list(NPC* npc_object);
     static void display_room_selection(Room *room_object, Player *player_object);
     static Room *get_room_object_from_ID(int ID);
 };
