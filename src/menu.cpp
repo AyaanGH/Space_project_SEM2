@@ -98,7 +98,6 @@ void Menu::clear_screen_ansi()
 
  void Menu::loading_animation()
 {
-     std::cout << " \n\n\nReturning back to menu";
      for (int i = 0; i < 2; i++)
         {
                 Sleep(200);
@@ -218,6 +217,7 @@ void Menu::check_menu_bar_button_press(Player *player_object)
         {
             if (_getch() == '\b')
             {
+                std::cout<<"\n\n\nReturning back to menu";
                 Menu::loading_animation();
                 return;
             }
@@ -233,6 +233,14 @@ void Menu::check_menu_bar_button_press(Player *player_object)
 
         break;
     case 'm':
+
+
+        std::cout << "\nMemory adress of Player menu.cpp:" << &player_object <<std::endl;
+        Sleep(5000);
+        std::cout << "\nMemory adress of Current Room from myPlayer  menu.cpp:" << &*(player_object ->get_current_room_object()) <<std::endl;
+        Sleep(5000);
+
+       char temp123 = _getch();
 
         clear_screen();
         Room::display_room_selection((player_object->get_current_room_object()), player_object);

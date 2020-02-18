@@ -145,6 +145,9 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
 
         Menu::clear_screen();
         std::cout << room_object->get_name() << std::endl;
+
+        std::cout << "\nMemory address of this room :" << &room_object<<std::endl;
+        Sleep(5000);
         std::cout << "------------------\n\n";
 
         for (int index_of_array = 0; index_of_array < 4; index_of_array++)
@@ -203,20 +206,14 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
         case '\r':
             /* code */
             std::cout << "\n\n\nSelecting room";
-            for (int i = 0; i < 2; i++)
-            {
-                Sleep(200);
-                std::cout << "." << std::flush;
-                Sleep(200);
-                std::cout << "." << std::flush;
-                Sleep(200);
-                std::cout << "." << std::flush;
-                Sleep(200);
-                std::cout << "\b\b\b   \b\b\b" << std::flush;
-            }
+            Menu::loading_animation();
             user_is_selecting = false;
 
+
             player_object->set_current_room(get_room_object_from_ID(room_object->get_connected_rooms()[user_selection]));
+            std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << &*(player_object->get_current_room_object()) <<std::endl;
+            Sleep(5000);
+
 
             break;
 
@@ -267,6 +264,7 @@ void Room::display_npc_selection(Room *room_object)
         {
             if (_getch() == '\b')
             {
+                std::cout<<"Returning back to menu";
                 Menu::loading_animation();
                 return;
             }
@@ -350,8 +348,8 @@ void Room::display_npc_selection(Room *room_object)
             user_is_selecting = false;
 
             Menu::clear_screen();
-            std::cout << "\n\n NPC MENU HERE" << std::endl;
-            Sleep(5000);
+            NPC::display_npc_menu(&(room_object->get_list_of_npc_objects()[saved_index]));
+            // Sleep(5000);
 
             break;
 

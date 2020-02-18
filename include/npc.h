@@ -26,6 +26,10 @@ public:
 
     std::vector<Conversation*> set_npc_menu(std::vector<Conversation*> npc_menu);
 
+
+    //Static method
+
+    static void display_npc_menu(NPC *npc_object);
 };
 
 #endif
