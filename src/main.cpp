@@ -48,7 +48,7 @@ int main()
 
     // npc_option {buy(),&wallet,exit()};
 
-    Sleep(3000);
+    // Sleep(3000);
     while (true)
     {
         Menu::clear_screen();
