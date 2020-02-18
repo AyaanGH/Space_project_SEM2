@@ -3,6 +3,7 @@
 #include "../include/menu.h"
 #include "../include/room.h"
 #include "../include/npc.h"
+#include "../include/conv.h"
 #include <stdio.h>
 #include <conio.h>
 #include <string>
@@ -40,9 +41,9 @@ int main()
     Conversation food("I am hungry","Don't you have a wallet?",{});
     Conversation car("I hate walking","Me too",{});
     Conversation wallet("Ask for wallet", "Why do you want my wallet?",{&food,&car});
-    Conversation buy(1);
+    Conversation buy(1, "Buy weapons");
 
-    npc_option {buy(),&wallet,exit()};
+    // npc_option {buy(),&wallet,exit()};
 
     Sleep(3000);
     while (true)
@@ -89,46 +90,46 @@ int main()
 
 //Quest stuff
 
-class Conversation
+// class Conversation
 
-{
+// {
 
-private:
-public:
-    string name;
-    string npc_response;
-    std::vector<Conversation> choice_list;
-    int id;
-
-
-    Conversation(int id, string name)
-    {
-            this -> name = name;
-            this -> id = id; 
-    }
-    Conversation(string name, string npc_response, std::vector<Conversation> choice_list)
-
-    {
-
-        this->name = name;
-        this->npc_response = npc_response;
-        this->choice_list = choice_list;
-    }
+// private:
+// public:
+//     string name;
+//     string npc_response;
+//     std::vector<Conversation> choice_list;
+//     int id;
 
 
-    //method
+//     Conversation(int id, string name)
+//     {
+//             this -> name = name;
+//             this -> id = id; 
+//     }
+//     Conversation(string name, string npc_response, std::vector<Conversation> choice_list)
+
+//     {
+
+//         this->name = name;
+//         this->npc_response = npc_response;
+//         this->choice_list = choice_list;
+//     }
 
 
-    void checkID()
+//     //method
 
-    {
+
+//     void checkID()
+
+//     {
 
 
     
 
         
-    }
-};
+//     }
+// };
 
 // for (int i = 0; i < market.get_list_of_npc_objects().size(); i++)
 // {
