@@ -15,6 +15,9 @@
 
 using std::string;
 
+
+class Conversation;
+
 int main()
 {
 
@@ -29,13 +32,17 @@ int main()
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
     Player myPlayer("Peter", "Parker", 100, &market);
-    NPC npc("Guy","bill",100,&market);
-    NPC npc2("Big","dude",100,&market);
-    
-    for(int i=0; i<market.get_list_of_npc_objects().size(); i++)
-    {
-        std::cout<<market.get_list_of_npc_objects()[i].get_first_name()<<" \n";
-    }
+    NPC npc("Guy", "bill", 100, &market);
+    NPC npc2("Big", "dude", 100, &market);
+
+
+
+    Conversation food("I am hungry","Don't you have a wallet?",{});
+    Conversation car("I hate walking","Me too",{});
+    Conversation wallet("Ask for wallet", "Why do you want my wallet?",{&food,&car});
+    Conversation buy(1);
+
+    npc_option {buy(),&wallet,exit()};
 
     Sleep(3000);
     while (true)
@@ -78,4 +85,52 @@ int main()
 // void playerMove(Player *bob)
 // {
 //   bob->position.x += 0.1f;
+// }
+
+//Quest stuff
+
+class Conversation
+
+{
+
+private:
+public:
+    string name;
+    string npc_response;
+    std::vector<Conversation> choice_list;
+    int id;
+
+
+    Conversation(int id, string name)
+    {
+            this -> name = name;
+            this -> id = id; 
+    }
+    Conversation(string name, string npc_response, std::vector<Conversation> choice_list)
+
+    {
+
+        this->name = name;
+        this->npc_response = npc_response;
+        this->choice_list = choice_list;
+    }
+
+
+    //method
+
+
+    void checkID()
+
+    {
+
+
+    
+
+        
+    }
+};
+
+// for (int i = 0; i < market.get_list_of_npc_objects().size(); i++)
+// {
+//     std::cout << market.get_list_of_npc_objects()[i].get_first_name() << " \n";
 // }

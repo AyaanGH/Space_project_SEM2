@@ -31,5 +31,3 @@ current_room_object->add_npc_to_list({this});
 
 
 }
-
-

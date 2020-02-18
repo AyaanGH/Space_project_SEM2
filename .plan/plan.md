@@ -16,7 +16,7 @@ Bill The Shopkeeper
 - Buy stuff
 - Ask him about his favourite video game
 - Walk Away
-
+ 
 
 options<3,string> {buy,custom1,exit  }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,3 +44,7 @@ Menu 2
 
 
 TODO: -References, shared pointers, smart pointer, polymorphism
+
+
+
+
