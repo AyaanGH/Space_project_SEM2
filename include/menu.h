@@ -45,6 +45,8 @@ public:
     void check_menu_bar_button_press(Player *player_object);
 
     void render_player();
+
+    static void loading_animation();
     
     //void change_scene_to_player_stats();
 };

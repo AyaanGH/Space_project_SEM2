@@ -96,6 +96,22 @@ void Menu::clear_screen_ansi()
     std::cout << "\033[2J\033[1;1H";
 }
 
+ void Menu::loading_animation()
+{
+     std::cout << " \n\n\nReturning back to menu";
+     for (int i = 0; i < 2; i++)
+        {
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "." << std::flush;
+                Sleep(200);
+                std::cout << "\b\b\b   \b\b\b" << std::flush;
+        }
+}
+
 void Menu::clear_screen()
 
 {
@@ -198,8 +214,15 @@ void Menu::check_menu_bar_button_press(Player *player_object)
         clear_screen();
 
         player_object->show_stats();
-
-        break;
+        while (true)
+        {
+            if (_getch() == '\b')
+            {
+                Menu::loading_animation();
+                return;
+            }
+        }
+        
     case 'e':
         
         clear_screen();
