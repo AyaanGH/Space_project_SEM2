@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libconv.a  CMakeFiles/conv.dir/src/conv.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libconv.a

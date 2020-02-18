@@ -174,6 +174,46 @@ menu/fast:
 	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/build
 .PHONY : menu/fast
 
+#=============================================================================
+# Target rules for targets named conv
+
+# Build rule for target.
+conv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 conv
+.PHONY : conv
+
+# fast build rule for target.
+conv/fast:
+	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/build
+.PHONY : conv/fast
+
+src/conv.obj: src/conv.cpp.obj
+
+.PHONY : src/conv.obj
+
+# target to build an object file
+src/conv.cpp.obj:
+	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/src/conv.cpp.obj
+.PHONY : src/conv.cpp.obj
+
+src/conv.i: src/conv.cpp.i
+
+.PHONY : src/conv.i
+
+# target to preprocess a source file
+src/conv.cpp.i:
+	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/src/conv.cpp.i
+.PHONY : src/conv.cpp.i
+
+src/conv.s: src/conv.cpp.s
+
+.PHONY : src/conv.s
+
+# target to generate assembly for a file
+src/conv.cpp.s:
+	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/src/conv.cpp.s
+.PHONY : src/conv.cpp.s
+
 src/main.obj: src/main.cpp.obj
 
 .PHONY : src/main.obj
@@ -321,7 +361,11 @@ help:
 	@echo ... player
 	@echo ... room
 	@echo ... menu
+	@echo ... conv
 	@echo ... rebuild_cache
+	@echo ... src/conv.obj
+	@echo ... src/conv.i
+	@echo ... src/conv.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

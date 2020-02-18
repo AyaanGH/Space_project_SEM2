@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/conv.h
+iostream
+-
+array
+-
+vector
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/conv.cpp
+../include/conv.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/conv.h
+iostream
+-
+array
+-
+string
+-
+vector
+-
+

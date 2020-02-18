@@ -37,11 +37,14 @@ int main()
     NPC npc2("Big", "dude", 100, &market);
 
 
-
     Conversation food("I am hungry","Don't you have a wallet?",{});
+
     Conversation car("I hate walking","Me too",{});
+
     Conversation wallet("Ask for wallet", "Why do you want my wallet?",{&food,&car});
+
     Conversation buy(1, "Buy weapons");
+
 
     // npc_option {buy(),&wallet,exit()};
 
