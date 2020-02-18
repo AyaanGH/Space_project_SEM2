@@ -6,9 +6,19 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/conv.h
+iostream
+-
+array
+-
+vector
+-
+
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/npc.h
 player.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
+vector
+-
 
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
 iostream
@@ -31,6 +41,10 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/npc.c
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/npc.h
 ../include/room.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/room.h
+../include/conv.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/conv.h
 iostream
+-
+vector
 -
 

@@ -33,8 +33,6 @@ int main()
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
     Player myPlayer("Peter", "Parker", 100, &market);
-    NPC npc("Guy", "bill", 100, &market);
-    NPC npc2("Big", "dude", 100, &market);
 
 
     Conversation food("I am hungry","Don't you have a wallet?",{});
@@ -45,10 +43,13 @@ int main()
 
     Conversation buy(1, "Buy weapons");
 
+    NPC npc("Guy", "bill", 100, &market,{&wallet,&buy});
+    NPC npc2("Big", "dude", 100, &market,{});
+
 
     // npc_option {buy(),&wallet,exit()};
 
-    // Sleep(3000);
+    Sleep(6000);
     while (true)
     {
         Menu::clear_screen();
