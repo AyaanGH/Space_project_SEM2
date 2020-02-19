@@ -22,12 +22,11 @@ Room::Room(int roomID, string name, string description, std::array<int, 4> conne
     this->connected_rooms = connected_rooms;
 
     Room::list_of_room_objects.push_back({this});
-
 }
 
 //static members
 
-std::vector<Room*> Room::list_of_room_objects = {};
+std::vector<Room *> Room::list_of_room_objects = {};
 
 //Getters
 
@@ -93,7 +92,7 @@ void Room::add_npc_to_list(NPC *npc_object)
 
 //Static Methods
 
-std::vector<Room*> Room::get_list_of_room_objects()
+std::vector<Room *> Room::get_list_of_room_objects()
 {
 
     return list_of_room_objects;
@@ -210,28 +209,10 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
             Menu::loading_animation();
             user_is_selecting = false;
 
-
             player_object->current_room_object = (get_room_object_from_ID(room_object->get_connected_rooms()[user_selection]));
             //std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->current_room_object <<std::endl;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            Sleep(5000);
-
+            // Sleep(5000);
 
             break;
 
@@ -244,8 +225,8 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
 
 Room *Room::get_room_object_from_ID(int ID)
 {
-    
-    for (int i = 0; i <list_of_room_objects.size(); i++)
+
+    for (int i = 0; i < list_of_room_objects.size(); i++)
     {
         /* code */
 
@@ -282,13 +263,12 @@ void Room::display_npc_selection(Room *room_object)
         {
             if (_getch() == '\b')
             {
-                std::cout<<"Returning back to menu";
+                std::cout << "Returning back to menu";
                 Menu::loading_animation();
                 return;
             }
         }
     }
-
 
     // std::cout << num_npc << std::endl;
     // Sleep(2000);
@@ -367,7 +347,7 @@ void Room::display_npc_selection(Room *room_object)
 
             Menu::clear_screen();
             NPC::display_npc_menu(&(room_object->get_list_of_npc_objects()[saved_index]));
-            // Sleep(5000);
+            // TODO: Have vector of pointers rather than objects; passing the reference because we need the address since the parameter is a pointer and the argument is an object.
 
             break;
 

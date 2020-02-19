@@ -6,6 +6,9 @@
 #include <vector>
 using std::string;
 
+//forward declration
+class NPC;
+
 class Conversation
 
 {
@@ -39,6 +42,11 @@ public:
     // Methods
 
     void checkID();
+
+
+    //Static methods
+
+    static void display_conv_menu(Conversation* conv_object,NPC* npc_object);
 };
 
 #endif

@@ -38,12 +38,12 @@ public:
 
     void setCursorPosition(int x, int y);
 
-    void slow_print(string str_to_print, int time);
+    static void slow_print(string str_to_print, int time);
 
     void show_menu_buttons();
 
     void check_menu_bar_button_press(Player *player_object);
-
+    
     void render_player();
 
     static void loading_animation();

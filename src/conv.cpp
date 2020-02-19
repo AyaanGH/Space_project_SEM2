@@ -1,13 +1,19 @@
 
 
 #include "../include/conv.h"
-// #include "../include/player.h"
+#include "../include/npc.h"
+#include "../include/menu.h"
 
 #include <iostream>
 using std::string;
 #include <array>
 #include <string>
 #include <vector>
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <windows.h>
 
 //constructors
 
@@ -17,14 +23,14 @@ Conversation::Conversation(int id, string name)
     this->name = set_name(name);
 }
 
-Conversation::Conversation(string name, string npc_response, std::vector<Conversation*> choice_list)
+Conversation::Conversation(string name, string npc_response, std::vector<Conversation *> choice_list)
 {
 
     this->name = set_name(name);
 
     this->npc_response = set_npc_response(npc_response);
 
-    this->choice_list = set_vector_of_choices (choice_list);
+    this->choice_list = set_vector_of_choices(choice_list);
 }
 
 //getters
@@ -39,7 +45,7 @@ string Conversation::get_npc_response()
     return npc_response;
 }
 
-std::vector<Conversation*> Conversation::get_vector_of_choices()
+std::vector<Conversation *> Conversation::get_vector_of_choices()
 {
     return choice_list;
 }
@@ -61,7 +67,7 @@ string Conversation::set_npc_response(string npc_reponse)
     return npc_response;
 }
 
-std::vector<Conversation*> Conversation::set_vector_of_choices(std::vector<Conversation*> choice_list)
+std::vector<Conversation *> Conversation::set_vector_of_choices(std::vector<Conversation *> choice_list)
 {
     return choice_list;
 }
@@ -91,5 +97,131 @@ void Conversation::checkID()
     else
     {
         /* code */
+    }
+}
+
+void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
+{
+
+    int user_selection = 0;
+    char user_input;
+    bool user_is_selecting = true;
+    int num_choice = conv_object->get_vector_of_choices().size();
+
+    if (num_choice <= 0)
+    {
+        Menu::clear_screen();
+        std::cout << "Talking to " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
+        std::cout << "------------------\n\n";
+        std::cout << npc_object->get_first_name() << " is done talking to you." << std::endl;
+        std::cout << "\n\n\nBackspace to return to main menu" << std::endl;
+        while (true)
+        {
+            if (_getch() == '\b')
+            {
+                std::cout << "Returning back to menu";
+                Menu::loading_animation();
+                return;
+            }
+        }
+    }
+
+    int saved_index;
+    while (user_is_selecting)
+
+    {
+        while (true)
+        {
+            if (user_selection < 0)
+            {
+                user_selection = num_choice - 1;
+            }
+
+            if (user_selection > num_choice - 1)
+            {
+                user_selection = 0;
+            }
+
+            else
+            {
+                break;
+            }
+        }
+
+        Menu::clear_screen();
+        std::cout << "Talking to " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
+        std::cout << "------------------\n\n";
+        Sleep(6000);
+        std::cout << conv_object ->get_npc_response() << "\n\n\n";
+        // Menu::slow_print(conv_object->get_npc_response(), 50);
+
+
+        // for (int i = 0; i < conv_object->get_npc_response().length(); i++)
+        // {
+
+        //     std::cout << conv_object->get_npc_response()[i];
+
+        //     Sleep(50);
+        // }
+        Sleep(6000);
+
+        std::cout << "\n\n";
+
+        for (int index_of_array = 0; index_of_array < num_choice; index_of_array++)
+        {
+
+            if (index_of_array == user_selection)
+            {
+
+                std::cout << conv_object->get_vector_of_choices()[index_of_array]->get_name() + " <--------- " + " \n";
+                saved_index = index_of_array;
+            }
+
+            else
+            {
+
+                std::cout << conv_object->get_vector_of_choices()[index_of_array]->get_name() << std::endl;
+            }
+        }
+        char user_input = _getch();
+
+        switch (user_input)
+        {
+        case 'H':
+
+            user_selection--;
+            break;
+
+        case 'P':
+            user_selection++;
+            break;
+
+        // case '\b':
+
+        //     std::cout << " \n\n\nReturning back to menu";
+        //     Menu::loading_animation();
+        //     user_is_selecting = false;
+        //     break;
+
+        case '\r':
+
+          
+            Menu::loading_animation();
+            user_is_selecting = false;
+
+            Menu::clear_screen();
+            
+            //Display conv menu
+
+            Conversation::display_conv_menu(conv_object->get_vector_of_choices()[saved_index], npc_object);
+            // NPC::display_npc_menu(npc_object->get_npc_menu()[saved_index]);
+            // Sleep(5000);
+
+            break;
+
+        default:
+
+            break;
+        }
     }
 }

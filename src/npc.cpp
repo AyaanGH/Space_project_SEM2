@@ -48,13 +48,14 @@ void NPC::display_npc_menu(NPC *npc_object)
     int user_selection = 0;
     char user_input;
     bool user_is_selecting = true;
-    int num_choice = npc_object ->get_npc_menu().size();
+    int num_choice = npc_object->get_npc_menu().size();
 
     if (num_choice <= 0)
     {
         Menu::clear_screen();
-        std::cout <<  npc_object -> get_first_name() << "  does not want to talk to you right now..."<< std::endl;
+        std::cout << "Talking to " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
         std::cout << "------------------\n\n";
+        std::cout << npc_object->get_first_name() << "  does not want to talk to you right now..." << std::endl;
         std::cout << "\n\n\nBackspace to return to main menu" << std::endl;
         while (true)
         {
@@ -65,7 +66,6 @@ void NPC::display_npc_menu(NPC *npc_object)
             }
         }
     }
-
 
     int saved_index;
     while (user_is_selecting)
@@ -89,9 +89,8 @@ void NPC::display_npc_menu(NPC *npc_object)
             }
         }
 
-
         Menu::clear_screen();
-        std::cout << "Talking to " << npc_object -> get_first_name() <<" "<< npc_object->get_last_name()<< std::endl;
+        std::cout << "Talking to " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
         std::cout << "------------------\n\n";
 
         for (int index_of_array = 0; index_of_array < num_choice; index_of_array++)
@@ -110,9 +109,45 @@ void NPC::display_npc_menu(NPC *npc_object)
                 std::cout << npc_object->get_npc_menu()[index_of_array]->get_name() << std::endl;
             }
         }
+        char user_input = _getch();
 
+        switch (user_input)
+        {
+        case 'H':
 
+            user_selection--;
+            break;
 
-    }    
+        case 'P':
+            user_selection++;
+            break;
 
+        case '\b':
+
+            std::cout << " \n\n\nReturning back to menu";
+            Menu::loading_animation();
+            user_is_selecting = false;
+            break;
+
+        case '\r':
+
+            std::cout << "\n\n\nSpeaking";
+            Menu::loading_animation();
+            user_is_selecting = false;
+
+            Menu::clear_screen();
+
+            //Display conv menu
+
+            Conversation::display_conv_menu(npc_object->get_npc_menu()[saved_index], npc_object);
+            // NPC::display_npc_menu(npc_object->get_npc_menu()[saved_index]);
+            // Sleep(5000);
+
+            break;
+
+        default:
+
+            break;
+        }
+    }
 }
