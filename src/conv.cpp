@@ -62,7 +62,7 @@ string Conversation::set_name(string name)
     return name;
 }
 
-string Conversation::set_npc_response(string npc_reponse)
+string Conversation::set_npc_response(string npc_response)
 {
     return npc_response;
 }
@@ -151,19 +151,11 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
         Menu::clear_screen();
         std::cout << "Talking to " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
         std::cout << "------------------\n\n";
-        Sleep(6000);
-        std::cout << conv_object ->get_npc_response() << "\n\n\n";
-        // Menu::slow_print(conv_object->get_npc_response(), 50);
+        Sleep(1000);
+        
+        Menu::slow_print(conv_object->get_npc_response(), 70);
 
-
-        // for (int i = 0; i < conv_object->get_npc_response().length(); i++)
-        // {
-
-        //     std::cout << conv_object->get_npc_response()[i];
-
-        //     Sleep(50);
-        // }
-        Sleep(6000);
+        Sleep(2500);
 
         std::cout << "\n\n";
 
