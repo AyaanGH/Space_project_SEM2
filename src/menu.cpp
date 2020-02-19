@@ -235,9 +235,9 @@ void Menu::check_menu_bar_button_press(Player *player_object)
     case 'm':
 
 
-        std::cout << "\nMemory adress of Player menu.cpp:" << &player_object <<std::endl;
+        std::cout << "\nMemory adress of Player menu.cpp:" << player_object <<std::endl;
         Sleep(5000);
-        std::cout << "\nMemory adress of Current Room from myPlayer  menu.cpp:" << &*(player_object ->get_current_room_object()) <<std::endl;
+        std::cout << "\nMemory adress of Current Room from myPlayer  menu.cpp:" << (player_object ->get_current_room_object()) <<std::endl;
         Sleep(5000);
 
        char temp123 = _getch();

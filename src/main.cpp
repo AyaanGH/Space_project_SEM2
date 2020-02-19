@@ -39,7 +39,7 @@ int main()
     Sleep(5000);
     std::cout << "\nMemory adress of Power Plant in main.cpp:" << &power_plant <<std::endl;
     Sleep(5000);
-   std::cout << "\nMemory adress of Current Room from myPlayer  main.cpp:" << &*(myPlayer.get_current_room_object()) <<std::endl;
+   std::cout << "\nMemory adress of Current Room from myPlayer  main.cpp:" << myPlayer.get_current_room_object()<<std::endl;
     Sleep(5000);
     std::cout << "\nMemory adress of  myPlayer  main.cpp:" << &myPlayer <<std::endl;
     Sleep(5000);

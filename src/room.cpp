@@ -146,7 +146,7 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
         Menu::clear_screen();
         std::cout << room_object->get_name() << std::endl;
 
-        std::cout << "\nMemory address of this room :" << &room_object<<std::endl;
+        std::cout << "\nMemory address of this room :" << room_object <<std::endl;
         Sleep(5000);
         std::cout << "------------------\n\n";
 
@@ -211,7 +211,7 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
 
 
             player_object->set_current_room(get_room_object_from_ID(room_object->get_connected_rooms()[user_selection]));
-            std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << &*(player_object->get_current_room_object()) <<std::endl;
+            std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->get_current_room_object() <<std::endl;
             Sleep(5000);
 
 

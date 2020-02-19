@@ -16,7 +16,7 @@ Player::Player(string first_name, string last_name, int hp,  Room *current_room_
 }
 
 
-Room *current_room_object;
+// Room *current_room_object;
 
 
 
