@@ -67,15 +67,52 @@ void NPC::display_npc_menu(NPC *npc_object)
     }
 
 
-    
-    // while (user_is_selecting)
+    int saved_index;
+    while (user_is_selecting)
 
-    // {
+    {
+        while (true)
+        {
+            if (user_selection < 0)
+            {
+                user_selection = num_choice - 1;
+            }
+
+            if (user_selection > num_choice - 1)
+            {
+                user_selection = 0;
+            }
+
+            else
+            {
+                break;
+            }
+        }
+
+
+        Menu::clear_screen();
+        std::cout << "Talking to " << npc_object -> get_first_name() <<" "<< npc_object->get_last_name()<< std::endl;
+        std::cout << "------------------\n\n";
+
+        for (int index_of_array = 0; index_of_array < num_choice; index_of_array++)
+        {
+
+            if (index_of_array == user_selection)
+            {
+
+                std::cout << npc_object->get_npc_menu()[index_of_array]->get_name() + " <--------- " + " \n";
+                saved_index = index_of_array;
+            }
+
+            else
+            {
+
+                std::cout << npc_object->get_npc_menu()[index_of_array]->get_name() << std::endl;
+            }
+        }
 
 
 
-
-
-    // }    
+    }    
 
 }

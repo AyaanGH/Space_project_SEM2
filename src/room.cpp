@@ -22,6 +22,7 @@ Room::Room(int roomID, string name, string description, std::array<int, 4> conne
     this->connected_rooms = connected_rooms;
 
     Room::list_of_room_objects.push_back({this});
+
 }
 
 //static members
@@ -146,8 +147,8 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
         Menu::clear_screen();
         std::cout << room_object->get_name() << std::endl;
 
-        std::cout << "\nMemory address of this room :" << room_object <<std::endl;
-        Sleep(5000);
+        //std::cout << "\nMemory address of this room :" << room_object <<std::endl;
+        //Sleep(5000);
         std::cout << "------------------\n\n";
 
         for (int index_of_array = 0; index_of_array < 4; index_of_array++)
@@ -211,7 +212,24 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
 
 
             player_object->current_room_object = (get_room_object_from_ID(room_object->get_connected_rooms()[user_selection]));
-            std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->current_room_object <<std::endl;
+            //std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->current_room_object <<std::endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Sleep(5000);
 
 
@@ -271,11 +289,11 @@ void Room::display_npc_selection(Room *room_object)
         }
     }
 
+
+    // std::cout << num_npc << std::endl;
+    // Sleep(2000);
+
     int saved_index;
-
-    std::cout << num_npc << std::endl;
-    Sleep(2000);
-
     while (user_is_selecting)
     {
 
@@ -343,7 +361,7 @@ void Room::display_npc_selection(Room *room_object)
 
         case '\r':
             /* code */
-            std::cout << "\n\n\nTalking to " + room_object->get_list_of_npc_objects()[saved_index].get_first_name(); //+ (current_selection.get_first_name())<< std::endl;
+            std::cout << "\n\n\nAproaching " + room_object->get_list_of_npc_objects()[saved_index].get_first_name(); //+ (current_selection.get_first_name())<< std::endl;
             Menu::loading_animation();
             user_is_selecting = false;
 

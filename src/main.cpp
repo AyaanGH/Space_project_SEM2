@@ -26,25 +26,25 @@ int main()
 
     game_menu.show_cursor(false);
 
-    Room market(10, "Marketplace", "Can purchase items", {-1, -1, -1, 15});
+    Room market(10, "Marketplace", "Can purchase items", {12, -1, 14, 15});
     Room power_plant(15, "Power Plant", "Can purchase items", {-1, 10, -1, -1});
-    // Room dock(12, "Docks", "Space ships dock", {-1, 13, 10, -1});
-    // Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
-    // Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
+    Room dock(12, "Docks", "Space ships dock", {-1, 13, 10, -1});
+    Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
+    Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
     Player myPlayer("Peter", "Parker", 100, &market);
 
 
-    std::cout << "\nMemory adress of Market in main.cpp:" << &market <<std::endl;
-    Sleep(5000);
-    std::cout << "\nMemory adress of Power Plant in main.cpp:" << &power_plant <<std::endl;
-    Sleep(5000);
-   std::cout << "\nMemory adress of Current Room from myPlayer  main.cpp:" << myPlayer.current_room_object<<std::endl;
-    Sleep(5000);
-    std::cout << "\nMemory adress of  myPlayer  main.cpp:" << &myPlayer <<std::endl;
-    Sleep(5000);
+    // std::cout << "\nMemory adress of Market in main.cpp:" << &market <<std::endl;
+    // Sleep(5000);
+    // std::cout << "\nMemory adress of Power Plant in main.cpp:" << &power_plant <<std::endl;
+    // Sleep(5000);
+    //std::cout << "\nMemory adress of Current Room from myPlayer  main.cpp:" << myPlayer.current_room_object<<std::endl;
+    // Sleep(5000);
+    // std::cout << "\nMemory adress of  myPlayer  main.cpp:" << &myPlayer <<std::endl;
+    // Sleep(5000);
 
-    char temp123 = _getch();
+    
 
     
     Conversation food("I am hungry","Don't you have a wallet?",{});
@@ -61,7 +61,7 @@ int main()
 
     // npc_option {buy(),&wallet,exit()};
 
-    Sleep(6000);
+    // Sleep(6000);
     while (true)
     {
         Menu::clear_screen();
