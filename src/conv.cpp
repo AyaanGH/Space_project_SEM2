@@ -107,6 +107,7 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
     char user_input;
     bool user_is_selecting = true;
     int num_choice = conv_object->get_vector_of_choices().size();
+    int time = 70;
 
     if (num_choice <= 0)
     {
@@ -151,11 +152,14 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
         Menu::clear_screen();
         std::cout << "Talking to " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
         std::cout << "------------------\n\n";
-        Sleep(1000);
-        
-        Menu::slow_print(conv_object->get_npc_response(), 70);
+        // Sleep(1000);
 
-        Sleep(2500);
+        Menu::slow_print(conv_object->get_npc_response(), time);
+        time = 0;
+
+        
+
+        // Sleep(2500);
 
         std::cout << "\n\n";
 
@@ -182,27 +186,28 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
         case 'H':
 
             user_selection--;
+            time = 0;
             break;
 
         case 'P':
             user_selection++;
+            time = 0;
             break;
 
-        // case '\b':
+            // case '\b':
 
-        //     std::cout << " \n\n\nReturning back to menu";
-        //     Menu::loading_animation();
-        //     user_is_selecting = false;
-        //     break;
+            //     std::cout << " \n\n\nReturning back to menu";
+            //     Menu::loading_animation();
+            //     user_is_selecting = false;
+            //     break;
 
         case '\r':
 
-          
             Menu::loading_animation();
             user_is_selecting = false;
 
             Menu::clear_screen();
-            
+
             //Display conv menu
 
             Conversation::display_conv_menu(conv_object->get_vector_of_choices()[saved_index], npc_object);

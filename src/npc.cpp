@@ -140,8 +140,6 @@ void NPC::display_npc_menu(NPC *npc_object)
             //Display conv menu
 
             Conversation::display_conv_menu(npc_object->get_npc_menu()[saved_index], npc_object);
-            // NPC::display_npc_menu(npc_object->get_npc_menu()[saved_index]);
-            // Sleep(5000);
 
             break;
 

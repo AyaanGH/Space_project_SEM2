@@ -96,19 +96,19 @@ void Menu::clear_screen_ansi()
     std::cout << "\033[2J\033[1;1H";
 }
 
- void Menu::loading_animation()
+void Menu::loading_animation()
 {
-     for (int i = 0; i < 2; i++)
-        {
-                Sleep(200);
-                std::cout << "." << std::flush;
-                Sleep(200);
-                std::cout << "." << std::flush;
-                Sleep(200);
-                std::cout << "." << std::flush;
-                Sleep(200);
-                std::cout << "\b\b\b   \b\b\b" << std::flush;
-        }
+    for (int i = 0; i < 2; i++)
+    {
+        Sleep(200);
+        std::cout << "." << std::flush;
+        Sleep(200);
+        std::cout << "." << std::flush;
+        Sleep(200);
+        std::cout << "." << std::flush;
+        Sleep(200);
+        std::cout << "\b\b\b   \b\b\b" << std::flush;
+    }
 }
 
 void Menu::clear_screen()
@@ -195,9 +195,7 @@ void Menu::show_menu_buttons()
     //         "=[+-,------'",
     //         " [_/"};
 
-
     std::cout << longString;
-
 }
 
 void Menu::check_menu_bar_button_press(Player *player_object)
@@ -217,14 +215,14 @@ void Menu::check_menu_bar_button_press(Player *player_object)
         {
             if (_getch() == '\b')
             {
-                std::cout<<"\n\n\nReturning back to menu";
+                std::cout << "\n\n\nReturning back to menu";
                 Menu::loading_animation();
                 return;
             }
         }
-        
+
     case 'e':
-        
+
         clear_screen();
         Room::display_npc_selection(player_object->current_room_object);
         break;
@@ -233,14 +231,6 @@ void Menu::check_menu_bar_button_press(Player *player_object)
 
         break;
     case 'm':
-
-
-    //     std::cout << "\nMemory adress of Player menu.cpp:" << player_object <<std::endl;
-    //     Sleep(5000);
-    //     std::cout << "\nMemory adress of Current Room from myPlayer  menu.cpp:" << (player_object ->current_room_object) <<std::endl;
-    //     Sleep(5000);
-
-    //    char temp123 = _getch();
 
         clear_screen();
         Room::display_room_selection(player_object->current_room_object, player_object);

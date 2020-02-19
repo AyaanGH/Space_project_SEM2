@@ -47,16 +47,46 @@ int main()
     
 
     
-    Conversation food("I am hungry","Don't you have a wallet?",{});
+    // Conversation food("I am hungry","Don't you have a wallet?",{});
 
-    Conversation car("I hate walking","Me too",{});
+    // Conversation car("I hate walking","Me too",{});
 
-    Conversation wallet("Ask for wallet", "Why do you want my wallet?",{&food,&car});
+    // Conversation wallet("Ask for wallet", "Why do you want my wallet?",{&food,&car});
 
-    Conversation buy(1, "Buy weapons");
+     Conversation buy(1, "What do you have in store?");
+     
+    Conversation walk_away(2,"Walk away");
 
-    NPC npc("Guy", "bill", 100, &market, {&wallet,&buy});
-    NPC npc2("Big", "dude", 100, &market, {});
+
+    //Bill Internship Conversation
+    Conversation not_ready{"I think I will come back later", "I'm closing shop, come back tomorrow",{}}; 
+  
+
+    Conversation correct_ans{"Answer is 144", "Correct! You get the job. You start tomorrow morning",{}};
+    Conversation wrong_ans{"I think it is 120", "Wrong! You are not smart enough. Apply next year",{}};
+    Conversation question{"Go ahead","What is 12 x 12 ?",{&correct_ans,&wrong_ans}};
+
+    Conversation ready{"Absolutely, bring it on!", "You seem enthusiastic, here is your first question",{&question}};
+    Conversation shy{"Do I have to?", "Absolutely, no pain no gain. Here is the question",{&question}};
+
+    Conversation internship("Ask for internship","So you want a job huh? You got to pass the on the spot interview ...",{&ready,&shy,&not_ready});
+
+
+
+    //Hungry
+    Conversation insecure("I don't know actually", "Are you making fun of me? DO NOT waste my time",{});
+    Conversation confident("I am very hungry", "You can have some of my food then",{});
+
+    Conversation food("Ask for food","So, are you hungry?",{&confident,&insecure});
+
+
+
+
+
+    NPC npc1("Bill", "the Employer", 100, &market, {&buy,&internship,&walk_away});
+    NPC npc2("Tom", "", 100, &market, {});
+    NPC npc3("Simon", "", 100, &market, {});
+    NPC npc4("William", "", 100, &dock, {&food,&walk_away});
 
 
     // npc_option {buy(),&wallet,exit()};
