@@ -16,7 +16,6 @@ class Player
 {
 protected:
     //Attributes
-    Room *current_room_object;
 
     string first_name;
     string last_name;
@@ -24,6 +23,9 @@ protected:
 
 public:
     //constructor
+
+    Room *current_room_object;
+
 
     Player(string first_name, string last_name, int hp, Room *current_room_object); //&bathroom
 
@@ -33,14 +35,14 @@ public:
     string get_last_name();
     int get_hp();
 
-    Room* get_current_room_object();
+    // Room* get_current_room_object();
 
     //Setters
 
     string set_first_name(string first_name);
     string set_last_name(string set_last_name);
     int set_hp(int hp);
-    void set_current_room(Room *room_object);
+    // void set_current_room(Room *room_object);
 
     //Methods
 

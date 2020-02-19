@@ -21,12 +21,12 @@ Room::Room(int roomID, string name, string description, std::array<int, 4> conne
     this->description = set_description(description);
     this->connected_rooms = connected_rooms;
 
-    Room::list_of_room_objects.push_back({*this});
+    Room::list_of_room_objects.push_back({this});
 }
 
 //static members
 
-std::vector<Room> Room::list_of_room_objects = {};
+std::vector<Room*> Room::list_of_room_objects = {};
 
 //Getters
 
@@ -92,7 +92,7 @@ void Room::add_npc_to_list(NPC *npc_object)
 
 //Static Methods
 
-std::vector<Room> Room::get_list_of_room_objects()
+std::vector<Room*> Room::get_list_of_room_objects()
 {
 
     return list_of_room_objects;
@@ -210,8 +210,8 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
             user_is_selecting = false;
 
 
-            player_object->set_current_room(get_room_object_from_ID(room_object->get_connected_rooms()[user_selection]));
-            std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->get_current_room_object() <<std::endl;
+            player_object->current_room_object = (get_room_object_from_ID(room_object->get_connected_rooms()[user_selection]));
+            std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->current_room_object <<std::endl;
             Sleep(5000);
 
 
@@ -226,15 +226,15 @@ void Room::display_room_selection(Room *room_object, Player *player_object)
 
 Room *Room::get_room_object_from_ID(int ID)
 {
-
-    for (int i = 0; i < list_of_room_objects.size(); i++)
+    
+    for (int i = 0; i <list_of_room_objects.size(); i++)
     {
         /* code */
 
         //TODO: Using direct member variable rather than getter
-        if (list_of_room_objects[i].get_room_id() == ID)
+        if (list_of_room_objects[i]->get_room_id() == ID)
         {
-            return &list_of_room_objects[i];
+            return list_of_room_objects[i];
         }
     }
 

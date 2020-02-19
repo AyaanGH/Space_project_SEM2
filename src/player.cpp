@@ -12,7 +12,7 @@ Player::Player(string first_name, string last_name, int hp,  Room *current_room_
     this->first_name = set_first_name(first_name);
     this->last_name = set_first_name(last_name);
     this->hp = set_hp(hp);
-    this->set_current_room(current_room_object);
+    this->current_room_object = current_room_object;
 }
 
 
@@ -41,10 +41,10 @@ int Player::get_hp()
 }
 
 
-Room* Player::get_current_room_object()
-{
-    return Player::current_room_object;
-}
+// Room* Player::get_current_room_object()
+// {
+//     return Player::current_room_object;
+// }
 
 //Setters
 
@@ -71,13 +71,13 @@ int Player::set_hp(int hp)
 }
 
 
-void Player::set_current_room(Room *room_object)
+// void Player::set_current_room(Room *room_object)
 
-{
+// {
 
-     current_room_object = room_object;
+//      current_room_object = room_object;
 
-}
+// }
 
 //Public Methods
 

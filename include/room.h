@@ -23,7 +23,7 @@ class Room
 
 private:
     
-    static std::vector<Room> list_of_room_objects;
+    static std::vector<Room*> list_of_room_objects;
     
     std::vector<NPC> list_of_npc_objects;
 
@@ -44,7 +44,7 @@ public:
 
     int get_room_id();
 
-    std::vector<int> get_list_of_rooms();
+    std::vector<int*> get_list_of_rooms();
 
     // static Room get_current_room_object();
 
@@ -54,7 +54,7 @@ public:
 
     string get_name();
 
-    static std::vector<Room> get_list_of_room_objects();
+    static std::vector<Room*> get_list_of_room_objects();
 
     std::vector<NPC> get_list_of_npc_objects();
 
