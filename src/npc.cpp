@@ -8,7 +8,7 @@
 
 using std::string;
 
-NPC::NPC(string first_name, string last_name, int hp, Room *current_room_object, std::vector<Conversation *> npc_menu) : Player(first_name, last_name, hp, current_room_object)
+NPC::NPC(string first_name, string last_name, int hp, Room *current_room_object, Inventory *inventory_object, std::vector<Conversation *> npc_menu) : Player(first_name, last_name, hp, current_room_object,inventory_object)
 {
     this->npc_menu = set_npc_menu(npc_menu);
 

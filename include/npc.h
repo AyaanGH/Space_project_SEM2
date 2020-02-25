@@ -2,11 +2,13 @@
 #define NPC_H
 #include "player.h"
 
+
 #include <vector>
 
 //forward declaration
 class Room;
 class Conversation;
+class Inventory;
 
 class NPC : public Player
 {
@@ -14,7 +16,7 @@ protected:
     std::vector<Conversation *> npc_menu;
 
 public:
-    NPC(string first_name, string last_name, int hp, Room *current_room_object, std::vector<Conversation *> npc_menu);
+    NPC(string first_name, string last_name, int hp, Room *current_room_object, Inventory *inventory_object, std::vector<Conversation *> npc_menu);
 
     //Getter
 

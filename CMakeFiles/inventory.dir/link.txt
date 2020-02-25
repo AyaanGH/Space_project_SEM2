@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libinventory.a  CMakeFiles/inventory.dir/src/inventory.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libinventory.a

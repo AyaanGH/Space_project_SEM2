@@ -31,9 +31,10 @@ add_library( menu src/menu.cpp )
 add_library( room src/room.cpp )
 add_library( npc src/npc.cpp )
 add_library( conv src/conv.cpp )
+add_library( inventory src/inventory.cpp )
 add_library( item src/item_class_src/item.cpp )
 add_executable( main src/main.cpp )
-target_link_libraries( main player menu room npc conv item )
+target_link_libraries( main player menu room npc conv item inventory )
 
 
 

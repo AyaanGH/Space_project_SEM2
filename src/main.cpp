@@ -4,6 +4,7 @@
 #include "../include/room.h"
 #include "../include/npc.h"
 #include "../include/conv.h"
+#include "../include/inventory.h"
 #include "../include/item_class_header/item.h"
 #include <stdio.h>
 #include <conio.h>
@@ -27,13 +28,18 @@ int main()
 
     game_menu.show_cursor(false);
 
+    Item myItem("Will the sharp","Sword","Weapon",10);
+    Item anotherItem("margaret the tasty","Potion","Consumable",3);
+
+    Inventory inventory_object(50,{&myItem,&anotherItem});
+
     Room market(10, "Marketplace", "Can purchase items", {12, -1, 14, 15});
     Room power_plant(15, "Power Plant", "Can purchase items", {-1, 10, -1, -1});
     Room dock(12, "Docks", "Space ships dock", {-1, 13, 10, -1});
     Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
-    Player myPlayer("Peter", "Parker", 100, &market);
+    Player myPlayer("Peter", "Parker", 100, &market,&inventory_object);
 
     
     Conversation buy(1, "What do you have in store?");
@@ -73,14 +79,24 @@ int main()
 
 
 
-    NPC npc1("Bill", "the Employer", 100, &market, {&buy, &internship, &walk_away});
-    NPC npc2("Tom", "", 100, &ship_yard, {&confused,&walk_away});
-    NPC npc3("Simon", "", 100, &market, {});
-    NPC npc4("William", "", 100, &dock, {&food, &walk_away});
+    NPC npc1("Bill", "the Employer", 100, &market, &inventory_object, {&buy, &internship, &walk_away});
+    NPC npc2("Tom", "", 100, &ship_yard, &inventory_object, {&confused,&walk_away});
+    NPC npc3("Simon", "", 100, &market, &inventory_object, {});
+    NPC npc4("William", "", 100, &dock, &inventory_object, {&food, &walk_away});
+
 
     // npc_option {buy(),&wallet,exit()};
-    Item myItem("Bill","Sword","Weapon",10);
-    std::cout << myItem.get_description();
+    
+    // std::cout << myItem.get_description();
+    // Sleep(10000);
+    std::cout<<npc1.inventory_object->get_total_slots() << std::endl;
+    for(int i=0; i<npc1.inventory_object->get_vector_of_items().size();i++)
+    {
+        std::cout<<npc1.inventory_object->get_vector_of_items()[i]->get_name() <<std::endl;
+        
+
+    }
+    
     Sleep(10000);
 
     while (true)
@@ -95,6 +111,7 @@ int main()
 
     return 0;
 }
+
 
 
 

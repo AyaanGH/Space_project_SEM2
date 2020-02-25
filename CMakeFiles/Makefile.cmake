@@ -50,6 +50,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/player.dir/DependInfo.cmake"
   "CMakeFiles/menu.dir/DependInfo.cmake"
   "CMakeFiles/room.dir/DependInfo.cmake"
+  "CMakeFiles/inventory.dir/DependInfo.cmake"
   "CMakeFiles/conv.dir/DependInfo.cmake"
   "CMakeFiles/item.dir/DependInfo.cmake"
   )

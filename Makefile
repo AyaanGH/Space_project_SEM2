@@ -175,6 +175,19 @@ room/fast:
 .PHONY : room/fast
 
 #=============================================================================
+# Target rules for targets named inventory
+
+# Build rule for target.
+inventory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 inventory
+.PHONY : inventory
+
+# fast build rule for target.
+inventory/fast:
+	$(MAKE) -f CMakeFiles\inventory.dir\build.make CMakeFiles/inventory.dir/build
+.PHONY : inventory/fast
+
+#=============================================================================
 # Target rules for targets named conv
 
 # Build rule for target.
@@ -226,6 +239,33 @@ src/conv.s: src/conv.cpp.s
 src/conv.cpp.s:
 	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/src/conv.cpp.s
 .PHONY : src/conv.cpp.s
+
+src/inventory.obj: src/inventory.cpp.obj
+
+.PHONY : src/inventory.obj
+
+# target to build an object file
+src/inventory.cpp.obj:
+	$(MAKE) -f CMakeFiles\inventory.dir\build.make CMakeFiles/inventory.dir/src/inventory.cpp.obj
+.PHONY : src/inventory.cpp.obj
+
+src/inventory.i: src/inventory.cpp.i
+
+.PHONY : src/inventory.i
+
+# target to preprocess a source file
+src/inventory.cpp.i:
+	$(MAKE) -f CMakeFiles\inventory.dir\build.make CMakeFiles/inventory.dir/src/inventory.cpp.i
+.PHONY : src/inventory.cpp.i
+
+src/inventory.s: src/inventory.cpp.s
+
+.PHONY : src/inventory.s
+
+# target to generate assembly for a file
+src/inventory.cpp.s:
+	$(MAKE) -f CMakeFiles\inventory.dir\build.make CMakeFiles/inventory.dir/src/inventory.cpp.s
+.PHONY : src/inventory.cpp.s
 
 src/item_class_src/item.obj: src/item_class_src/item.cpp.obj
 
@@ -395,18 +435,22 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... main
 	@echo ... edit_cache
+	@echo ... main
 	@echo ... npc
 	@echo ... player
 	@echo ... menu
 	@echo ... room
+	@echo ... inventory
 	@echo ... conv
 	@echo ... item
 	@echo ... rebuild_cache
 	@echo ... src/conv.obj
 	@echo ... src/conv.i
 	@echo ... src/conv.s
+	@echo ... src/inventory.obj
+	@echo ... src/inventory.i
+	@echo ... src/inventory.s
 	@echo ... src/item_class_src/item.obj
 	@echo ... src/item_class_src/item.i
 	@echo ... src/item_class_src/item.s

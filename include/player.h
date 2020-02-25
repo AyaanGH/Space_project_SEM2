@@ -10,12 +10,13 @@ using std::string;
 //forward declarations
 
 class Room;
-// class NPC;s
+class Inventory;
+// class NPCs
 
 class Player
 {
 protected:
-    //Attributes
+    //Attributes;
 
     string first_name;
     string last_name;
@@ -24,10 +25,11 @@ protected:
 public:
     //constructor
 
+    Inventory *inventory_object;
     Room *current_room_object;
 
 
-    Player(string first_name, string last_name, int hp, Room *current_room_object); //&bathroom
+    Player(string first_name, string last_name, int hp, Room *current_room_object, Inventory *inventory_object); 
 
     //Getters
 

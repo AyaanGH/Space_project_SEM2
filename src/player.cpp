@@ -1,18 +1,22 @@
 #include "../include/player.h"
 #include "../include/room.h"
+#include "../include/inventory.h"
 
 #include <iostream>
 
 using std::string;
 
 //Constructor
-Player::Player(string first_name, string last_name, int hp,  Room *current_room_object) 
+Player::Player(string first_name, string last_name, int hp,  Room *current_room_object, Inventory *inventory_object) 
 
 {
     this->first_name = set_first_name(first_name);
     this->last_name = set_first_name(last_name);
     this->hp = set_hp(hp);
     this->current_room_object = current_room_object;
+
+
+    this->inventory_object = inventory_object;
 }
 
 
