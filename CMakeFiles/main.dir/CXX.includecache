@@ -14,7 +14,7 @@ array
 vector
 -
 
-C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
 string
 -
 
@@ -61,8 +61,8 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/r
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/npc.h
 ../include/conv.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/conv.h
-../include/item.h
-C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item.h
+../include/item_class_header/item.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
 stdio.h
 -
 conio.h

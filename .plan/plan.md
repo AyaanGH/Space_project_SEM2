@@ -1,7 +1,25 @@
+# Items
+
+
+-Weapons
+    -> Ranged
+    -> Melee
+-Apparel
+-Consumable 
+-Misc   
+
+
+
+NPC npc3("Simon", "", 100, &market, {}, myInv(slots=10 , {&sword,&shield}));
+
+
+
+Player(string first_name, string last_name, int hp, Room *current_room_object,)
+
 # NPC Interaction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                             /                                                      \ (|)      |
-Display List of NPCs      \/                                                           --/\   |
+Display List of NPCs      \/                                                           --/\   | 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                / (|)      |
                           \/
 NPC Menu                  /\ 

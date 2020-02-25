@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/item.dir/src/item.cpp.obj"
+  "CMakeFiles/item.dir/src/item_class_src/item.cpp.obj"
   "builds/lib/libitem.a"
   "builds/lib/libitem.pdb"
 )

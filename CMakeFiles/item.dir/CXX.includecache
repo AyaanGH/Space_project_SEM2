@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
 string
 -
 
-C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/item.cpp
-../include/item.h
-C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/item_class_src/item.cpp
+../../include/item_class_header/item.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
 iostream
 -
 string

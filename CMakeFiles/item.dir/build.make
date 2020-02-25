@@ -56,28 +56,28 @@ include CMakeFiles/item.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/item.dir/flags.make
 
-CMakeFiles/item.dir/src/item.cpp.obj: CMakeFiles/item.dir/flags.make
-CMakeFiles/item.dir/src/item.cpp.obj: CMakeFiles/item.dir/includes_CXX.rsp
-CMakeFiles/item.dir/src/item.cpp.obj: src/item.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/item.dir/src/item.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\item.dir\src\item.cpp.obj -c "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\src\item.cpp"
+CMakeFiles/item.dir/src/item_class_src/item.cpp.obj: CMakeFiles/item.dir/flags.make
+CMakeFiles/item.dir/src/item_class_src/item.cpp.obj: CMakeFiles/item.dir/includes_CXX.rsp
+CMakeFiles/item.dir/src/item_class_src/item.cpp.obj: src/item_class_src/item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/item.dir/src/item_class_src/item.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\item.dir\src\item_class_src\item.cpp.obj -c "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\src\item_class_src\item.cpp"
 
-CMakeFiles/item.dir/src/item.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/item.dir/src/item.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\src\item.cpp" > CMakeFiles\item.dir\src\item.cpp.i
+CMakeFiles/item.dir/src/item_class_src/item.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/item.dir/src/item_class_src/item.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\src\item_class_src\item.cpp" > CMakeFiles\item.dir\src\item_class_src\item.cpp.i
 
-CMakeFiles/item.dir/src/item.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/item.dir/src/item.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\src\item.cpp" -o CMakeFiles\item.dir\src\item.cpp.s
+CMakeFiles/item.dir/src/item_class_src/item.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/item.dir/src/item_class_src/item.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\src\item_class_src\item.cpp" -o CMakeFiles\item.dir\src\item_class_src\item.cpp.s
 
 # Object files for target item
 item_OBJECTS = \
-"CMakeFiles/item.dir/src/item.cpp.obj"
+"CMakeFiles/item.dir/src/item_class_src/item.cpp.obj"
 
 # External object files for target item
 item_EXTERNAL_OBJECTS =
 
-builds/lib/libitem.a: CMakeFiles/item.dir/src/item.cpp.obj
+builds/lib/libitem.a: CMakeFiles/item.dir/src/item_class_src/item.cpp.obj
 builds/lib/libitem.a: CMakeFiles/item.dir/build.make
 builds/lib/libitem.a: CMakeFiles/item.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library builds\lib\libitem.a"

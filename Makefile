@@ -227,32 +227,32 @@ src/conv.cpp.s:
 	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/src/conv.cpp.s
 .PHONY : src/conv.cpp.s
 
-src/item.obj: src/item.cpp.obj
+src/item_class_src/item.obj: src/item_class_src/item.cpp.obj
 
-.PHONY : src/item.obj
+.PHONY : src/item_class_src/item.obj
 
 # target to build an object file
-src/item.cpp.obj:
-	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item.cpp.obj
-.PHONY : src/item.cpp.obj
+src/item_class_src/item.cpp.obj:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item_class_src/item.cpp.obj
+.PHONY : src/item_class_src/item.cpp.obj
 
-src/item.i: src/item.cpp.i
+src/item_class_src/item.i: src/item_class_src/item.cpp.i
 
-.PHONY : src/item.i
+.PHONY : src/item_class_src/item.i
 
 # target to preprocess a source file
-src/item.cpp.i:
-	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item.cpp.i
-.PHONY : src/item.cpp.i
+src/item_class_src/item.cpp.i:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item_class_src/item.cpp.i
+.PHONY : src/item_class_src/item.cpp.i
 
-src/item.s: src/item.cpp.s
+src/item_class_src/item.s: src/item_class_src/item.cpp.s
 
-.PHONY : src/item.s
+.PHONY : src/item_class_src/item.s
 
 # target to generate assembly for a file
-src/item.cpp.s:
-	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item.cpp.s
-.PHONY : src/item.cpp.s
+src/item_class_src/item.cpp.s:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item_class_src/item.cpp.s
+.PHONY : src/item_class_src/item.cpp.s
 
 src/main.obj: src/main.cpp.obj
 
@@ -407,9 +407,9 @@ help:
 	@echo ... src/conv.obj
 	@echo ... src/conv.i
 	@echo ... src/conv.s
-	@echo ... src/item.obj
-	@echo ... src/item.i
-	@echo ... src/item.s
+	@echo ... src/item_class_src/item.obj
+	@echo ... src/item_class_src/item.i
+	@echo ... src/item_class_src/item.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

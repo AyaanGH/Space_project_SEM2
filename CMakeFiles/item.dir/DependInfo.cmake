@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/item.cpp" "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/item.dir/src/item.cpp.obj"
+  "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/item_class_src/item.cpp" "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/item.dir/src/item_class_src/item.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

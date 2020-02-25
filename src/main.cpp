@@ -4,7 +4,7 @@
 #include "../include/room.h"
 #include "../include/npc.h"
 #include "../include/conv.h"
-#include "../include/item.h"
+#include "../include/item_class_header/item.h"
 #include <stdio.h>
 #include <conio.h>
 #include <string>
@@ -72,12 +72,16 @@ int main()
     Conversation confused("Hey, you look confused","Sorry, i'm just looking for some materials, can you help me?",{&agree,&not_ready});
 
 
+
     NPC npc1("Bill", "the Employer", 100, &market, {&buy, &internship, &walk_away});
     NPC npc2("Tom", "", 100, &ship_yard, {&confused,&walk_away});
     NPC npc3("Simon", "", 100, &market, {});
     NPC npc4("William", "", 100, &dock, {&food, &walk_away});
 
     // npc_option {buy(),&wallet,exit()};
+    Item myItem("Bill","Sword","Weapon",10);
+    std::cout << myItem.get_description();
+    Sleep(10000);
 
     while (true)
     {
@@ -85,6 +89,7 @@ int main()
         game_menu.show_menu_buttons();
         game_menu.check_menu_bar_button_press(&myPlayer);
     }
+
 
     // auto here = Room::get_current_room_object();
 
