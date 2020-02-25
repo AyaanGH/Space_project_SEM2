@@ -228,7 +228,6 @@ Room *Room::get_room_object_from_ID(int ID)
 
     for (int i = 0; i < list_of_room_objects.size(); i++)
     {
-        /* code */
 
         //TODO: Using direct member variable rather than getter
         if (list_of_room_objects[i]->get_room_id() == ID)
@@ -237,7 +236,7 @@ Room *Room::get_room_object_from_ID(int ID)
         }
     }
 
-    throw "ROOM ID DOES NOT EXIST THAT U ARE TRYING TO FIND";
+    throw "ROOM ID DOES NOT EXIST THAT YOU ARE TRYING TO FIND";
 
     //
 }

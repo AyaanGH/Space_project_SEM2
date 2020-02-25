@@ -149,19 +149,6 @@ player/fast:
 .PHONY : player/fast
 
 #=============================================================================
-# Target rules for targets named room
-
-# Build rule for target.
-room: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 room
-.PHONY : room
-
-# fast build rule for target.
-room/fast:
-	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/build
-.PHONY : room/fast
-
-#=============================================================================
 # Target rules for targets named menu
 
 # Build rule for target.
@@ -175,6 +162,19 @@ menu/fast:
 .PHONY : menu/fast
 
 #=============================================================================
+# Target rules for targets named room
+
+# Build rule for target.
+room: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 room
+.PHONY : room
+
+# fast build rule for target.
+room/fast:
+	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/build
+.PHONY : room/fast
+
+#=============================================================================
 # Target rules for targets named conv
 
 # Build rule for target.
@@ -186,6 +186,19 @@ conv: cmake_check_build_system
 conv/fast:
 	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/build
 .PHONY : conv/fast
+
+#=============================================================================
+# Target rules for targets named item
+
+# Build rule for target.
+item: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 item
+.PHONY : item
+
+# fast build rule for target.
+item/fast:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/build
+.PHONY : item/fast
 
 src/conv.obj: src/conv.cpp.obj
 
@@ -213,6 +226,33 @@ src/conv.s: src/conv.cpp.s
 src/conv.cpp.s:
 	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/src/conv.cpp.s
 .PHONY : src/conv.cpp.s
+
+src/item.obj: src/item.cpp.obj
+
+.PHONY : src/item.obj
+
+# target to build an object file
+src/item.cpp.obj:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item.cpp.obj
+.PHONY : src/item.cpp.obj
+
+src/item.i: src/item.cpp.i
+
+.PHONY : src/item.i
+
+# target to preprocess a source file
+src/item.cpp.i:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item.cpp.i
+.PHONY : src/item.cpp.i
+
+src/item.s: src/item.cpp.s
+
+.PHONY : src/item.s
+
+# target to generate assembly for a file
+src/item.cpp.s:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item.cpp.s
+.PHONY : src/item.cpp.s
 
 src/main.obj: src/main.cpp.obj
 
@@ -355,17 +395,21 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... edit_cache
 	@echo ... main
+	@echo ... edit_cache
 	@echo ... npc
 	@echo ... player
-	@echo ... room
 	@echo ... menu
+	@echo ... room
 	@echo ... conv
+	@echo ... item
 	@echo ... rebuild_cache
 	@echo ... src/conv.obj
 	@echo ... src/conv.i
 	@echo ... src/conv.s
+	@echo ... src/item.obj
+	@echo ... src/item.i
+	@echo ... src/item.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

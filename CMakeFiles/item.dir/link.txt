@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libitem.a  CMakeFiles/item.dir/src/item.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libitem.a

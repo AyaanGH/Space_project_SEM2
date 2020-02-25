@@ -55,9 +55,10 @@ CMAKE_BINARY_DIR = "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\
 all: CMakeFiles/main.dir/all
 all: CMakeFiles/npc.dir/all
 all: CMakeFiles/player.dir/all
-all: CMakeFiles/room.dir/all
 all: CMakeFiles/menu.dir/all
+all: CMakeFiles/room.dir/all
 all: CMakeFiles/conv.dir/all
+all: CMakeFiles/item.dir/all
 
 .PHONY : all
 
@@ -70,9 +71,10 @@ preinstall:
 clean: CMakeFiles/main.dir/clean
 clean: CMakeFiles/npc.dir/clean
 clean: CMakeFiles/player.dir/clean
-clean: CMakeFiles/room.dir/clean
 clean: CMakeFiles/menu.dir/clean
+clean: CMakeFiles/room.dir/clean
 clean: CMakeFiles/conv.dir/clean
+clean: CMakeFiles/item.dir/clean
 
 .PHONY : clean
 
@@ -82,17 +84,18 @@ clean: CMakeFiles/conv.dir/clean
 # All Build rule for target.
 CMakeFiles/main.dir/all: CMakeFiles/npc.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/room.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/menu.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/room.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/conv.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/item.dir/all
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=3,4 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=5,6 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 12
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 14
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -114,7 +117,7 @@ CMakeFiles/main.dir/clean:
 CMakeFiles/npc.dir/all:
 	$(MAKE) -f CMakeFiles\npc.dir\build.make CMakeFiles/npc.dir/depend
 	$(MAKE) -f CMakeFiles\npc.dir\build.make CMakeFiles/npc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=7,8 "Built target npc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=9,10 "Built target npc"
 .PHONY : CMakeFiles/npc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -141,7 +144,7 @@ CMakeFiles/npc.dir/clean:
 CMakeFiles/player.dir/all:
 	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/depend
 	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=9,10 "Built target player"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=11,12 "Built target player"
 .PHONY : CMakeFiles/player.dir/all
 
 # Build rule for subdir invocation for target.
@@ -162,40 +165,13 @@ CMakeFiles/player.dir/clean:
 .PHONY : CMakeFiles/player.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/room.dir
-
-# All Build rule for target.
-CMakeFiles/room.dir/all:
-	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/depend
-	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=11,12 "Built target room"
-.PHONY : CMakeFiles/room.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/room.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/room.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
-.PHONY : CMakeFiles/room.dir/rule
-
-# Convenience name for target.
-room: CMakeFiles/room.dir/rule
-
-.PHONY : room
-
-# clean rule for target.
-CMakeFiles/room.dir/clean:
-	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/clean
-.PHONY : CMakeFiles/room.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/menu.dir
 
 # All Build rule for target.
 CMakeFiles/menu.dir/all:
 	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/depend
 	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=5,6 "Built target menu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=7,8 "Built target menu"
 .PHONY : CMakeFiles/menu.dir/all
 
 # Build rule for subdir invocation for target.
@@ -214,6 +190,33 @@ menu: CMakeFiles/menu.dir/rule
 CMakeFiles/menu.dir/clean:
 	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/clean
 .PHONY : CMakeFiles/menu.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/room.dir
+
+# All Build rule for target.
+CMakeFiles/room.dir/all:
+	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/depend
+	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=13,14 "Built target room"
+.PHONY : CMakeFiles/room.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/room.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/room.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
+.PHONY : CMakeFiles/room.dir/rule
+
+# Convenience name for target.
+room: CMakeFiles/room.dir/rule
+
+.PHONY : room
+
+# clean rule for target.
+CMakeFiles/room.dir/clean:
+	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/clean
+.PHONY : CMakeFiles/room.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/conv.dir
@@ -241,6 +244,33 @@ conv: CMakeFiles/conv.dir/rule
 CMakeFiles/conv.dir/clean:
 	$(MAKE) -f CMakeFiles\conv.dir\build.make CMakeFiles/conv.dir/clean
 .PHONY : CMakeFiles/conv.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/item.dir
+
+# All Build rule for target.
+CMakeFiles/item.dir/all:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/depend
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=3,4 "Built target item"
+.PHONY : CMakeFiles/item.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/item.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/item.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
+.PHONY : CMakeFiles/item.dir/rule
+
+# Convenience name for target.
+item: CMakeFiles/item.dir/rule
+
+.PHONY : item
+
+# clean rule for target.
+CMakeFiles/item.dir/clean:
+	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/clean
+.PHONY : CMakeFiles/item.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

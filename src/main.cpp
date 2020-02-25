@@ -4,6 +4,7 @@
 #include "../include/room.h"
 #include "../include/npc.h"
 #include "../include/conv.h"
+#include "../include/item.h"
 #include <stdio.h>
 #include <conio.h>
 #include <string>
@@ -13,9 +14,9 @@
 #include <windows.h>
 #include <cstdlib>
 #include <random>
+#include <thread>
 
 using std::string;
-
 
 class Conversation;
 
@@ -34,70 +35,50 @@ int main()
 
     Player myPlayer("Peter", "Parker", 100, &market);
 
-
-    // std::cout << "\nMemory adress of Market in main.cpp:" << &market <<std::endl;
-    // Sleep(5000);
-    // std::cout << "\nMemory adress of Power Plant in main.cpp:" << &power_plant <<std::endl;
-    // Sleep(5000);
-    //std::cout << "\nMemory adress of Current Room from myPlayer  main.cpp:" << myPlayer.current_room_object<<std::endl;
-    // Sleep(5000);
-    // std::cout << "\nMemory adress of  myPlayer  main.cpp:" << &myPlayer <<std::endl;
-    // Sleep(5000);
-
     
+    Conversation buy(1, "What do you have in store?");
 
-    
-    // Conversation food("I am hungry","Don't you have a wallet?",{});
-
-    // Conversation car("I hate walking","Me too",{});
-
-    // Conversation wallet("Ask for wallet", "Why do you want my wallet?",{&food,&car});
-
-     Conversation buy(1, "What do you have in store?");
-     
-    Conversation walk_away(2,"Walk away");
-
+    Conversation walk_away(2, "Walk away");
 
     //Bill Internship Conversation
-    Conversation not_ready{"I think I will come back later", "I'm closing shop, come back tomorrow",{}}; 
-    Conversation correct_terminate{"Thanks","",{}};
-    Conversation incorrect_terminate{"Awww come on","",{}};
-  
+    Conversation not_ready{"I think I will come back later", "I'm closing shop, come back tomorrow", {}};
+    Conversation correct_terminate{"Thanks", "", {}};
+    Conversation incorrect_terminate{"Awww come on", "", {}};
 
-    Conversation correct_ans{"Answer is 144", "Correct! You get the job. You start tomorrow morning",{&correct_terminate}};
-    Conversation wrong_ans{"I think it is 120", "Wrong! You are not smart enough. Apply next year",{&incorrect_terminate}};
-    Conversation question{"Go ahead","What is 12 x 12 ?",{&correct_ans,&wrong_ans}};
+    Conversation correct_ans{"Answer is 144", "Correct! You get the job. You start tomorrow morning", {&correct_terminate}};
+    Conversation wrong_ans{"I think it is 120", "Wrong! You are not smart enough. Apply next year", {&incorrect_terminate}};
+    Conversation question{"Go ahead", "What is 12 x 12 ?", {&correct_ans, &wrong_ans}};
 
-    Conversation ready{"Absolutely, bring it on!", "You seem enthusiastic, here is your first question",{&question}};
-    Conversation shy{"Do I have to?", "Absolutely, no pain no gain. Here is the question",{&question}};
+    Conversation ready{"Absolutely, bring it on!", "You seem enthusiastic, here is your first question", {&question}};
+    Conversation shy{"Do I have to?", "Absolutely, no pain no gain. Here is the question", {&question}};
 
-    Conversation internship("Ask for internship","So you want a job huh? You got to pass the on the spot interview ...",{&ready,&shy,&not_ready});
+    Conversation internship("Ask for internship", "So you want a job huh? You got to pass the on the spot interview ...", {&ready, &shy, &not_ready});
+
+    //William hungry conversation
+    Conversation no_more_hungry{"Thanks", "", {}};
+    Conversation sad{"Awww come on", "", {}};
+
+    Conversation insecure("I don't know actually", "Are you making fun of me? DO NOT waste my time", {&sad});
+    Conversation confident("I am very hungry", "You can have some of my food then", {&no_more_hungry});
+
+    Conversation food("Ask for food", "So, are you hungry?", {&confident, &insecure});
+
+    //Tom Quest collect conversation
+
+    
+    Conversation agree2("You've got it!", "Ok, cool I will see you later",{});
+    Conversation agree("Yes sure, I have time to kill", "Well I hope you you don't kill anyone, can you bring me 5 pieces?",{&agree2,&not_ready});
+
+    Conversation confused("Hey, you look confused","Sorry, i'm just looking for some materials, can you help me?",{&agree,&not_ready});
 
 
-
-    //Hungry
-    Conversation no_more_hungry{"Thanks","",{}};
-    Conversation sad{"Awww come on","",{}};
-  
-
-    Conversation insecure("I don't know actually", "Are you making fun of me? DO NOT waste my time",{&sad});
-    Conversation confident("I am very hungry", "You can have some of my food then",{&no_more_hungry});
-
-    Conversation food("Ask for food","So, are you hungry?",{&confident,&insecure});
-
-
-
-
-
-    NPC npc1("Bill", "the Employer", 100, &market, {&buy,&internship,&walk_away});
-    NPC npc2("Tom", "", 100, &market, {});
+    NPC npc1("Bill", "the Employer", 100, &market, {&buy, &internship, &walk_away});
+    NPC npc2("Tom", "", 100, &ship_yard, {&confused,&walk_away});
     NPC npc3("Simon", "", 100, &market, {});
-    NPC npc4("William", "", 100, &dock, {&food,&walk_away});
-
+    NPC npc4("William", "", 100, &dock, {&food, &walk_away});
 
     // npc_option {buy(),&wallet,exit()};
 
-    // Sleep(6000);
     while (true)
     {
         Menu::clear_screen();
@@ -109,6 +90,14 @@ int main()
 
     return 0;
 }
+
+
+
+
+
+
+
+
 
 // struct Vector3
 // {
@@ -153,11 +142,10 @@ int main()
 //     std::vector<Conversation> choice_list;
 //     int id;
 
-
 //     Conversation(int id, string name)
 //     {
 //             this -> name = name;
-//             this -> id = id; 
+//             this -> id = id;
 //     }
 //     Conversation(string name, string npc_response, std::vector<Conversation> choice_list)
 
@@ -168,18 +156,12 @@ int main()
 //         this->choice_list = choice_list;
 //     }
 
-
 //     //method
-
 
 //     void checkID()
 
 //     {
 
-
-    
-
-        
 //     }
 // };
 
