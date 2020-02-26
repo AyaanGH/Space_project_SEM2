@@ -7,7 +7,6 @@ using std::string;
 
 //Constructor
 
-
 Item::Item(string name, string description, string item_type, int item_value)
 {
     this->name = set_name(name);
@@ -21,7 +20,7 @@ Item::Item(string name, string description, string item_type, int item_value)
 string Item::get_name()
 {
     return name;
-    }
+}
 
 string Item::get_description()
 {
@@ -63,4 +62,3 @@ int Item::set_item_value(int item_value)
     return item_value;
 }
 //Methods
-

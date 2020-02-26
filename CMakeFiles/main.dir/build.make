@@ -86,6 +86,7 @@ bin/main.exe: builds/lib/libnpc.a
 bin/main.exe: builds/lib/libconv.a
 bin/main.exe: builds/lib/libitem.a
 bin/main.exe: builds/lib/libinventory.a
+bin/main.exe: builds/lib/libweapon.a
 bin/main.exe: CMakeFiles/main.dir/linklibs.rsp
 bin/main.exe: CMakeFiles/main.dir/objects1.rsp
 bin/main.exe: CMakeFiles/main.dir/link.txt

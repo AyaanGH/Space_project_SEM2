@@ -1,5 +1,3 @@
-C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/edit_cache.dir
-C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/main.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/npc.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/player.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/menu.dir
@@ -7,4 +5,7 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFile
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/inventory.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/conv.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/item.dir
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/weapon.dir
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/edit_cache.dir
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/main.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/rebuild_cache.dir

@@ -52,7 +52,6 @@ CMAKE_BINARY_DIR = "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main.dir/all
 all: CMakeFiles/npc.dir/all
 all: CMakeFiles/player.dir/all
 all: CMakeFiles/menu.dir/all
@@ -60,6 +59,8 @@ all: CMakeFiles/room.dir/all
 all: CMakeFiles/inventory.dir/all
 all: CMakeFiles/conv.dir/all
 all: CMakeFiles/item.dir/all
+all: CMakeFiles/weapon.dir/all
+all: CMakeFiles/main.dir/all
 
 .PHONY : all
 
@@ -69,7 +70,6 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main.dir/clean
 clean: CMakeFiles/npc.dir/clean
 clean: CMakeFiles/player.dir/clean
 clean: CMakeFiles/menu.dir/clean
@@ -77,41 +77,10 @@ clean: CMakeFiles/room.dir/clean
 clean: CMakeFiles/inventory.dir/clean
 clean: CMakeFiles/conv.dir/clean
 clean: CMakeFiles/item.dir/clean
+clean: CMakeFiles/weapon.dir/clean
+clean: CMakeFiles/main.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/main.dir
-
-# All Build rule for target.
-CMakeFiles/main.dir/all: CMakeFiles/npc.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/menu.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/room.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/inventory.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/conv.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/item.dir/all
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=7,8 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 16
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
-.PHONY : CMakeFiles/main.dir/rule
-
-# Convenience name for target.
-main: CMakeFiles/main.dir/rule
-
-.PHONY : main
-
-# clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/npc.dir
@@ -301,6 +270,67 @@ item: CMakeFiles/item.dir/rule
 CMakeFiles/item.dir/clean:
 	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/clean
 .PHONY : CMakeFiles/item.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/weapon.dir
+
+# All Build rule for target.
+CMakeFiles/weapon.dir/all:
+	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/depend
+	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=17,18 "Built target weapon"
+.PHONY : CMakeFiles/weapon.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/weapon.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/weapon.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
+.PHONY : CMakeFiles/weapon.dir/rule
+
+# Convenience name for target.
+weapon: CMakeFiles/weapon.dir/rule
+
+.PHONY : weapon
+
+# clean rule for target.
+CMakeFiles/weapon.dir/clean:
+	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/clean
+.PHONY : CMakeFiles/weapon.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/main.dir
+
+# All Build rule for target.
+CMakeFiles/main.dir/all: CMakeFiles/npc.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/menu.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/room.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/inventory.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/conv.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/item.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/weapon.dir/all
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=7,8 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 18
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
+.PHONY : CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: CMakeFiles/main.dir/rule
+
+.PHONY : main
+
+# clean rule for target.
+CMakeFiles/main.dir/clean:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

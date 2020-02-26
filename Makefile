@@ -110,19 +110,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
 # Target rules for targets named npc
 
 # Build rule for target.
@@ -213,6 +200,32 @@ item/fast:
 	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/build
 .PHONY : item/fast
 
+#=============================================================================
+# Target rules for targets named weapon
+
+# Build rule for target.
+weapon: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 weapon
+.PHONY : weapon
+
+# fast build rule for target.
+weapon/fast:
+	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/build
+.PHONY : weapon/fast
+
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
 src/conv.obj: src/conv.cpp.obj
 
 .PHONY : src/conv.obj
@@ -293,6 +306,33 @@ src/item_class_src/item.s: src/item_class_src/item.cpp.s
 src/item_class_src/item.cpp.s:
 	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/src/item_class_src/item.cpp.s
 .PHONY : src/item_class_src/item.cpp.s
+
+src/item_class_src/weapon.obj: src/item_class_src/weapon.cpp.obj
+
+.PHONY : src/item_class_src/weapon.obj
+
+# target to build an object file
+src/item_class_src/weapon.cpp.obj:
+	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.obj
+.PHONY : src/item_class_src/weapon.cpp.obj
+
+src/item_class_src/weapon.i: src/item_class_src/weapon.cpp.i
+
+.PHONY : src/item_class_src/weapon.i
+
+# target to preprocess a source file
+src/item_class_src/weapon.cpp.i:
+	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.i
+.PHONY : src/item_class_src/weapon.cpp.i
+
+src/item_class_src/weapon.s: src/item_class_src/weapon.cpp.s
+
+.PHONY : src/item_class_src/weapon.s
+
+# target to generate assembly for a file
+src/item_class_src/weapon.cpp.s:
+	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.s
+.PHONY : src/item_class_src/weapon.cpp.s
 
 src/main.obj: src/main.cpp.obj
 
@@ -435,8 +475,6 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... edit_cache
-	@echo ... main
 	@echo ... npc
 	@echo ... player
 	@echo ... menu
@@ -444,6 +482,9 @@ help:
 	@echo ... inventory
 	@echo ... conv
 	@echo ... item
+	@echo ... weapon
+	@echo ... edit_cache
+	@echo ... main
 	@echo ... rebuild_cache
 	@echo ... src/conv.obj
 	@echo ... src/conv.i
@@ -454,6 +495,9 @@ help:
 	@echo ... src/item_class_src/item.obj
 	@echo ... src/item_class_src/item.i
 	@echo ... src/item_class_src/item.s
+	@echo ... src/item_class_src/weapon.obj
+	@echo ... src/item_class_src/weapon.i
+	@echo ... src/item_class_src/weapon.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

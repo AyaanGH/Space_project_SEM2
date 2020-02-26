@@ -3,6 +3,10 @@
 
 -Weapons
     -> Ranged
+        -> Accuracy (distance)
+        ->
+        -> Ammunition 
+
     -> Melee
 -Apparel
 -Consumable 
@@ -21,8 +25,8 @@ Player(string first_name, string last_name, int hp, Room *current_room_object,)
                             /                                                      \ (|)      |
 Display List of NPCs      \/                                                           --/\   | 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                / (|)      |
-                          \/
-NPC Menu                  /\ 
+                            /
+NPC Menu                  \/ 
     |
     |---> Display list of interactions    
     

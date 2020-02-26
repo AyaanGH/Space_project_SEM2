@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libweapon.a  CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libweapon.a

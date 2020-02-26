@@ -19,7 +19,7 @@
 
 using std::string;
 
-class Conversation;
+// class Conversation;
 
 int main()
 {
@@ -28,19 +28,20 @@ int main()
 
     game_menu.show_cursor(false);
 
-    Item myItem("Will the sharp","Sword","Weapon",10);
-    Item anotherItem("margaret the tasty","Potion","Consumable",3);
 
-    Inventory inventory_object(50,{&myItem,&anotherItem});
 
+  
+
+
+    //Rooms
     Room market(10, "Marketplace", "Can purchase items", {12, -1, 14, 15});
     Room power_plant(15, "Power Plant", "Can purchase items", {-1, 10, -1, -1});
     Room dock(12, "Docks", "Space ships dock", {-1, 13, 10, -1});
     Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
-    Player myPlayer("Peter", "Parker", 100, &market,&inventory_object);
 
+    //Conveersation
     
     Conversation buy(1, "What do you have in store?");
 
@@ -69,20 +70,26 @@ int main()
 
     Conversation food("Ask for food", "So, are you hungry?", {&confident, &insecure});
 
-    //Tom Quest collect conversation
-
-    
-    Conversation agree2("You've got it!", "Ok, cool I will see you later",{});
-    Conversation agree("Yes sure, I have time to kill", "Well I hope you you don't kill anyone, can you bring me 5 pieces?",{&agree2,&not_ready});
-
-    Conversation confused("Hey, you look confused","Sorry, i'm just looking for some materials, can you help me?",{&agree,&not_ready});
 
 
 
-    NPC npc1("Bill", "the Employer", 100, &market, &inventory_object, {&buy, &internship, &walk_away});
-    NPC npc2("Tom", "", 100, &ship_yard, &inventory_object, {&confused,&walk_away});
-    NPC npc3("Simon", "", 100, &market, &inventory_object, {});
-    NPC npc4("William", "", 100, &dock, &inventory_object, {&food, &walk_away});
+    //Items 
+    Item myItem("Will the sharp","Sword","Weapon",10);
+    Item anotherItem("margaret the tasty","Potion","Consumable",3);
+
+    //Inventory
+    Inventory player_inventory(50,{&myItem,&anotherItem});
+    Inventory npc1_inventory(20,{}); 
+    Inventory npc2_inventory(20,{}); 
+    Inventory npc3_inventory(20,{}); 
+     
+    //Players
+    Player myPlayer("Peter", "Parker", 100, &market,&player_inventory);
+
+    //NPCs
+    NPC npc1("Bill", "the Employer", 100, &market, &npc1_inventory, {&buy, &internship, &walk_away});
+    NPC npc2("Simon", "", 100, &market, &npc2_inventory, {});
+    NPC npc3("William", "", 100, &dock, &npc3_inventory, {&food, &walk_away});
 
 
     // npc_option {buy(),&wallet,exit()};
