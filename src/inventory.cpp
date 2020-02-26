@@ -35,3 +35,4 @@ int Inventory::set_total_slots(int total_slots)
 
     return total_slots;
 }
+

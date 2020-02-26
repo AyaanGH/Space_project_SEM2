@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libconsumable.a  CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libconsumable.a

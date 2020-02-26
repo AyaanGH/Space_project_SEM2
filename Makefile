@@ -188,6 +188,19 @@ conv/fast:
 .PHONY : conv/fast
 
 #=============================================================================
+# Target rules for targets named apparel
+
+# Build rule for target.
+apparel: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 apparel
+.PHONY : apparel
+
+# fast build rule for target.
+apparel/fast:
+	$(MAKE) -f CMakeFiles\apparel.dir\build.make CMakeFiles/apparel.dir/build
+.PHONY : apparel/fast
+
+#=============================================================================
 # Target rules for targets named item
 
 # Build rule for target.
@@ -212,6 +225,19 @@ weapon: cmake_check_build_system
 weapon/fast:
 	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/build
 .PHONY : weapon/fast
+
+#=============================================================================
+# Target rules for targets named consumable
+
+# Build rule for target.
+consumable: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 consumable
+.PHONY : consumable
+
+# fast build rule for target.
+consumable/fast:
+	$(MAKE) -f CMakeFiles\consumable.dir\build.make CMakeFiles/consumable.dir/build
+.PHONY : consumable/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -279,6 +305,60 @@ src/inventory.s: src/inventory.cpp.s
 src/inventory.cpp.s:
 	$(MAKE) -f CMakeFiles\inventory.dir\build.make CMakeFiles/inventory.dir/src/inventory.cpp.s
 .PHONY : src/inventory.cpp.s
+
+src/item_class_src/apparel.obj: src/item_class_src/apparel.cpp.obj
+
+.PHONY : src/item_class_src/apparel.obj
+
+# target to build an object file
+src/item_class_src/apparel.cpp.obj:
+	$(MAKE) -f CMakeFiles\apparel.dir\build.make CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.obj
+.PHONY : src/item_class_src/apparel.cpp.obj
+
+src/item_class_src/apparel.i: src/item_class_src/apparel.cpp.i
+
+.PHONY : src/item_class_src/apparel.i
+
+# target to preprocess a source file
+src/item_class_src/apparel.cpp.i:
+	$(MAKE) -f CMakeFiles\apparel.dir\build.make CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.i
+.PHONY : src/item_class_src/apparel.cpp.i
+
+src/item_class_src/apparel.s: src/item_class_src/apparel.cpp.s
+
+.PHONY : src/item_class_src/apparel.s
+
+# target to generate assembly for a file
+src/item_class_src/apparel.cpp.s:
+	$(MAKE) -f CMakeFiles\apparel.dir\build.make CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.s
+.PHONY : src/item_class_src/apparel.cpp.s
+
+src/item_class_src/consumable.obj: src/item_class_src/consumable.cpp.obj
+
+.PHONY : src/item_class_src/consumable.obj
+
+# target to build an object file
+src/item_class_src/consumable.cpp.obj:
+	$(MAKE) -f CMakeFiles\consumable.dir\build.make CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.obj
+.PHONY : src/item_class_src/consumable.cpp.obj
+
+src/item_class_src/consumable.i: src/item_class_src/consumable.cpp.i
+
+.PHONY : src/item_class_src/consumable.i
+
+# target to preprocess a source file
+src/item_class_src/consumable.cpp.i:
+	$(MAKE) -f CMakeFiles\consumable.dir\build.make CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.i
+.PHONY : src/item_class_src/consumable.cpp.i
+
+src/item_class_src/consumable.s: src/item_class_src/consumable.cpp.s
+
+.PHONY : src/item_class_src/consumable.s
+
+# target to generate assembly for a file
+src/item_class_src/consumable.cpp.s:
+	$(MAKE) -f CMakeFiles\consumable.dir\build.make CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.s
+.PHONY : src/item_class_src/consumable.cpp.s
 
 src/item_class_src/item.obj: src/item_class_src/item.cpp.obj
 
@@ -481,8 +561,10 @@ help:
 	@echo ... room
 	@echo ... inventory
 	@echo ... conv
+	@echo ... apparel
 	@echo ... item
 	@echo ... weapon
+	@echo ... consumable
 	@echo ... edit_cache
 	@echo ... main
 	@echo ... rebuild_cache
@@ -492,6 +574,12 @@ help:
 	@echo ... src/inventory.obj
 	@echo ... src/inventory.i
 	@echo ... src/inventory.s
+	@echo ... src/item_class_src/apparel.obj
+	@echo ... src/item_class_src/apparel.i
+	@echo ... src/item_class_src/apparel.s
+	@echo ... src/item_class_src/consumable.obj
+	@echo ... src/item_class_src/consumable.i
+	@echo ... src/item_class_src/consumable.s
 	@echo ... src/item_class_src/item.obj
 	@echo ... src/item_class_src/item.i
 	@echo ... src/item_class_src/item.s

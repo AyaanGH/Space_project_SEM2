@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libapparel.a  CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libapparel.a

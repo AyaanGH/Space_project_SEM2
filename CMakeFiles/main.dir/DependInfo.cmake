@@ -23,6 +23,8 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/item.dir/DependInfo.cmake"
   "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/inventory.dir/DependInfo.cmake"
   "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/weapon.dir/DependInfo.cmake"
+  "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/apparel.dir/DependInfo.cmake"
+  "C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/consumable.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

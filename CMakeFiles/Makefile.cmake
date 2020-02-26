@@ -51,7 +51,9 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/room.dir/DependInfo.cmake"
   "CMakeFiles/inventory.dir/DependInfo.cmake"
   "CMakeFiles/conv.dir/DependInfo.cmake"
+  "CMakeFiles/apparel.dir/DependInfo.cmake"
   "CMakeFiles/item.dir/DependInfo.cmake"
   "CMakeFiles/weapon.dir/DependInfo.cmake"
+  "CMakeFiles/consumable.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   )

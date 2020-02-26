@@ -4,8 +4,10 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFile
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/room.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/inventory.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/conv.dir
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/apparel.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/item.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/weapon.dir
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/consumable.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/edit_cache.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/main.dir
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/CMakeFiles/rebuild_cache.dir
