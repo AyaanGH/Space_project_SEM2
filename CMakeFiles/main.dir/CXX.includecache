@@ -20,6 +20,24 @@ string
 vector
 -
 
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/apparel.h
+item.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
+string
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/consumable.h
+item.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
+string
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
+string
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/weapon.h
+item.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
 string
 -
@@ -71,6 +89,12 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/c
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/inventory.h
 ../include/item_class_header/item.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
+../include/item_class_header/weapon.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/weapon.h
+../include/item_class_header/apparel.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/apparel.h
+../include/item_class_header/consumable.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/consumable.h
 stdio.h
 -
 conio.h

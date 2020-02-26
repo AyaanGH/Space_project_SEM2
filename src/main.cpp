@@ -6,6 +6,9 @@
 #include "../include/conv.h"
 #include "../include/inventory.h"
 #include "../include/item_class_header/item.h"
+#include "../include/item_class_header/weapon.h"
+#include "../include/item_class_header/apparel.h"
+#include "../include/item_class_header/consumable.h"
 #include <stdio.h>
 #include <conio.h>
 #include <string>
@@ -74,11 +77,11 @@ int main()
 
 
     //Items 
-    Item myItem("Will the sharp","Sword","Weapons",10);
-    Item anotherItem("margaret the tasty","Potion","Consumables",3);
+    Weapon pistol("Plasma Pistol","Small range, high accuracy. Great for small-medium range space combat","Weapons",10,100,55,70,70);
+    Consumable adrenaline("Adrenaline rush","Surge of power with the cost of fatigue","Consumables",3,1,120);
 
     //Inventory
-    Inventory player_inventory(50,{&myItem,&anotherItem});
+    Inventory player_inventory(50,{&pistol,&adrenaline});
     Inventory npc1_inventory(20,{}); 
     Inventory npc2_inventory(20,{}); 
     Inventory npc3_inventory(20,{}); 

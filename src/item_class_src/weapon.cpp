@@ -61,3 +61,6 @@ int Weapon::set_accuracy(int accuracy)
     return accuracy;
 }
 //methods
+
+
+

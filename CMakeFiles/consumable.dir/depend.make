@@ -3,5 +3,7 @@
 
 CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.obj: include/item_class_header/consumable.h
 CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.obj: include/item_class_header/item.h
+CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.obj: include/menu.h
+CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.obj: include/player.h
 CMakeFiles/consumable.dir/src/item_class_src/consumable.cpp.obj: src/item_class_src/consumable.cpp
 

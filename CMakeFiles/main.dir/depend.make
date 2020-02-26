@@ -3,7 +3,10 @@
 
 CMakeFiles/main.dir/src/main.cpp.obj: include/conv.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/inventory.h
+CMakeFiles/main.dir/src/main.cpp.obj: include/item_class_header/apparel.h
+CMakeFiles/main.dir/src/main.cpp.obj: include/item_class_header/consumable.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/item_class_header/item.h
+CMakeFiles/main.dir/src/main.cpp.obj: include/item_class_header/weapon.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/menu.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/npc.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/player.h

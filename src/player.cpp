@@ -321,29 +321,23 @@ void Player::display_items_in_inventory(string user_category_selection, Player *
 
             std::cout << "------------------\n\n";
 
-            std::cout << vector_of_filtered_items[saved_index]->get_description() << std::endl;
+            vector_of_filtered_items[saved_index]->display_stats();
 
             while (true)
             {
-             char user_input = _getch();
+                char user_input = _getch();
 
-             if (user_input = '\b')
-             {
-                std::cout<<"Returning";
-                Menu::loading_animation();
-                Menu::clear_screen();
-                display_items_in_inventory(user_category_selection, player_object);
-
-
-             }
-             break;
+                if (user_input = '\b')
+                {
+                    std::cout << "\n\n\n";
+                    std::cout << "Returning";
+                    Menu::loading_animation();
+                    Menu::clear_screen();
+                    display_items_in_inventory(user_category_selection, player_object);
+                }
+                break;
                 /* code */
             }
-            
-
-            //std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->current_room_object <<std::endl;
-
-            // Sleep(5000);
 
             break;
 

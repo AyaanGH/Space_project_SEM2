@@ -62,3 +62,14 @@ int Item::set_item_value(int item_value)
     return item_value;
 }
 //Methods
+
+
+
+void Item::display_stats()
+
+{
+
+    std::cout << get_description() << std::endl;
+}
+
+

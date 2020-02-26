@@ -31,6 +31,8 @@ public:
     int set_range(int range);
     int set_durability(int durability);
     int set_accuracy(int accuracy);
+
+
 };
 
 #endif

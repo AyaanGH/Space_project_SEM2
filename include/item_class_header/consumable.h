@@ -24,6 +24,9 @@ public:
     int get_duration();
     int set_num_uses(int num_uses);
     int set_duration(int duration);
+
+    
+    virtual void display_stats();
 };
 
 #endif

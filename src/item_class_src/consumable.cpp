@@ -1,4 +1,5 @@
 #include "../../include/item_class_header/consumable.h"
+#include "../../include/menu.h"
 
 #include <iostream>
 using std::string;
@@ -36,4 +37,18 @@ int Consumable::set_duration(int duration)
 int Consumable::set_num_uses(int num_uses)
 {
     return num_uses;
+}
+
+
+
+void Consumable::display_stats()
+
+{
+
+    Menu::slow_print(get_description(),75);
+    std::cout  << "\n\n";
+    std::cout << "Duration: " << get_duration() << std::endl;
+    std::cout << "Number of uses: " << get_num_uses() << std::endl;
+
+
 }
