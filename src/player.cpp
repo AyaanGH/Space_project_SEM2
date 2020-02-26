@@ -1,13 +1,15 @@
 #include "../include/player.h"
 #include "../include/room.h"
 #include "../include/inventory.h"
+#include "../include/item_class_header/item.h"
+#include "../include/menu.h"
 
 #include <iostream>
 
 using std::string;
 
 //Constructor
-Player::Player(string first_name, string last_name, int hp,  Room *current_room_object, Inventory *inventory_object) 
+Player::Player(string first_name, string last_name, int hp, Room *current_room_object, Inventory *inventory_object)
 
 {
     this->first_name = set_first_name(first_name);
@@ -15,14 +17,10 @@ Player::Player(string first_name, string last_name, int hp,  Room *current_room_
     this->hp = set_hp(hp);
     this->current_room_object = current_room_object;
 
-
     this->inventory_object = inventory_object;
 }
 
-
 // Room *current_room_object;
-
-
 
 //Getters
 
@@ -43,7 +41,6 @@ int Player::get_hp()
 
     return hp;
 }
-
 
 // Room* Player::get_current_room_object()
 // {
@@ -73,7 +70,6 @@ int Player::set_hp(int hp)
     }
     return hp;
 }
-
 
 // void Player::set_current_room(Room *room_object)
 
@@ -115,7 +111,245 @@ void Player::show_stats()
     std::cout << get_last_name() << std::endl;
 
     std::cout << "HP: " << get_hp() << std::endl;
+}
+
+void Player::display_inventory_categories(Player *player_object)
+
+{
+
+    int user_selection = 0;
+    char user_input;
+    bool user_going_down = true;
+    bool user_is_selecting = true;
+    int saved_index;
+
+    //TODO: Remove hard coding of categories
+    std::array<string, 3> categories = {"Apparel", "Consumables", "Weapons"};
+
+    //    player_object -> inventory_object->get_vector_of_items()
+
+    while (user_is_selecting)
+
+    {
+
+        //User selection in the index position which the arrow is rendered on. Making sure that the user doesn't go out of bounds of the array
+        while (true)
+        {
+            if (user_selection < 0)
+            {
+                user_selection = 2;
+            }
+
+            if (user_selection > 2)
+            {
+                user_selection = 0;
+            }
+
+            else
+            {
+                break;
+            }
+        }
+
+        Menu::clear_screen();
+
+        std::cout << player_object->get_first_name() << "'s inventory" << std::endl;
+
+        //std::cout << "\nMemory address of this room :" << room_object <<std::endl;
+        //Sleep(5000);
+        std::cout << "------------------\n\n";
+
+        for (int index_of_array = 0; index_of_array < 3; index_of_array++)
+        {
+
+            if (index_of_array == user_selection)
+            {
+
+                std::cout << categories[index_of_array] + " <--------- " + " \n";
+                saved_index = index_of_array;
+            }
+
+            else
+            {
+
+                std::cout << categories[index_of_array] << std::endl;
+            }
+        }
+
+        char user_input = _getch();
+
+        switch (user_input)
+        {
+        case 'H':
+
+            user_selection--;
+            user_going_down = false;
+            break;
+
+        case 'P':
+            user_selection++;
+            user_going_down = true;
+            break;
+
+        case '\b':
+            /* code */
+            std::cout << " \n\n\nReturning back to menu";
+            Menu::loading_animation();
+            user_is_selecting = false;
+            break;
+
+        case '\r':
+            /* code */
+            std::cout << "\n\n\nOpening";
+            Menu::loading_animation();
+            user_is_selecting = false;
+
+            display_items_in_inventory(categories[saved_index], player_object);
+
+            //std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->current_room_object <<std::endl;
+
+            // Sleep(5000);
+
+            break;
+
+        default:
+
+            break;
+        }
+    }
+}
+
+void Player::display_items_in_inventory(string user_category_selection, Player *player_object)
+{
+
+    std::vector<Item *> vector_of_filtered_items = {};
+
+    for (int i = 0; i < player_object->inventory_object->get_vector_of_items().size(); i++)
+    {
+        if (user_category_selection == player_object->inventory_object->get_vector_of_items()[i]->get_item_type())
+        {
+            vector_of_filtered_items.push_back(player_object->inventory_object->get_vector_of_items()[i]);
+        }
+    }
+
+    int user_selection = 0;
+    char user_input;
+    bool user_going_down = true;
+    bool user_is_selecting = true;
+    int saved_index;
+
+    while (user_is_selecting)
+
+    {
+
+        //User selection in the index position which the arrow is rendered on. Making sure that the user doesn't go out of bounds of the array
+        while (true)
+        {
+            if (user_selection < 0)
+            {
+                user_selection = vector_of_filtered_items.size() - 1;
+            }
+
+            if (user_selection > vector_of_filtered_items.size() - 1)
+            {
+                user_selection = 0;
+            }
+
+            else
+            {
+                break;
+            }
+        }
+
+        Menu::clear_screen();
+
+        std::cout << user_category_selection << std::endl;
+
+        //std::cout << "\nMemory address of this room :" << room_object <<std::endl;
+        //Sleep(5000);
+        std::cout << "------------------\n\n";
+
+        for (int index_of_array = 0; index_of_array < vector_of_filtered_items.size(); index_of_array++)
+        {
+
+            if (index_of_array == user_selection)
+            {
+
+                std::cout << vector_of_filtered_items[index_of_array]->get_name() + " <--------- " + " \n";
+                saved_index = index_of_array;
+            }
+
+            else
+            {
+
+                std::cout << vector_of_filtered_items[index_of_array]->get_name() << std::endl;
+            }
+        }
+
+        char user_input = _getch();
+
+        switch (user_input)
+        {
+        case 'H':
+
+            user_selection--;
+            user_going_down = false;
+            break;
+
+        case 'P':
+            user_selection++;
+            user_going_down = true;
+            break;
+
+        case '\b':
+            /* code */
+            std::cout << " \n\n\nReturning";
+            Menu::loading_animation();
+            user_is_selecting = false;
+
+            display_inventory_categories(player_object);
+            break;
+
+        case '\r':
+            /* code */
+            std::cout << "\n\n\nOpening";
+            Menu::loading_animation();
+            user_is_selecting = false;
+
+            Menu::clear_screen();
+            std::cout << vector_of_filtered_items[saved_index]->get_name() << std::endl;
+
+            std::cout << "------------------\n\n";
+
+            std::cout << vector_of_filtered_items[saved_index]->get_description() << std::endl;
+
+            while (true)
+            {
+             char user_input = _getch();
+
+             if (user_input = '\b')
+             {
+                std::cout<<"Returning";
+                Menu::loading_animation();
+                Menu::clear_screen();
+                display_items_in_inventory(user_category_selection, player_object);
 
 
+             }
+             break;
+                /* code */
+            }
+            
 
+            //std::cout << "\nMemory adress of current_room after we set the new room the player is in :" << player_object->current_room_object <<std::endl;
+
+            // Sleep(5000);
+
+            break;
+
+        default:
+
+            break;
+        }
+    }
 }

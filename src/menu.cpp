@@ -205,6 +205,12 @@ void Menu::check_menu_bar_button_press(Player *player_object)
     {
 
     case 'i':
+        clear_screen();
+
+      
+
+        Player::display_inventory_categories(player_object);
+
 
         break;
     case 'p':

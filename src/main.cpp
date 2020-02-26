@@ -74,8 +74,8 @@ int main()
 
 
     //Items 
-    Item myItem("Will the sharp","Sword","Weapon",10);
-    Item anotherItem("margaret the tasty","Potion","Consumable",3);
+    Item myItem("Will the sharp","Sword","Weapons",10);
+    Item anotherItem("margaret the tasty","Potion","Consumables",3);
 
     //Inventory
     Inventory player_inventory(50,{&myItem,&anotherItem});
@@ -104,7 +104,7 @@ int main()
 
     }
     
-    Sleep(10000);
+    // Sleep(10000);
 
     while (true)
     {
