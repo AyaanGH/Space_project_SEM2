@@ -5,6 +5,7 @@
 #include "../include/menu.h"
 
 #include <iostream>
+#include<windows.h>
 
 using std::string;
 
@@ -226,6 +227,7 @@ void Player::display_items_in_inventory(string user_category_selection, Player *
 
     for (int i = 0; i < player_object->inventory_object->get_vector_of_items().size(); i++)
     {
+        
         if (user_category_selection == player_object->inventory_object->get_vector_of_items()[i]->get_item_type())
         {
             vector_of_filtered_items.push_back(player_object->inventory_object->get_vector_of_items()[i]);

@@ -83,7 +83,7 @@ int main()
     Apparel EVA_suit("EVA Suit","Designed for comfort on space walks","Apparel",3,10,28);
 
     //Inventory
-    Inventory player_inventory(50,{&pistol,&adrenaline});
+    Inventory player_inventory(50,{&pistol,&adrenaline,&g_force,&EVA_suit});
     Inventory npc1_inventory(20,{}); 
     Inventory npc2_inventory(12,{}); 
     Inventory npc3_inventory(3,{}); 
