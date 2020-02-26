@@ -32,6 +32,9 @@ public:
     int set_durability(int durability);
     int set_accuracy(int accuracy);
 
+    virtual void display_stats();
+
+
 
 };
 

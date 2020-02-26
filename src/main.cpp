@@ -78,13 +78,15 @@ int main()
 
     //Items 
     Weapon pistol("Plasma Pistol","Small range, high accuracy. Great for small-medium range space combat","Weapons",10,100,55,70,70);
-    Consumable adrenaline("Adrenaline rush","Surge of power with the cost of fatigue","Consumables",3,1,120);
+    Consumable adrenaline("Adrenaline rush","Surge of power with the cost of fatigue after rush","Consumables",3,1,120);
+    Consumable g_force("G-Force juice","Survive high G manouvers in space combat","Consumables",3,1,300);
+    Apparel EVA_suit("EVA Suit","Designed for comfort on space walks","Apparel",3,10,28);
 
     //Inventory
     Inventory player_inventory(50,{&pistol,&adrenaline});
     Inventory npc1_inventory(20,{}); 
-    Inventory npc2_inventory(20,{}); 
-    Inventory npc3_inventory(20,{}); 
+    Inventory npc2_inventory(12,{}); 
+    Inventory npc3_inventory(3,{}); 
      
     //Players
     Player myPlayer("Peter", "Parker", 100, &market,&player_inventory);
@@ -99,13 +101,13 @@ int main()
     
     // std::cout << myItem.get_description();
     // Sleep(10000);
-    std::cout<<npc1.inventory_object->get_total_slots() << std::endl;
-    for(int i=0; i<npc1.inventory_object->get_vector_of_items().size();i++)
-    {
-        std::cout<<npc1.inventory_object->get_vector_of_items()[i]->get_name() <<std::endl;
+    // std::cout<<npc1.inventory_object->get_total_slots() << std::endl;
+    // for(int i=0; i<npc1.inventory_object->get_vector_of_items().size();i++)
+    // {
+    //     std::cout<<npc1.inventory_object->get_vector_of_items()[i]->get_name() <<std::endl;
         
 
-    }
+    // }
     
     // Sleep(10000);
 

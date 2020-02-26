@@ -1,4 +1,5 @@
 #include "../../include/item_class_header/weapon.h"
+#include "../../include/menu.h"
 
 #include <iostream>
 using std::string;
@@ -64,3 +65,16 @@ int Weapon::set_accuracy(int accuracy)
 
 
 
+void Weapon::display_stats()
+
+{
+
+    Menu::slow_print(get_description(),55);
+    std::cout  << "\n\n";
+    std::cout << "Accuracy: " << get_accuracy() << std::endl;
+    std::cout << "Damage: " << get_damage() << std::endl;
+    std::cout << "Durability: " << get_durability() << std::endl;
+    std::cout << "Range(metres): " << get_range() << std::endl;
+
+
+}

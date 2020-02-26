@@ -25,6 +25,8 @@ public:
     int set_defense(int defense);
     int set_durability(int durability);
 
+    virtual void display_stats();
+
 };
 
 #endif

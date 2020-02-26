@@ -3,5 +3,7 @@
 
 CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.obj: include/item_class_header/item.h
 CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.obj: include/item_class_header/weapon.h
+CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.obj: include/menu.h
+CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.obj: include/player.h
 CMakeFiles/weapon.dir/src/item_class_src/weapon.cpp.obj: src/item_class_src/weapon.cpp
 

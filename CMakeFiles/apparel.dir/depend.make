@@ -3,5 +3,7 @@
 
 CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.obj: include/item_class_header/apparel.h
 CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.obj: include/item_class_header/item.h
+CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.obj: include/menu.h
+CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.obj: include/player.h
 CMakeFiles/apparel.dir/src/item_class_src/apparel.cpp.obj: src/item_class_src/apparel.cpp
 

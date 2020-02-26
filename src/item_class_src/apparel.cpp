@@ -1,4 +1,5 @@
 #include "../../include/item_class_header/apparel.h"
+#include "../../include/menu.h"
 
 #include <iostream>
 using std::string;
@@ -36,4 +37,18 @@ int Apparel::set_defense(int defense)
 int Apparel::set_durability(int durability)
 {
     return durability;
+}
+
+
+
+void Apparel::display_stats()
+
+{
+
+    Menu::slow_print(get_description(),55);
+    std::cout  << "\n\n";
+    std::cout << "Defense: " << get_defense() << std::endl;
+    std::cout << "Durability: " << get_durability() << std::endl;
+
+
 }

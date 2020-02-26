@@ -45,9 +45,9 @@ void Consumable::display_stats()
 
 {
 
-    Menu::slow_print(get_description(),75);
+    Menu::slow_print(get_description(),55);
     std::cout  << "\n\n";
-    std::cout << "Duration: " << get_duration() << std::endl;
+    std::cout << "Duration(seconds): " << get_duration() << std::endl;
     std::cout << "Number of uses: " << get_num_uses() << std::endl;
 
 
