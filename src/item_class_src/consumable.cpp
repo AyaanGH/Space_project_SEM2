@@ -47,7 +47,6 @@ void Consumable::display_stats()
     std::cout << "Duration(seconds): " << get_duration() << std::endl;
     std::cout << "Number of uses: " << get_num_uses() << std::endl;
 
-
 }
 
 

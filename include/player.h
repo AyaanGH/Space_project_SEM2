@@ -21,6 +21,18 @@ protected:
     string first_name;
     string last_name;
     int hp = 10;
+    
+    int strength = 5;
+    int endurance = 5;
+    int reflexes = 5;
+    int iq = 5;
+    int awarness = 5;
+    int influence = 5;
+
+    int exhaustion;
+    int hunger;
+    int thirst;
+    
 
 public:
     //constructor
@@ -36,6 +48,18 @@ public:
     string get_first_name();
     string get_last_name();
     int get_hp();
+    
+    int get_strength();
+    int get_endurance();
+    int get_iq();
+    int get_reflexes();
+    int get_awarness();
+    int get_influence();
+
+    int get_exhaustion();
+    int get_hunger();
+    int get_thirst();
+    
 
     // Room* get_current_room_object();
 
@@ -44,6 +68,16 @@ public:
     string set_first_name(string first_name);
     string set_last_name(string set_last_name);
     int set_hp(int hp);
+
+    void set_strength(int strength);
+    void set_endurance(int endurance);
+    void set_iq(int iq);
+    void set_reflexes(int reflexes);
+    void set_influence(int influence);
+    
+    void set_exhaustion(int exhaustion);
+    void set_hunger(int hunger);
+    void set_thirst(int thirst);
     // void set_current_room(Room *room_object);
 
     //Methods

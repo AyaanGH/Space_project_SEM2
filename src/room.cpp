@@ -56,6 +56,8 @@ std::vector<NPC> Room::get_list_of_npc_objects()
     return list_of_npc_objects;
 }
 
+
+
 //Setters
 
 int Room::set_roomID(int roomID)

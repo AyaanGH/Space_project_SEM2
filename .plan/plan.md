@@ -1,3 +1,40 @@
+# Stats
+
+-Strength : 10 
+    -> Combat damage
+    -> Power to push/pull/lift objects
+    ->
+-Endurance
+    -> How many G's you can survive
+    ->
+    ->
+-IQ
+-Reflexes : 7
+-Awarness
+-Influence
+
+
+-Exhaustion 
+
+
+-Hunger /////
+    -> Bigger you are, the more food you need to sustain
+    -> If hunger below a certain level for a set period of time, you loose strength as you get weaker
+-Thirst +++++
+
+-Sleep
+    -> Chrono Library
+    -> 24hrs is 30 irl mins
+        -> One elapsed second == 1 simulator minute
+        -
+
+
+- Show help 
+
+
+
+
+
 # Items
 
 

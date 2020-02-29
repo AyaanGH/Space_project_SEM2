@@ -17,8 +17,9 @@ Player::Player(string first_name, string last_name, int hp, Room *current_room_o
     this->last_name = set_first_name(last_name);
     this->hp = set_hp(hp);
     this->current_room_object = current_room_object;
-
     this->inventory_object = inventory_object;
+
+    
 }
 
 // Room *current_room_object;
@@ -43,10 +44,31 @@ int Player::get_hp()
     return hp;
 }
 
-// Room* Player::get_current_room_object()
-// {
-//     return Player::current_room_object;
-// }
+int Player::get_strength()
+{
+    return strength;
+}
+int Player::get_endurance()
+{
+    return endurance;
+}
+int Player::get_iq()
+{
+    return iq;
+}
+int Player::get_reflexes()
+{
+    return reflexes;
+}
+int Player::get_awarness()
+{
+    
+    return awarness;
+}
+int Player::get_influence()
+{
+    return influence;
+}
 
 //Setters
 
@@ -72,13 +94,27 @@ int Player::set_hp(int hp)
     return hp;
 }
 
-// void Player::set_current_room(Room *room_object)
-
-// {
-
-//      current_room_object = room_object;
-
-// }
+    void Player::set_strength(int strength)
+    {
+        this -> strength += strength;
+        
+    }
+    void Player::set_endurance(int endurance)
+    {
+        this -> endurance += endurance; 
+    }
+    void Player::set_iq(int iq)
+    {
+        this -> iq += iq;
+    }
+    void Player::set_reflexes(int reflexes)
+    {
+        this ->reflexes += reflexes;
+    }
+    void Player::set_influence(int influence)
+    {
+        this -> influence += influence;
+    }
 
 //Public Methods
 
@@ -104,7 +140,6 @@ int Player::decrease_hp(int decrease_value)
 }
 
 void Player::show_stats()
-
 {
 
     std::cout << get_first_name() << std::endl;
@@ -112,6 +147,7 @@ void Player::show_stats()
     std::cout << get_last_name() << std::endl;
 
     std::cout << "HP: " << get_hp() << std::endl;
+
 }
 
 void Player::display_inventory_categories(Player *player_object)
