@@ -34,9 +34,8 @@ public:
     string set_description(string description);
 
     string set_item_type(string item_type);
-    
-    int set_item_value(int item_value);
 
+    int set_item_value(int item_value);
 
     virtual void display_stats();
 };

@@ -14,8 +14,6 @@ Apparel::Apparel(string name, string description, string item_type, int item_val
     this->defense = set_defense(defense);
 }
 
-
-
 //getters
 int Apparel::get_durability()
 {
@@ -31,7 +29,7 @@ int Apparel::get_defense()
 
 int Apparel::set_defense(int defense)
 {
-    return defense;   
+    return defense;
 }
 
 int Apparel::set_durability(int durability)
@@ -39,16 +37,12 @@ int Apparel::set_durability(int durability)
     return durability;
 }
 
-
-
 void Apparel::display_stats()
 
 {
 
-    Menu::slow_print(get_description(),55);
-    std::cout  << "\n\n";
+    Menu::slow_print(get_description(), 55);
+    std::cout << "\n\n";
     std::cout << "Defense: " << get_defense() << std::endl;
     std::cout << "Durability: " << get_durability() << std::endl;
-
-
 }

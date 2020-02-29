@@ -15,7 +15,6 @@ Weapon::Weapon(string name, string description, string item_type, int item_value
     this->durability = set_durability(durability);
     this->accuracy = set_accuracy(accuracy);
 }
-
 //Getters
 
 int Weapon::get_damage()
@@ -64,7 +63,6 @@ int Weapon::set_accuracy(int accuracy)
 //methods
 
 
-
 void Weapon::display_stats()
 
 {
@@ -78,3 +76,5 @@ void Weapon::display_stats()
 
 
 }
+
+

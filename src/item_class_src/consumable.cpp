@@ -14,8 +14,6 @@ Consumable::Consumable(string name, string description, string item_type, int it
     this->duration = set_duration(duration);
 }
 
-
-
 //getters
 int Consumable::get_num_uses()
 {
@@ -40,7 +38,6 @@ int Consumable::set_num_uses(int num_uses)
 }
 
 
-
 void Consumable::display_stats()
 
 {
@@ -52,3 +49,5 @@ void Consumable::display_stats()
 
 
 }
+
+

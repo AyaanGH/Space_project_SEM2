@@ -54,6 +54,10 @@ public:
     void show_stats();
 
     static void display_inventory_categories(Player *player_object);
+
+
+
+    
     static void display_items_in_inventory(string user_category_selection, Player *player_object);
 };
 

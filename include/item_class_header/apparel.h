@@ -6,10 +6,6 @@
 
 using std::string;
 
-//forward declration
-
-// class Item;
-
 class Apparel : public Item
 {
 
@@ -26,7 +22,7 @@ public:
     int set_durability(int durability);
 
     virtual void display_stats();
-
 };
 
 #endif
+

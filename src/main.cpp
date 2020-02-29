@@ -79,17 +79,23 @@ int main()
     //Items 
     Weapon pistol("Plasma Pistol","Small range, high accuracy. Great for small-medium range space combat","Weapons",10,100,55,70,70);
     Consumable adrenaline("Adrenaline rush","Surge of power with the cost of fatigue after rush","Consumables",3,1,120);
-    Consumable g_force("G-Force juice","Survive high G manouvers in space combat","Consumables",3,1,300);
+    Consumable g_force("G-Force juice","Survive high G manoeuvres in space combat","Consumables",3,1,300);
     Apparel EVA_suit("EVA Suit","Designed for comfort on space walks","Apparel",3,10,28);
 
-    //Inventory
+    //Inventory 
     Inventory player_inventory(50,{&pistol,&adrenaline,&g_force,&EVA_suit});
+
+    Player myPlayer("Peter", "Parker", 100, &market,&player_inventory);
+
+
+
+    
+
     Inventory npc1_inventory(20,{}); 
     Inventory npc2_inventory(12,{}); 
     Inventory npc3_inventory(3,{}); 
      
     //Players
-    Player myPlayer("Peter", "Parker", 100, &market,&player_inventory);
 
     //NPCs
     NPC npc1("Bill", "the Employer", 100, &market, &npc1_inventory, {&buy, &internship, &walk_away});

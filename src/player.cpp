@@ -5,7 +5,7 @@
 #include "../include/menu.h"
 
 #include <iostream>
-#include<windows.h>
+#include <windows.h>
 
 using std::string;
 
@@ -124,10 +124,8 @@ void Player::display_inventory_categories(Player *player_object)
     bool user_is_selecting = true;
     int saved_index;
 
-    //TODO: Remove hard coding of categories
+    //TODO: Category overhaul
     std::array<string, 3> categories = {"Apparel", "Consumables", "Weapons"};
-
-    //    player_object -> inventory_object->get_vector_of_items()
 
     while (user_is_selecting)
 
@@ -156,8 +154,6 @@ void Player::display_inventory_categories(Player *player_object)
 
         std::cout << player_object->get_first_name() << "'s inventory" << std::endl;
 
-        //std::cout << "\nMemory address of this room :" << room_object <<std::endl;
-        //Sleep(5000);
         std::cout << "------------------\n\n";
 
         for (int index_of_array = 0; index_of_array < 3; index_of_array++)
@@ -227,7 +223,7 @@ void Player::display_items_in_inventory(string user_category_selection, Player *
 
     for (int i = 0; i < player_object->inventory_object->get_vector_of_items().size(); i++)
     {
-        
+
         if (user_category_selection == player_object->inventory_object->get_vector_of_items()[i]->get_item_type())
         {
             vector_of_filtered_items.push_back(player_object->inventory_object->get_vector_of_items()[i]);
@@ -241,7 +237,6 @@ void Player::display_items_in_inventory(string user_category_selection, Player *
     int saved_index;
 
     while (user_is_selecting)
-
     {
 
         //User selection in the index position which the arrow is rendered on. Making sure that the user doesn't go out of bounds of the array
@@ -267,8 +262,7 @@ void Player::display_items_in_inventory(string user_category_selection, Player *
 
         std::cout << user_category_selection << std::endl;
 
-        //std::cout << "\nMemory address of this room :" << room_object <<std::endl;
-        //Sleep(5000);
+    ;
         std::cout << "------------------\n\n";
 
         for (int index_of_array = 0; index_of_array < vector_of_filtered_items.size(); index_of_array++)
@@ -323,7 +317,11 @@ void Player::display_items_in_inventory(string user_category_selection, Player *
 
             std::cout << "------------------\n\n";
 
+
+            //Method works on any object of type Item
             vector_of_filtered_items[saved_index]->display_stats();
+
+           
 
             while (true)
             {

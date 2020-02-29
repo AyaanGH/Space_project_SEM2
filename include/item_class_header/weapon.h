@@ -6,10 +6,6 @@
 
 using std::string;
 
-//forward declration
-
-// class Item;
-
 class Weapon : public Item
 {
 
