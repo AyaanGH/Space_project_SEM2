@@ -25,6 +25,10 @@ Player::Player(string first_name, string last_name, int hp, Room *current_room_o
 // Room *current_room_object;
 
 //Getters
+string Player::get_profile_name()
+{
+    return profile_name;
+}
 
 string Player::get_first_name()
 
@@ -71,6 +75,10 @@ int Player::get_influence()
 }
 
 //Setters
+void Player::set_profile_name(string profile_name)
+{
+    this -> profile_name = profile_name;
+}
 
 string Player::set_first_name(string first_name)
 {
@@ -115,8 +123,12 @@ int Player::set_hp(int hp)
     {
         this -> influence += influence;
     }
+    void Player::set_awarness(int awarness)
+    {
+        this -> awarness += awarness;
+    }
 
-//Public Methods
+//Public Methodse
 
 int Player::increase_hp(int increase_value)
 {
@@ -131,7 +143,7 @@ int Player::decrease_hp(int decrease_value)
     if (hp - 1 < 0)
     {
 
-        std::cout << "HP cannot be lower than zero, current hp --> 0\n";
+        std::cout << "HP cannot be loweer than zero, current hp --> 0\n";
 
         return hp = 0;
     }
@@ -141,12 +153,23 @@ int Player::decrease_hp(int decrease_value)
 
 void Player::show_stats()
 {
-
+    std::cout<<get_profile_name()<<std::endl;
+    std::cout << "------------------\n\n";
+    
     std::cout << get_first_name() << std::endl;
 
     std::cout << get_last_name() << std::endl;
 
     std::cout << "HP: " << get_hp() << std::endl;
+
+    std::cout << "Strength: " << get_strength() << std::endl;
+    std::cout << "Endurance: " << get_endurance() << std::endl;
+    std::cout << "IQ: " << get_iq() << std::endl;
+    std::cout << "Reflexes: " << get_reflexes() << std::endl;
+    std::cout << "Influence: " << get_influence() << std::endl;
+    std::cout << "Awarness: " << get_awarness() << std::endl;
+
+
 
 }
 

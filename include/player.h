@@ -17,6 +17,7 @@ class Player
 {
 protected:
     //Attributes;
+    string profile_name;
 
     string first_name;
     string last_name;
@@ -44,6 +45,7 @@ public:
     Player(string first_name, string last_name, int hp, Room *current_room_object, Inventory *inventory_object); 
 
     //Getters
+    string get_profile_name();
 
     string get_first_name();
     string get_last_name();
@@ -64,6 +66,7 @@ public:
     // Room* get_current_room_object();
 
     //Setters
+    void set_profile_name(string name);
 
     string set_first_name(string first_name);
     string set_last_name(string set_last_name);
@@ -78,6 +81,7 @@ public:
     void set_exhaustion(int exhaustion);
     void set_hunger(int hunger);
     void set_thirst(int thirst);
+    void set_awarness(int awarness);
     // void set_current_room(Room *room_object);
 
     //Methods

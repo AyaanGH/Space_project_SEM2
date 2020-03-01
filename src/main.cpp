@@ -24,17 +24,38 @@ using std::string;
 
 // class Conversation;
 
+int stats_boundary_check(int &skill_points_available)
+{
+    int user_stat;
+    do
+    {
+        {
+            std::cin >> user_stat;
+
+            if (user_stat <= skill_points_available && user_stat >= 0)
+            {
+
+                skill_points_available -= user_stat;
+                std::cout << "\nYou have " << skill_points_available << " avaiable to allocate\n"
+                          << std::endl;
+                return user_stat;
+            }
+
+            else
+            {
+                std::cout << "Invalid input\n";
+            }
+        }
+    } while (user_stat < 0 || user_stat > skill_points_available);
+
+    return 0;
+}
 int main()
 {
 
     Menu game_menu;
 
     game_menu.show_cursor(false);
-
-
-
-  
-
 
     //Rooms
     Room market(10, "Marketplace", "Can purchase items", {12, -1, 14, 15});
@@ -43,9 +64,8 @@ int main()
     Room ship_yard(13, "Ship Yard", "Construction", {-1, -1, -1, 12});
     Room o2_farm(14, "Oxygen Farm", "Fresh air", {10, -1, -1, -1});
 
-
     //Conveersation
-    
+
     Conversation buy(1, "What do you have in store?");
 
     Conversation walk_away(2, "Walk away");
@@ -73,28 +93,21 @@ int main()
 
     Conversation food("Ask for food", "So, are you hungry?", {&confident, &insecure});
 
+    //Items
+    Weapon pistol("Plasma Pistol", "Small range, high accuracy. Great for small-medium range space combat", "Weapons", 10, 100, 55, 70, 70);
+    Consumable adrenaline("Adrenaline rush", "Surge of power with the cost of fatigue after rush", "Consumables", 3, 1, 120);
+    Consumable g_force("G-Force juice", "Survive high G manoeuvres in space combat", "Consumables", 3, 1, 300);
+    Apparel EVA_suit("EVA Suit", "Designed for comfort on space walks", "Apparel", 3, 10, 28);
 
+    //Inventory
+    Inventory player_inventory(50, {&pistol, &adrenaline, &g_force, &EVA_suit});
 
+    Player myPlayer("Peter", "Parker", 100, &market, &player_inventory);
 
-    //Items 
-    Weapon pistol("Plasma Pistol","Small range, high accuracy. Great for small-medium range space combat","Weapons",10,100,55,70,70);
-    Consumable adrenaline("Adrenaline rush","Surge of power with the cost of fatigue after rush","Consumables",3,1,120);
-    Consumable g_force("G-Force juice","Survive high G manoeuvres in space combat","Consumables",3,1,300);
-    Apparel EVA_suit("EVA Suit","Designed for comfort on space walks","Apparel",3,10,28);
+    Inventory npc1_inventory(20, {});
+    Inventory npc2_inventory(12, {});
+    Inventory npc3_inventory(3, {});
 
-    //Inventory 
-    Inventory player_inventory(50,{&pistol,&adrenaline,&g_force,&EVA_suit});
-
-    Player myPlayer("Peter", "Parker", 100, &market,&player_inventory);
-
-
-
-    
-
-    Inventory npc1_inventory(20,{}); 
-    Inventory npc2_inventory(12,{}); 
-    Inventory npc3_inventory(3,{}); 
-     
     //Players
 
     //NPCs
@@ -102,21 +115,49 @@ int main()
     NPC npc2("Simon", "", 100, &market, &npc2_inventory, {});
     NPC npc3("William", "", 100, &dock, &npc3_inventory, {&food, &walk_away});
 
-
     // npc_option {buy(),&wallet,exit()};
-    
+
     // std::cout << myItem.get_description();
     // Sleep(10000);
     // std::cout<<npc1.inventory_object->get_total_slots() << std::endl;
     // for(int i=0; i<npc1.inventory_object->get_vector_of_items().size();i++)
     // {
     //     std::cout<<npc1.inventory_object->get_vector_of_items()[i]->get_name() <<std::endl;
-        
 
     // }
-    
+
     // Sleep(10000);
-    
+
+    string name;
+
+    int skill_points_available = 10;
+    std::cout << "Enter your name: ";
+    std::cin >> name;
+    myPlayer.set_profile_name(name);
+
+    Menu::clear_screen();
+    Menu::slow_print("You have " + std::to_string(skill_points_available) + " skill points to spend for upgrading your stats. You start with a base of 5 in everything.", 55);
+    std::cout << std::endl;
+    std::cout << "Strength: ";
+
+    myPlayer.set_strength(stats_boundary_check(skill_points_available));
+    std::cout << "Endurance: ";
+
+    myPlayer.set_endurance(stats_boundary_check(skill_points_available));
+    std::cout << "IQ: ";
+
+    myPlayer.set_iq(stats_boundary_check(skill_points_available));
+    std::cout << "Influence: ";
+    std::cout << std::endl;
+    myPlayer.set_influence(stats_boundary_check(skill_points_available));
+    std::cout << "Reflexes: ";
+    std::cout << std::endl;
+    myPlayer.set_reflexes(stats_boundary_check(skill_points_available));
+    std::cout << "Awarness: ";
+
+    myPlayer.set_awarness(stats_boundary_check(skill_points_available));
+
+    Sleep(5000);
 
     while (true)
     {
@@ -125,20 +166,10 @@ int main()
         game_menu.check_menu_bar_button_press(&myPlayer);
     }
 
-
     // auto here = Room::get_current_room_object();
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
 
 // struct Vector3
 // {

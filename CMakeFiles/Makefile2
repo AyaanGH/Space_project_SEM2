@@ -360,11 +360,11 @@ CMakeFiles/consumable.dir/clean:
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: CMakeFiles/npc.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/menu.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/room.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/inventory.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/npc.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/conv.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/apparel.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/item.dir/all
