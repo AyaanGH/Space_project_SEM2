@@ -23,6 +23,18 @@ Conversation::Conversation(int id, string name)
     this->name = set_name(name);
 }
 
+
+Conversation::Conversation(string name, string npc_last_response)
+{
+    
+    this->name = set_name(name);
+
+    this->npc_response = set_npc_response(npc_last_response);
+
+    terminate_convo = true;
+
+}
+
 Conversation::Conversation(string name, string npc_response, std::vector<Conversation *> choice_list)
 {
 
@@ -108,6 +120,21 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
     bool user_is_selecting = true;
     int num_choice = conv_object->get_vector_of_choices().size();
     int time = 70;
+
+    if(conv_object->terminate_convo)
+    {
+
+        Menu::clear_screen();
+        std::cout << "Talking to " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
+        std::cout << "------------------\n\n";
+        // Sleep(1000);
+
+        Menu::slow_print(conv_object->get_npc_response(), time);
+        char user_input = _getch();
+        std::cout << "\n Returning";
+        Menu::loading_animation();
+        return;
+    }
 
     if (num_choice <= 0)
     {

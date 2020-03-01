@@ -20,10 +20,16 @@ protected:
     std::vector<Conversation *> choice_list;
 
 public:
+    bool terminate_convo = false;
     // Constructors
     Conversation(int id, string name);
 
+    //Normal conversation
     Conversation(string name, string npc_response, std::vector<Conversation *> choice_list);
+
+
+    //End of conversation line
+    Conversation(string name, string npc_last_response);
 
     //Getters
 

@@ -72,11 +72,10 @@ int main()
 
     //Bill Internship Conversation
     Conversation not_ready{"I think I will come back later", "I'm closing shop, come back tomorrow", {}};
-    Conversation correct_terminate{"Thanks", "", {}};
-    Conversation incorrect_terminate{"Awww come on", "", {}};
+    
 
-    Conversation correct_ans{"Answer is 144", "Correct! You get the job. You start tomorrow morning", {&correct_terminate}};
-    Conversation wrong_ans{"I think it is 120", "Wrong! You are not smart enough. Apply next year", {&incorrect_terminate}};
+    Conversation correct_ans{"Answer is 144", "Correct! You get the job. You start tomorrow morning"};
+    Conversation wrong_ans{"I think it is 120", "Wrong! You are not smart enough. Apply next year"};
     Conversation question{"Go ahead", "What is 12 x 12 ?", {&correct_ans, &wrong_ans}};
 
     Conversation ready{"Absolutely, bring it on!", "You seem enthusiastic, here is your first question", {&question}};
