@@ -3,7 +3,6 @@
 
 #include <string>
 #include <vector>
-
 using std::string;
 
 //Forward declrations
