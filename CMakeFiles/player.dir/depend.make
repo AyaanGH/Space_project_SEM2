@@ -5,6 +5,8 @@ CMakeFiles/player.dir/src/player.cpp.obj: include/inventory.h
 CMakeFiles/player.dir/src/player.cpp.obj: include/item_class_header/item.h
 CMakeFiles/player.dir/src/player.cpp.obj: include/menu.h
 CMakeFiles/player.dir/src/player.cpp.obj: include/player.h
+CMakeFiles/player.dir/src/player.cpp.obj: include/quest_class_header/fetch.h
+CMakeFiles/player.dir/src/player.cpp.obj: include/quest_class_header/quest.h
 CMakeFiles/player.dir/src/player.cpp.obj: include/room.h
 CMakeFiles/player.dir/src/player.cpp.obj: src/player.cpp
 

@@ -17,7 +17,7 @@ protected:
 
 public:
     Quest(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active, bool quest_completed);
-    ~Quest();
+    
 
     //Getters
     int get_quest_id();
@@ -36,6 +36,9 @@ public:
 
     bool set_quest_active(bool quest_active);
     bool set_quest_completed(bool quest_completed);
+
+    //Methods
+    virtual void display_quest_details();
 };
 
 #endif

@@ -31,6 +31,20 @@ vector
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
 iostream
 -
+vector
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/fetch.h
+quest.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
+string
+-
+vector
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
+string
+-
 
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/src/conv.cpp
 ../include/conv.h
@@ -39,6 +53,12 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/c
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/npc.h
 ../include/menu.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/menu.h
+../include/player.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
+../include/quest_class_header/quest.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
+../include/quest_class_header/fetch.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/fetch.h
 iostream
 -
 array

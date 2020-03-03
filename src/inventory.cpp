@@ -7,7 +7,7 @@ using std::string;
 
 Inventory::Inventory(int total_slots, std::vector<Item *> vector_of_items)
 {
-    this->total_slots = set_total_slots(total_slots);
+    this->total_slots = total_slots;
     this->vector_of_items = set_vector_of_items(vector_of_items);
 }
 
@@ -30,11 +30,18 @@ std::vector<Item *> Inventory::set_vector_of_items(std::vector<Item *> vector_of
     return vector_of_items;
 }
 
-int Inventory::set_total_slots(int total_slots)
+void Inventory::set_total_slots(int total_slots)
 {
 
-    return total_slots;
+    this -> total_slots = total_slots; 
 }
 
 
+// void Inventory::calculate_total_slots(std::vector<Item*> vector_of_items)
+// {
+
+//     int slots
+
+
+// }
 

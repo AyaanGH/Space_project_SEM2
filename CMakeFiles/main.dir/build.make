@@ -89,6 +89,8 @@ bin/main.exe: builds/lib/libinventory.a
 bin/main.exe: builds/lib/libweapon.a
 bin/main.exe: builds/lib/libapparel.a
 bin/main.exe: builds/lib/libconsumable.a
+bin/main.exe: builds/lib/libquest.a
+bin/main.exe: builds/lib/libfetch.a
 bin/main.exe: CMakeFiles/main.dir/linklibs.rsp
 bin/main.exe: CMakeFiles/main.dir/objects1.rsp
 bin/main.exe: CMakeFiles/main.dir/link.txt

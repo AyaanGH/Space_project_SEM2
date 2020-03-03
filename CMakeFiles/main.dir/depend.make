@@ -10,6 +10,8 @@ CMakeFiles/main.dir/src/main.cpp.obj: include/item_class_header/weapon.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/menu.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/npc.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/player.h
+CMakeFiles/main.dir/src/main.cpp.obj: include/quest_class_header/fetch.h
+CMakeFiles/main.dir/src/main.cpp.obj: include/quest_class_header/quest.h
 CMakeFiles/main.dir/src/main.cpp.obj: include/room.h
 CMakeFiles/main.dir/src/main.cpp.obj: src/main.cpp
 

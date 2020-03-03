@@ -62,6 +62,8 @@ all: CMakeFiles/apparel.dir/all
 all: CMakeFiles/item.dir/all
 all: CMakeFiles/weapon.dir/all
 all: CMakeFiles/consumable.dir/all
+all: CMakeFiles/quest.dir/all
+all: CMakeFiles/fetch.dir/all
 all: CMakeFiles/main.dir/all
 
 .PHONY : all
@@ -82,6 +84,8 @@ clean: CMakeFiles/apparel.dir/clean
 clean: CMakeFiles/item.dir/clean
 clean: CMakeFiles/weapon.dir/clean
 clean: CMakeFiles/consumable.dir/clean
+clean: CMakeFiles/quest.dir/clean
+clean: CMakeFiles/fetch.dir/clean
 clean: CMakeFiles/main.dir/clean
 
 .PHONY : clean
@@ -93,7 +97,7 @@ clean: CMakeFiles/main.dir/clean
 CMakeFiles/npc.dir/all:
 	$(MAKE) -f CMakeFiles\npc.dir\build.make CMakeFiles/npc.dir/depend
 	$(MAKE) -f CMakeFiles\npc.dir\build.make CMakeFiles/npc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=15,16 "Built target npc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=17,18 "Built target npc"
 .PHONY : CMakeFiles/npc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -120,7 +124,7 @@ CMakeFiles/npc.dir/clean:
 CMakeFiles/player.dir/all:
 	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/depend
 	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=17,18 "Built target player"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=19,20 "Built target player"
 .PHONY : CMakeFiles/player.dir/all
 
 # Build rule for subdir invocation for target.
@@ -147,7 +151,7 @@ CMakeFiles/player.dir/clean:
 CMakeFiles/menu.dir/all:
 	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/depend
 	$(MAKE) -f CMakeFiles\menu.dir\build.make CMakeFiles/menu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=13,14 "Built target menu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=15,16 "Built target menu"
 .PHONY : CMakeFiles/menu.dir/all
 
 # Build rule for subdir invocation for target.
@@ -174,7 +178,7 @@ CMakeFiles/menu.dir/clean:
 CMakeFiles/room.dir/all:
 	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/depend
 	$(MAKE) -f CMakeFiles\room.dir\build.make CMakeFiles/room.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=19,20 "Built target room"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=23,24 "Built target room"
 .PHONY : CMakeFiles/room.dir/all
 
 # Build rule for subdir invocation for target.
@@ -201,7 +205,7 @@ CMakeFiles/room.dir/clean:
 CMakeFiles/inventory.dir/all:
 	$(MAKE) -f CMakeFiles\inventory.dir\build.make CMakeFiles/inventory.dir/depend
 	$(MAKE) -f CMakeFiles\inventory.dir\build.make CMakeFiles/inventory.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=7,8 "Built target inventory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=9,10 "Built target inventory"
 .PHONY : CMakeFiles/inventory.dir/all
 
 # Build rule for subdir invocation for target.
@@ -282,7 +286,7 @@ CMakeFiles/apparel.dir/clean:
 CMakeFiles/item.dir/all:
 	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/depend
 	$(MAKE) -f CMakeFiles\item.dir\build.make CMakeFiles/item.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=9,10 "Built target item"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=11,12 "Built target item"
 .PHONY : CMakeFiles/item.dir/all
 
 # Build rule for subdir invocation for target.
@@ -309,7 +313,7 @@ CMakeFiles/item.dir/clean:
 CMakeFiles/weapon.dir/all:
 	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/depend
 	$(MAKE) -f CMakeFiles\weapon.dir\build.make CMakeFiles/weapon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=21,22 "Built target weapon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=25,26 "Built target weapon"
 .PHONY : CMakeFiles/weapon.dir/all
 
 # Build rule for subdir invocation for target.
@@ -357,27 +361,83 @@ CMakeFiles/consumable.dir/clean:
 .PHONY : CMakeFiles/consumable.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/quest.dir
+
+# All Build rule for target.
+CMakeFiles/quest.dir/all:
+	$(MAKE) -f CMakeFiles\quest.dir\build.make CMakeFiles/quest.dir/depend
+	$(MAKE) -f CMakeFiles\quest.dir\build.make CMakeFiles/quest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=21,22 "Built target quest"
+.PHONY : CMakeFiles/quest.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/quest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/quest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
+.PHONY : CMakeFiles/quest.dir/rule
+
+# Convenience name for target.
+quest: CMakeFiles/quest.dir/rule
+
+.PHONY : quest
+
+# clean rule for target.
+CMakeFiles/quest.dir/clean:
+	$(MAKE) -f CMakeFiles\quest.dir\build.make CMakeFiles/quest.dir/clean
+.PHONY : CMakeFiles/quest.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/fetch.dir
+
+# All Build rule for target.
+CMakeFiles/fetch.dir/all:
+	$(MAKE) -f CMakeFiles\fetch.dir\build.make CMakeFiles/fetch.dir/depend
+	$(MAKE) -f CMakeFiles\fetch.dir\build.make CMakeFiles/fetch.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=7,8 "Built target fetch"
+.PHONY : CMakeFiles/fetch.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/fetch.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/fetch.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
+.PHONY : CMakeFiles/fetch.dir/rule
+
+# Convenience name for target.
+fetch: CMakeFiles/fetch.dir/rule
+
+.PHONY : fetch
+
+# clean rule for target.
+CMakeFiles/fetch.dir/clean:
+	$(MAKE) -f CMakeFiles\fetch.dir\build.make CMakeFiles/fetch.dir/clean
+.PHONY : CMakeFiles/fetch.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
+CMakeFiles/main.dir/all: CMakeFiles/npc.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/menu.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/room.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/inventory.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/npc.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/player.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/conv.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/apparel.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/item.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/weapon.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/consumable.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/quest.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/fetch.dir/all
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=11,12 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" --progress-num=13,14 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 22
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 26
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\Space Game\CMakeFiles" 0
 .PHONY : CMakeFiles/main.dir/rule

@@ -55,17 +55,6 @@ CMAKE_BINARY_DIR = "C:\Users\Ayaan\Documents\Computer_Science\Year 1\Semester 2\
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	"C:\Program Files\CMake\bin\cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -76,6 +65,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	"C:\Program Files\CMake\bin\cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -238,6 +238,32 @@ consumable: cmake_check_build_system
 consumable/fast:
 	$(MAKE) -f CMakeFiles\consumable.dir\build.make CMakeFiles/consumable.dir/build
 .PHONY : consumable/fast
+
+#=============================================================================
+# Target rules for targets named quest
+
+# Build rule for target.
+quest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 quest
+.PHONY : quest
+
+# fast build rule for target.
+quest/fast:
+	$(MAKE) -f CMakeFiles\quest.dir\build.make CMakeFiles/quest.dir/build
+.PHONY : quest/fast
+
+#=============================================================================
+# Target rules for targets named fetch
+
+# Build rule for target.
+fetch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 fetch
+.PHONY : fetch
+
+# fast build rule for target.
+fetch/fast:
+	$(MAKE) -f CMakeFiles\fetch.dir\build.make CMakeFiles/fetch.dir/build
+.PHONY : fetch/fast
 
 #=============================================================================
 # Target rules for targets named main
@@ -522,6 +548,60 @@ src/player.cpp.s:
 	$(MAKE) -f CMakeFiles\player.dir\build.make CMakeFiles/player.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
 
+src/quest_class_src/fetch.obj: src/quest_class_src/fetch.cpp.obj
+
+.PHONY : src/quest_class_src/fetch.obj
+
+# target to build an object file
+src/quest_class_src/fetch.cpp.obj:
+	$(MAKE) -f CMakeFiles\fetch.dir\build.make CMakeFiles/fetch.dir/src/quest_class_src/fetch.cpp.obj
+.PHONY : src/quest_class_src/fetch.cpp.obj
+
+src/quest_class_src/fetch.i: src/quest_class_src/fetch.cpp.i
+
+.PHONY : src/quest_class_src/fetch.i
+
+# target to preprocess a source file
+src/quest_class_src/fetch.cpp.i:
+	$(MAKE) -f CMakeFiles\fetch.dir\build.make CMakeFiles/fetch.dir/src/quest_class_src/fetch.cpp.i
+.PHONY : src/quest_class_src/fetch.cpp.i
+
+src/quest_class_src/fetch.s: src/quest_class_src/fetch.cpp.s
+
+.PHONY : src/quest_class_src/fetch.s
+
+# target to generate assembly for a file
+src/quest_class_src/fetch.cpp.s:
+	$(MAKE) -f CMakeFiles\fetch.dir\build.make CMakeFiles/fetch.dir/src/quest_class_src/fetch.cpp.s
+.PHONY : src/quest_class_src/fetch.cpp.s
+
+src/quest_class_src/quest.obj: src/quest_class_src/quest.cpp.obj
+
+.PHONY : src/quest_class_src/quest.obj
+
+# target to build an object file
+src/quest_class_src/quest.cpp.obj:
+	$(MAKE) -f CMakeFiles\quest.dir\build.make CMakeFiles/quest.dir/src/quest_class_src/quest.cpp.obj
+.PHONY : src/quest_class_src/quest.cpp.obj
+
+src/quest_class_src/quest.i: src/quest_class_src/quest.cpp.i
+
+.PHONY : src/quest_class_src/quest.i
+
+# target to preprocess a source file
+src/quest_class_src/quest.cpp.i:
+	$(MAKE) -f CMakeFiles\quest.dir\build.make CMakeFiles/quest.dir/src/quest_class_src/quest.cpp.i
+.PHONY : src/quest_class_src/quest.cpp.i
+
+src/quest_class_src/quest.s: src/quest_class_src/quest.cpp.s
+
+.PHONY : src/quest_class_src/quest.s
+
+# target to generate assembly for a file
+src/quest_class_src/quest.cpp.s:
+	$(MAKE) -f CMakeFiles\quest.dir\build.make CMakeFiles/quest.dir/src/quest_class_src/quest.cpp.s
+.PHONY : src/quest_class_src/quest.cpp.s
+
 src/room.obj: src/room.cpp.obj
 
 .PHONY : src/room.obj
@@ -565,9 +645,11 @@ help:
 	@echo ... item
 	@echo ... weapon
 	@echo ... consumable
+	@echo ... rebuild_cache
+	@echo ... quest
+	@echo ... fetch
 	@echo ... edit_cache
 	@echo ... main
-	@echo ... rebuild_cache
 	@echo ... src/conv.obj
 	@echo ... src/conv.i
 	@echo ... src/conv.s
@@ -598,6 +680,12 @@ help:
 	@echo ... src/player.obj
 	@echo ... src/player.i
 	@echo ... src/player.s
+	@echo ... src/quest_class_src/fetch.obj
+	@echo ... src/quest_class_src/fetch.i
+	@echo ... src/quest_class_src/fetch.s
+	@echo ... src/quest_class_src/quest.obj
+	@echo ... src/quest_class_src/quest.i
+	@echo ... src/quest_class_src/quest.s
 	@echo ... src/room.obj
 	@echo ... src/room.i
 	@echo ... src/room.s

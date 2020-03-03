@@ -234,6 +234,8 @@ void Menu::check_menu_bar_button_press(Player *player_object)
         break;
 
     case 'j':
+        clear_screen();
+        Player::display_list_of_quests(player_object);
 
         break;
     case 'm':

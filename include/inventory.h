@@ -29,7 +29,7 @@ public:
 
     std::vector<Item *> set_vector_of_items(std::vector<Item *> vector_of_items);
 
-    int set_total_slots(int total_slots);
+    void set_total_slots(int total_slots);
 
     //Methods
 };

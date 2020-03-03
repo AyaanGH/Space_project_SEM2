@@ -55,5 +55,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/item.dir/DependInfo.cmake"
   "CMakeFiles/weapon.dir/DependInfo.cmake"
   "CMakeFiles/consumable.dir/DependInfo.cmake"
+  "CMakeFiles/quest.dir/DependInfo.cmake"
+  "CMakeFiles/fetch.dir/DependInfo.cmake"
   "CMakeFiles/main.dir/DependInfo.cmake"
   )

@@ -9,11 +9,15 @@ using std::string;
 
 Item::Item(string name, string description, string item_type, int item_value)
 {
+    
     this->name = set_name(name);
     this->description = set_description(description);
     this->item_type = set_item_type(item_type);
     this->item_value = set_item_value(item_value);
+
+
 }
+
 
 //Getters
 

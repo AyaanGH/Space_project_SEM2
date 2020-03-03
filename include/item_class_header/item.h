@@ -14,7 +14,10 @@ protected:
     string item_type;
     int item_value;
 
+
 public:
+    int slots_occupied;
+
     Item(string name, string description, string item_type, int item_value);
 
     //Getters

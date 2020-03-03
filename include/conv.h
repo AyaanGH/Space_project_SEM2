@@ -8,6 +8,9 @@ using std::string;
 
 //forward declration
 class NPC;
+class Quest;
+class Player;
+class Fetch;
 
 class Conversation
 
@@ -21,6 +24,13 @@ protected:
 
 public:
     bool terminate_convo = false;
+    bool has_quest = false;
+    static Player *stored_player_object;
+
+    Fetch *quest_object; 
+
+    //Init player object constructor
+    Conversation(Player *player_object);
     // Constructors
     Conversation(int id, string name);
 
@@ -30,6 +40,9 @@ public:
 
     //End of conversation line
     Conversation(string name, string npc_last_response);
+    //Quest 
+    Conversation(string name, string npc_last_response, Fetch *quest_object, bool has_quest);
+
 
     //Getters
 
@@ -50,6 +63,7 @@ public:
     void checkID();
 
     //Static methods
+
 
     static void display_conv_menu(Conversation *conv_object, NPC *npc_object);
 };

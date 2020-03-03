@@ -2,6 +2,8 @@
 #include "../include/room.h"
 #include "../include/inventory.h"
 #include "../include/item_class_header/item.h"
+#include "../include/quest_class_header/quest.h"
+#include "../include/quest_class_header/fetch.h"
 #include "../include/menu.h"
 
 #include <iostream>
@@ -406,3 +408,119 @@ void Player::display_items_in_inventory(string user_category_selection, Player *
         }
     }
 }
+
+void Player::display_list_of_quests(Player* player_object)
+{   
+    int user_selection = 0;
+    char user_input;
+    bool user_going_down = true;
+    bool user_is_selecting = true;
+    int saved_index;
+
+    while (user_is_selecting)
+    {
+
+        //User selection in the index position which the arrow is rendered on. Making sure that the user doesn't go out of bounds of the array
+        while (true)
+        {
+            if (user_selection < 0)
+            {
+                user_selection = player_object -> active_quests.size() - 1;
+            }
+
+            if (user_selection > player_object -> active_quests.size() - 1)
+            {
+                user_selection = 0;
+            }
+
+            else
+            {
+                break;
+            }
+        }
+
+        Menu::clear_screen();
+
+        std::cout << "Journal" << std::endl;
+
+    
+        std::cout << "------------------\n\n";
+
+        for (int index_of_array = 0; index_of_array < player_object -> active_quests.size(); index_of_array++)
+        {
+
+            if (index_of_array == user_selection)
+            {
+
+                std::cout << player_object -> active_quests[index_of_array] ->get_quest_title()  + " <--------- " + player_object -> active_quests[index_of_array] ->get_quest_short_description() +  " \n";
+
+                saved_index = index_of_array; 
+            }
+
+            else
+            {
+
+                std::cout << player_object -> active_quests[index_of_array] ->get_quest_title() << std::endl;
+            }
+        }
+
+        char user_input = _getch();
+
+        switch (user_input)
+        {
+        case 'H':
+
+            user_selection--;
+            user_going_down = false;
+            break;
+
+        case 'P':
+            user_selection++;
+            user_going_down = true;
+            break;
+
+        case '\b':
+            /* code */
+            std::cout << " \n\n\nReturning";
+            Menu::loading_animation();
+            user_is_selecting = false;
+            break;
+
+        case '\r':
+            /* code */
+            std::cout << "\n\n\nOpening";
+            Menu::loading_animation();
+            user_is_selecting = false;
+
+            Menu::clear_screen();
+            //TODO: Go to quest description
+            player_object -> active_quests[saved_index] -> display_quest_details();
+            while (true)
+            {
+                char user_input = _getch();
+
+                if (user_input = '\b')
+                {
+                    std::cout << "\n\n\n";
+                    std::cout << "Returning";
+                    Menu::loading_animation();
+                    Menu::clear_screen();
+                    display_list_of_quests(player_object);
+                }
+                break;
+                /* code */
+            }
+
+           
+
+            break;
+
+        default:
+
+            break;
+        }
+    }
+
+
+}
+

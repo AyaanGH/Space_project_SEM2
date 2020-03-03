@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc builds\lib\libfetch.a  CMakeFiles/fetch.dir/src/quest_class_src/fetch.cpp.obj
+C:\MinGW\bin\ranlib.exe builds\lib\libfetch.a

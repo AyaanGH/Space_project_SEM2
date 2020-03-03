@@ -27,6 +27,20 @@ array
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
 iostream
 -
+vector
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/fetch.h
+quest.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
+string
+-
+vector
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
+string
+-
 
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/room.h
 iostream
@@ -49,6 +63,10 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/r
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/inventory.h
 ../include/item_class_header/item.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
+../include/quest_class_header/quest.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
+../include/quest_class_header/fetch.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/fetch.h
 ../include/menu.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/menu.h
 iostream

@@ -16,7 +16,7 @@ private:
     std::vector<Item*> quest_item_req;
 public:
     Fetch(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active, bool quest_completed, std::vector<Item*> quest_item_req);
-    ~Fetch();
+    
     
     
 //Getters
@@ -28,6 +28,7 @@ std::vector<Item*> set_quest_item_req(std::vector<Item*> quest_item_req);
 
 //Methods
 
+virtual void display_quest_details();
 };
 #endif
 

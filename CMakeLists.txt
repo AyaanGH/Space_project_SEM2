@@ -36,9 +36,11 @@ add_library( item src/item_class_src/item.cpp )
 add_library( weapon src/item_class_src/weapon.cpp )
 add_library( apparel src/item_class_src/apparel.cpp )
 add_library( consumable src/item_class_src/consumable.cpp)
+add_library( quest src/quest_class_src/quest.cpp)
+add_library( fetch src/quest_class_src/fetch.cpp)
 
 add_executable( main src/main.cpp )
-target_link_libraries( main player menu room npc conv item inventory weapon apparel consumable)
+target_link_libraries( main player menu room npc conv item inventory weapon apparel consumable quest fetch)
 
 
 

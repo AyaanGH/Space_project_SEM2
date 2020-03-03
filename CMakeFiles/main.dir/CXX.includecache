@@ -59,6 +59,20 @@ vector
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
 iostream
 -
+vector
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/fetch.h
+quest.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
+string
+-
+vector
+-
+
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
+string
+-
 
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/room.h
 iostream
@@ -95,6 +109,10 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/i
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/apparel.h
 ../include/item_class_header/consumable.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/consumable.h
+../include/quest_class_header/fetch.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/fetch.h
+../include/quest_class_header/quest.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
 stdio.h
 -
 conio.h

@@ -9,6 +9,7 @@
 class Room;
 class Conversation;
 class Inventory;
+class Quest;
 
 class NPC : public Player
 {
@@ -16,7 +17,8 @@ protected:
     std::vector<Conversation *> npc_menu;
 
 public:
-    NPC(string first_name, string last_name, int hp, Room *current_room_object, Inventory *inventory_object, std::vector<Conversation *> npc_menu);
+    std::vector<Quest *> npc_quests;
+    NPC(string first_name, string last_name, int hp, Room *current_room_object, Inventory *inventory_object, std::vector<Conversation *> npc_menu, std::vector<Quest *> npc_quests);
 
     //Getter
 

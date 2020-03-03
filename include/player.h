@@ -5,12 +5,14 @@
 // #include "room.h"
 //#include "npc.h"
 #include <iostream>
+#include <vector>
 using std::string;
 
 //forward declarations
 
 class Room;
 class Inventory;
+class Quest;
 // class NPCs
 
 class Player
@@ -40,7 +42,9 @@ public:
 
     Inventory *inventory_object;
     Room *current_room_object;
-
+    std::vector<Quest *> active_quests; 
+    
+    
 
     Player(string first_name, string last_name, int hp, Room *current_room_object, Inventory *inventory_object); 
 
@@ -92,11 +96,9 @@ public:
     void show_stats();
 
     static void display_inventory_categories(Player *player_object);
-
-
-
-    
     static void display_items_in_inventory(string user_category_selection, Player *player_object);
+    static void display_list_of_quests(Player *player_object);
+//     static void display_detail_of_quest(Quest quest,Player *player_object);
 };
 
 #endif
