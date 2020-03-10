@@ -29,6 +29,12 @@ public:
 
     Fetch *quest_object; 
 
+    Conversation *parent_object;
+
+    //Defauly constructor
+
+    Conversation();
+
     //Init player object constructor
     Conversation(Player *player_object);
     // Constructors
@@ -40,9 +46,14 @@ public:
 
     //End of conversation line
     Conversation(string name, string npc_last_response);
-    //Quest 
+    
+    //Conv with quest 
     Conversation(string name, string npc_last_response, Fetch *quest_object, bool has_quest);
 
+
+    //Deconstructor
+
+    ~Conversation();
 
     //Getters
 
@@ -62,10 +73,16 @@ public:
 
     void checkID();
 
+
+
+    
+
     //Static methods
 
 
     static void display_conv_menu(Conversation *conv_object, NPC *npc_object);
+
+    
 };
 
 #endif

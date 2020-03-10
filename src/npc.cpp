@@ -26,6 +26,13 @@ std::vector<Conversation *> NPC::get_npc_menu()
     return npc_menu;
 }
 
+//
+void NPC::modify_npc_menu(std::vector<Conversation*> npc_menu)
+{
+    
+    this->npc_menu=npc_menu;
+}
+
 //Setters
 
 std::vector<Conversation *> NPC::set_npc_menu(std::vector<Conversation *> npc_menu)
@@ -97,6 +104,7 @@ void NPC::display_npc_menu(NPC *npc_object)
 
                 std::cout << npc_object->get_npc_menu()[index_of_array]->get_name() + " <--------- " + " \n";
                 saved_index = index_of_array;
+                
             }
 
             else
@@ -134,9 +142,9 @@ void NPC::display_npc_menu(NPC *npc_object)
             Menu::clear_screen();
 
             //Display conv menu
-
+            
             Conversation::display_conv_menu(npc_object->get_npc_menu()[saved_index], npc_object);
-
+            
             break;
 
         default:

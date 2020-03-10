@@ -101,8 +101,8 @@ int main()
 
     //Bill Internship Conversation
     Conversation not_ready{"I think I will come back later", "I'm closing shop, come back tomorrow"};
-    
 
+    // Conversation internship;
     Conversation correct_ans{"Answer is 144", "Correct! You get the job. You start tomorrow morning", &quest1 , true};
     Conversation wrong_ans{"I think it is 120", "Wrong! You are not smart enough. Apply next year"};
     Conversation question{"Go ahead", "What is 12 x 12 ?", {&correct_ans, &wrong_ans}};
@@ -112,6 +112,13 @@ int main()
 
     Conversation internship("Ask for internship", "So you want a job huh? You got to pass the on the spot interview ...", {&ready, &shy, &not_ready});
 
+    
+
+    correct_ans.parent_object = &internship;
+
+  
+
+    
     //William hungry conversation
     Conversation no_more_hungry{"Thanks", ""}; 
     Conversation sad{"Awww come on", "" };
@@ -122,7 +129,6 @@ int main()
     Conversation food("Ask for food", "So, are you hungry?", {&confident, &insecure});
 
 
-   
 
     //Players
 

@@ -18,12 +18,17 @@ using std::string;
 #include <stdlib.h>
 #include <unistd.h>
 #include <windows.h>
+#include <algorithm>
 
 //Static members
 
 Player *Conversation::stored_player_object;
 
 //constructors
+
+Conversation::Conversation()
+{
+}
 
 Conversation::Conversation(Player *player_object)
 {
@@ -61,13 +66,7 @@ Conversation::Conversation(string name, string npc_last_response, Fetch *quest_o
 
     this->has_quest = true;
 
-    std::cout << "DEBUG 3\n";
-
-    std::cout << name << std::endl;
-    std::cout << quest_object->get_quest_title() << std::endl;
-
-    std::cout << std::boolalpha << has_quest;
-    Sleep(2000);
+    this->parent_object = parent_object;
 }
 
 Conversation::Conversation(string name, string npc_response, std::vector<Conversation *> choice_list)
@@ -79,6 +78,9 @@ Conversation::Conversation(string name, string npc_response, std::vector<Convers
 
     this->choice_list = set_vector_of_choices(choice_list);
 }
+
+//Deconstructor
+Conversation::~Conversation() {}
 
 //getters
 
@@ -156,10 +158,12 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
     int num_choice = conv_object->get_vector_of_choices().size();
     int time = 70;
 
-   
     if (conv_object->terminate_convo)
     {
 
+        // npc_object->get_npc_menu().erase(std::remove(npc_object->get_npc_menu().begin(), npc_object->get_npc_menu().end(), conv_object->parent_object), npc_object->get_npc_menu().end());
+
+        // conv_object->parent_object->~Conversation();
         Menu::clear_screen();
         std::cout << "Talking to " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
         std::cout << "------------------\n\n";
@@ -171,7 +175,6 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
         if (conv_object->has_quest == true)
         {
             Menu::clear_screen();
-            
 
             std::cout << "~~~~~~~~~~~~~~\n";
             std::cout << "QUEST RECIEVED\n";
@@ -185,8 +188,44 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
             char user_input = _getch();
         }
 
+        // std::vector<Conversation *> temp_vec;
+        // int temp_index;
+
+        // for (int i = 0; i < npc_object->get_npc_menu().size(); i++)
+        // {
+        //     std::cout << npc_object->get_npc_menu()[i]->get_name() << std::endl;
+
+        //     if (npc_object->get_npc_menu()[i] == conv_object->parent_object)
+        //     {
+        //         std::cout << " Match found";
+
+        //         temp_index = i;
+        //     }
+
+        //     else
+        //     {
+        //         temp_vec.push_back( npc_object->get_npc_menu()[i]);
+        //     }
+            
+        // }
+
+        //FIXME: Delete pointer in vector of pointers
+        // npc_object -> get_npc_menu().erase (npc_object -> get_npc_menu().begin() +temp_index );
+
+        // std::cout << "Address of NPC menu " << &(npc_object->get_npc_menu());
+        // // std::cout<<"Address of temp_vec " << &temp_vec;
+        // // npc_object->modify_npc_menu(temp_vec);
+
+        // std::cout << "Address of NPC menu after " << &(npc_object->get_npc_menu());
+         
+        //  Sleep(7000);
+
+        
         std::cout << "\n Returning";
         Menu::loading_animation();
+        // npc_object->get_npc_menu().erase(std::remove(npc_object->get_npc_menu().begin(), npc_object->get_npc_menu().end(), conv_object->parent_object), npc_object->get_npc_menu().end());
+
+        // conv_object->parent_object->~Conversation();
         return;
     }
 

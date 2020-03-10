@@ -31,6 +31,11 @@ public:
     //Static method
 
     static void display_npc_menu(NPC *npc_object);
+
+
+    //Modifier
+
+    void modify_npc_menu(std::vector<Conversation *> npc_menu);
 };
 
 #endif
