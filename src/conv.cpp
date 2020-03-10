@@ -19,20 +19,16 @@ using std::string;
 #include <unistd.h>
 #include <windows.h>
 
-
 //Static members
 
 Player *Conversation::stored_player_object;
 
 //constructors
 
-
-
 Conversation::Conversation(Player *player_object)
 {
 
     stored_player_object = player_object;
-    
 }
 
 Conversation::Conversation(int id, string name)
@@ -44,40 +40,35 @@ Conversation::Conversation(int id, string name)
 //Terminate construct
 Conversation::Conversation(string name, string npc_last_response)
 {
-    
+
     this->name = set_name(name);
 
     this->npc_response = set_npc_response(npc_last_response);
 
     terminate_convo = true;
-
-    
-
 }
 //Quest
 Conversation::Conversation(string name, string npc_last_response, Fetch *quest_object, bool has_quest)
 {
-    
+
     this->name = set_name(name);
 
     this->npc_response = set_npc_response(npc_last_response);
 
-    this ->quest_object = quest_object;
-    
+    this->quest_object = quest_object;
+
     terminate_convo = true;
-    
-    this -> has_quest = true;
 
-     std::cout << "DEBUG 3\n";
+    this->has_quest = true;
 
-     std::cout << name << std::endl;
-     std::cout << quest_object ->get_quest_title() << std::endl;
+    std::cout << "DEBUG 3\n";
 
-    std::cout << std::boolalpha << has_quest ;
+    std::cout << name << std::endl;
+    std::cout << quest_object->get_quest_title() << std::endl;
+
+    std::cout << std::boolalpha << has_quest;
     Sleep(2000);
-
 }
-
 
 Conversation::Conversation(string name, string npc_response, std::vector<Conversation *> choice_list)
 {
@@ -165,33 +156,8 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
     int num_choice = conv_object->get_vector_of_choices().size();
     int time = 70;
 
-    std::cout << "DEBUG 2";
-    std::cout << std::boolalpha <<conv_object ->has_quest;
-    Sleep(2000);
-
-
-    if(conv_object -> has_quest == true)
-    {
-        Menu::clear_screen();
-        std::cout << "Quest ID: " <<conv_object ->quest_object ->get_quest_id();
-        Sleep(2000);
-        std::cout << "Quest from  " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
-        std::cout << "------------------\n\n";
-
-        std::cout<<conv_object -> quest_object -> get_quest_title() <<std::endl;
-
-        conv_object -> quest_object -> display_quest_details();
-        std::cout << "DEBUG 1";
-        Sleep(5000);
-
-        Menu::slow_print(conv_object->quest_object->get_quest_short_description(),50);
-        Conversation::stored_player_object->active_quests.push_back(conv_object -> quest_object);
-        char user_input = _getch();
-
-        
-    }
-
-    if(conv_object->terminate_convo)
+   
+    if (conv_object->terminate_convo)
     {
 
         Menu::clear_screen();
@@ -201,6 +167,24 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
 
         Menu::slow_print(conv_object->get_npc_response(), time);
         char user_input = _getch();
+
+        if (conv_object->has_quest == true)
+        {
+            Menu::clear_screen();
+            
+
+            std::cout << "~~~~~~~~~~~~~~\n";
+            std::cout << "QUEST RECIEVED\n";
+            std::cout << "~~~~~~~~~~~~~~\n\n";
+            // std::cout << "Quest from  " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
+            // std::cout << "------------------\n\n";
+            conv_object->quest_object->display_quest_details();
+            std::cout << "\n";
+            Menu::slow_print(conv_object->quest_object->get_quest_short_description(), 50);
+            Conversation::stored_player_object->active_quests.push_back(conv_object->quest_object);
+            char user_input = _getch();
+        }
+
         std::cout << "\n Returning";
         Menu::loading_animation();
         return;
@@ -253,8 +237,6 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
 
         Menu::slow_print(conv_object->get_npc_response(), time);
         time = 0;
-
-        
 
         // Sleep(2500);
 

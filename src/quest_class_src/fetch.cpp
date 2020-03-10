@@ -21,33 +21,33 @@ Fetch::Fetch(int quest_id, string quest_title, string quest_short_description, s
 
 void Fetch::display_quest_details()
 {
-    Menu::clear_screen();
+    // Menu::clear_screen();
 
     std::cout << this -> get_quest_title() << std::endl;
     std::cout << "------------------\n\n"; 
     Menu::slow_print( this -> get_quest_long_description(),50);
-    std::cout<<std::endl;
+    std::cout<<"\n\n";
 
 
     if (quest_completed)
     {
-        std::cout << "Completed\n";
+        std::cout << "Status: Completed\n";
     }
     else
     {
-        std::cout << "Not completed\n";
+        std::cout << "Status: Not completed\n";
     }
 
     if (quest_active)
     {
-        std::cout<< "Quest is active\n";
+        std::cout<< "Status: Quest is active\n";
     }
    
-    std::cout << "Item requirments:\n";
+    std::cout << "Item requirments:\n\n";
     
     for(int i=0; i<quest_item_req.size(); i++)
     {
-        std::cout << i <<". " << quest_item_req[i]->get_name() << std::endl;
+        std::cout << i+1 <<". " << quest_item_req[i]->get_name() << std::endl;
     }
     
     
