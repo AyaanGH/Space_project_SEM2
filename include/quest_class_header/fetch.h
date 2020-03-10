@@ -9,13 +9,14 @@ using std::string;
 //Forward declrations
 
 class Item;
+class Player;
 
 class Fetch : public Quest
 {
 private:
     std::vector<Item*> quest_item_req;
 public:
-    Fetch(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active, bool quest_completed, std::vector<Item*> quest_item_req);
+    Fetch(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active, std::vector<Item*> quest_item_req);
     
     
     
@@ -27,6 +28,8 @@ std::vector<Item*> get_quest_item_req();
 std::vector<Item*> set_quest_item_req(std::vector<Item*> quest_item_req);
 
 //Methods
+
+void check_quest_criteria(Player *player_object);
 
 virtual void display_quest_details();
 };

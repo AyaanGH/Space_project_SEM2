@@ -4,7 +4,10 @@
 #include <string>
 using std::string;
 
+class Player;
+
 class Quest
+
 {
 protected:
     string quest_title;
@@ -12,11 +15,11 @@ protected:
     string quest_long_description;
 
     bool quest_active;
-    bool quest_completed;
     int quest_id;
 
 public:
-    Quest(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active, bool quest_completed);
+    bool quest_completed=false;
+    Quest(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active);
     
 
     //Getters
@@ -26,7 +29,7 @@ public:
     string get_quest_long_description();
 
     bool get_quest_active();
-    bool get_quest_completed();
+
 
     //Setters
     int set_quest_id(int quest_id);
@@ -35,10 +38,12 @@ public:
     string set_quest_long_description(string quest_long_description);
 
     bool set_quest_active(bool quest_active);
-    bool set_quest_completed(bool quest_completed);
+   
 
     //Methods
     virtual void display_quest_details();
+
+    virtual void check_quest_criteria(Player *player_object);
 };
 
 #endif

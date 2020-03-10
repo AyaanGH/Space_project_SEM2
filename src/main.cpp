@@ -78,7 +78,7 @@ int main()
 
 
      //Inventory
-    Inventory player_inventory(50, {&adrenaline, &g_force, &EVA_suit});
+    Inventory player_inventory(50, {&pistol,&adrenaline, &g_force, &EVA_suit});
 
     Player myPlayer("Peter", "Parker", 100, &market, &player_inventory);
 
@@ -89,7 +89,7 @@ int main()
     Inventory npc3_inventory(3, {});
 
     //Quests
-    Fetch quest1(100,"Get pistol","Bring me back my stolen pistol.","The war...It sucks...",false,false,{&pistol});
+    Fetch quest1(100,"Get pistol","Bring me back my stolen pistol.","The war...It sucks...",false,{&pistol});
 
     //Conveersation
 

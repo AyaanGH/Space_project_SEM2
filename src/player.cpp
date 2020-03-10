@@ -411,6 +411,8 @@ void Player::display_items_in_inventory(string user_category_selection, Player *
 
 void Player::display_list_of_quests(Player* player_object)
 {   
+
+    
     int user_selection = 0;
     char user_input;
     bool user_going_down = true;
@@ -494,6 +496,10 @@ void Player::display_list_of_quests(Player* player_object)
 
             Menu::clear_screen();
             //TODO: Go to quest description
+
+
+
+            player_object -> active_quests[saved_index] -> check_quest_criteria(player_object);
             player_object -> active_quests[saved_index] -> display_quest_details();
             while (true)
             {

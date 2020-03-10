@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/inventory.h
+string
+-
+vector
+-
+
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
 string
 -
@@ -43,6 +49,10 @@ C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/q
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/quest_class_header/quest.h
 ../../include/item_class_header/item.h
 C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/item_class_header/item.h
+../../include/inventory.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/inventory.h
+../../include/player.h
+C:/Users/Ayaan/Documents/Computer_Science/Year 1/Semester 2/Space Game/include/player.h
 string
 -
 iostream

@@ -6,14 +6,14 @@ using std::string;
 
 
 
-Quest::Quest(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active, bool quest_completed)
+Quest::Quest(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active)
 {
     this -> quest_id = set_quest_id(quest_id);
     this -> quest_title = set_quest_title(quest_title);
     this -> quest_short_description = set_quest_short_description(quest_short_description);
     this -> quest_long_description = set_quest_long_description(quest_long_description);
     this -> quest_active = set_quest_active(quest_active);
-    this -> quest_completed = set_quest_completed(quest_completed);
+    
     
 }
 
@@ -44,10 +44,7 @@ bool Quest::get_quest_active()
 {
     return quest_active;
 }
-bool Quest::get_quest_completed()
-{
-    return quest_completed;
-}
+
 
 //Setters
 int Quest::set_quest_id(int quest_id)
@@ -75,12 +72,20 @@ bool Quest::set_quest_active(bool quest_active)
 {
     return quest_active;
 }
-bool Quest::set_quest_completed(bool quest_completed)
-{
-    return quest_completed;
-}
+
+
+
 
 //Methods
+
+
+void Quest::check_quest_criteria(Player *player_object)
+{
+
+
+    return;
+}
+
 void Quest::display_quest_details()
 {
     Menu::clear_screen();
