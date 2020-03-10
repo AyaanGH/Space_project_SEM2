@@ -1,6 +1,6 @@
 
-
 #include "../../include/quest_class_header/fetch.h"
+#include "../../include/quest_class_header/quest.h"
 #include "../../include/item_class_header/item.h"
 #include <string>
 #include <iostream>
@@ -23,9 +23,9 @@ void Fetch::display_quest_details()
 {
     Menu::clear_screen();
 
-    std::cout <<  get_quest_title() << std::endl;
+    std::cout << this -> get_quest_title() << std::endl;
     std::cout << "------------------\n\n"; 
-    Menu::slow_print( get_quest_long_description(),50);
+    Menu::slow_print( this -> get_quest_long_description(),50);
     std::cout<<std::endl;
 
 

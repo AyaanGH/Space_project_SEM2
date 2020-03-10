@@ -173,10 +173,13 @@ void Conversation::display_conv_menu(Conversation *conv_object, NPC *npc_object)
     if(conv_object -> has_quest == true)
     {
         Menu::clear_screen();
+        std::cout << "Quest ID: " <<conv_object ->quest_object ->get_quest_id();
+        Sleep(2000);
         std::cout << "Quest from  " << npc_object->get_first_name() << " " << npc_object->get_last_name() << std::endl;
         std::cout << "------------------\n\n";
 
         std::cout<<conv_object -> quest_object -> get_quest_title() <<std::endl;
+
         conv_object -> quest_object -> display_quest_details();
         std::cout << "DEBUG 1";
         Sleep(5000);

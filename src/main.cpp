@@ -89,7 +89,7 @@ int main()
     Inventory npc3_inventory(3, {});
 
     //Quests
-    Fetch quest1(1,"Get pistol","Bring me back my stolen pistol.","The war...It sucks...",false,false,{&pistol});
+    Fetch quest1(100,"Get pistol","Bring me back my stolen pistol.","The war...It sucks...",false,false,{&pistol});
 
     //Conveersation
 

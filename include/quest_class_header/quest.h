@@ -7,13 +7,13 @@ using std::string;
 class Quest
 {
 protected:
-    int quest_id;
     string quest_title;
     string quest_short_description;
     string quest_long_description;
 
     bool quest_active;
     bool quest_completed;
+    int quest_id;
 
 public:
     Quest(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active, bool quest_completed);

@@ -8,8 +8,13 @@ using std::string;
 
 Quest::Quest(int quest_id, string quest_title, string quest_short_description, string quest_long_description, bool quest_active, bool quest_completed)
 {
-
-
+    this -> quest_id = set_quest_id(quest_id);
+    this -> quest_title = set_quest_title(quest_title);
+    this -> quest_short_description = set_quest_short_description(quest_short_description);
+    this -> quest_long_description = set_quest_long_description(quest_long_description);
+    this -> quest_active = set_quest_active(quest_active);
+    this -> quest_completed = set_quest_completed(quest_completed);
+    
 }
 
 
